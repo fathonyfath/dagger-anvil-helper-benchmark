@@ -1,8 +1,6 @@
 @file:Suppress("UnstableApiUsage")
 
-
-
-pluginManagement {
+dependencyResolutionManagement {
     repositories {
         google {
             content {
@@ -14,18 +12,12 @@ pluginManagement {
         mavenCentral()
         gradlePluginPortal()
     }
-    includeBuild("gradle/plugins")
-}
-
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-    repositories {
-        google()
-        mavenCentral()
+    
+    versionCatalogs { 
+        create("libs") {
+            from(files("../libs.versions.toml"))
+        }
     }
 }
 
-rootProject.name = "AnvilHelper-Dagger"
-include(":app")
-include(":component1")
-include(":base")
+include("android-plugins")

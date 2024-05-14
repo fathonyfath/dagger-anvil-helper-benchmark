@@ -8,7 +8,8 @@ import dev.fathony.anvilhelper.dagger.databinding.ItemGroupBinding
 import dev.fathony.anvilhelper.dagger.databinding.ItemPageBinding
 
 class MainAdapter(
-    context: Context,
+    private val context: Context,
+    private val activityLauncher: ActivityLauncher,
     private val items: List<MainItem>
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
@@ -48,7 +49,11 @@ class MainAdapter(
         val item = items[position]
         when (holder) {
             is HeaderViewHolder -> (item as? MainItem.Header)?.let { holder.bind(it) }
-            is PageViewHolder -> (item as? MainItem.Item)?.let { holder.bind(it) }
+            is PageViewHolder -> (item as? MainItem.Item)?.let { data ->
+                holder.bind(data) {
+                    activityLauncher.launchActivity(data.page.intentBuilder.create(context))
+                }
+            }
         }
     }
 
@@ -63,8 +68,9 @@ class MainAdapter(
     class PageViewHolder(private val binding: ItemPageBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(data: MainItem.Item) {
+        fun bind(data: MainItem.Item, onClick: () -> Unit) {
             binding.root.text = data.page.name
+            binding.root.setOnClickListener { onClick.invoke() }
         }
     }
 }
