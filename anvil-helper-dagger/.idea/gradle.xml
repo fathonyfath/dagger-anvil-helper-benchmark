@@ -7,6 +7,12 @@
         <compositeConfiguration>
           <compositeBuild compositeDefinitionSource="SCRIPT">
             <builds>
+              <build path="$PROJECT_DIR$/gradle/meta-plugins" name="meta-plugins">
+                <projects>
+                  <project path="$PROJECT_DIR$/gradle/meta-plugins" />
+                  <project path="$PROJECT_DIR$/gradle/meta-plugins/settings-plugins" />
+                </projects>
+              </build>
               <build path="$PROJECT_DIR$/gradle/plugins" name="plugins">
                 <projects>
                   <project path="$PROJECT_DIR$/gradle/plugins" />
@@ -24,6 +30,8 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/base" />
             <option value="$PROJECT_DIR$/component1" />
+            <option value="$PROJECT_DIR$/gradle/meta-plugins" />
+            <option value="$PROJECT_DIR$/gradle/meta-plugins/settings-plugins" />
             <option value="$PROJECT_DIR$/gradle/plugins" />
             <option value="$PROJECT_DIR$/gradle/plugins/android-plugins" />
           </set>

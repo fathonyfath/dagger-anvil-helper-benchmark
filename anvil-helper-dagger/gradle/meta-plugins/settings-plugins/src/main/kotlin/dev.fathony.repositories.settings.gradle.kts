@@ -1,10 +1,6 @@
 @file:Suppress("UnstableApiUsage")
 
 pluginManagement {
-    includeBuild("../meta-plugins")
-}
-
-dependencyResolutionManagement {
     repositories {
         google {
             content {
@@ -16,12 +12,13 @@ dependencyResolutionManagement {
         mavenCentral()
         gradlePluginPortal()
     }
-    
-    versionCatalogs { 
-        create("libs") {
-            from(files("../libs.versions.toml"))
-        }
-    }
+    includeBuild("gradle/plugins")
 }
 
-include("android-plugins")
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
