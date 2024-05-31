@@ -3,5 +3,6 @@ plugins {
 }
 
 dependencies {
-    implementation(libs.androidGradle)
+    implementation(libs.android.gradlePlugin)
+    implementation(libs.kotlin.gradlePlugin)
 }
