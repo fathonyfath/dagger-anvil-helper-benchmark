@@ -1,7 +1,7 @@
 package dev.fathony.anvilhelper.dagger
 
-import dev.fathony.anvilhelper.base.Page
-import dev.fathony.anvilhelper.base.PageGroup
+import dev.fathony.anvilhelper.base.page.Page
+import dev.fathony.anvilhelper.base.page.PageGroup
 
 sealed class MainItem {
 

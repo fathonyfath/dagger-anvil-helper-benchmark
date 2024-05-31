@@ -1,4 +1,4 @@
-package dev.fathony.anvilhelper.base
+package dev.fathony.anvilhelper.base.page
 
 data class Page(
     val name: String,

@@ -2,6 +2,7 @@
 androidGradlePlugin = "8.4.1"
 kotlin = "1.9.23"
 dagger = "2.51.1"
+javaxInject = "1"
 coreKtx = "1.13.1"
 junit = "4.13.2"
 androidxJunit = "1.1.5"
@@ -16,6 +17,7 @@ android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", ver
 kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 dagger-runtime = { group = "com.google.dagger", name = "dagger",  version.ref = "dagger" }
 dagger-compiler = { group = "com.google.dagger", name = "dagger-compiler", version.ref = "dagger" }
+javax-inject = { group = "javax.inject", name = "javax.inject", version.ref = "javaxInject" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidxJunit" }

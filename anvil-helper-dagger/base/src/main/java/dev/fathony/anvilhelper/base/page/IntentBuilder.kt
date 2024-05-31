@@ -1,4 +1,4 @@
-package dev.fathony.anvilhelper.base
+package dev.fathony.anvilhelper.base.page
 
 import android.content.Context
 import android.content.Intent
