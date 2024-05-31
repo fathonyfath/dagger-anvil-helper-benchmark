@@ -1,5 +1,6 @@
 plugins {
     id("dev.fathony.android-application")
+    id("dev.fathony.dagger")
 }
 
 
@@ -25,6 +26,7 @@ android {
 
 dependencies {
     implementation(project(":base"))
+    implementation(project(":common"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

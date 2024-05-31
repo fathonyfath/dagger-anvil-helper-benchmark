@@ -24,4 +24,4 @@ dependencyResolutionManagement {
     }
 }
 
-include("android-plugins")
+include("android-plugins", "dagger-plugins")
