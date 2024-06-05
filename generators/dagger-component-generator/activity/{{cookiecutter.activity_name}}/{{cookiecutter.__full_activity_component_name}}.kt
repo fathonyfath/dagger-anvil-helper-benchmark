@@ -1,4 +1,4 @@
-package dev.fathony.anvilhelper.component1
+package {{cookiecutter.__full_package_name}}
 
 import dagger.BindsInstance
 import dagger.Subcomponent
@@ -8,9 +8,9 @@ import dev.fathony.anvilhelper.base.dagger.scope.ActivityScope
 
 @ActivityScope
 @Subcomponent
-interface Page1ActivityComponent : DaggerComponent<Page1Activity> {
+interface {{ cookiecutter.__full_activity_component_name }} : DaggerComponent<{{ cookiecutter.__full_activity_name }}> {
     @Subcomponent.Factory
     interface Factory : DaggerSubcomponentFactory {
-        fun create(@BindsInstance target: Page1Activity): Page1ActivityComponent
+        fun create(@BindsInstance target: {{ cookiecutter.__full_activity_name }}): {{ cookiecutter.__full_activity_component_name }}
     }
 }

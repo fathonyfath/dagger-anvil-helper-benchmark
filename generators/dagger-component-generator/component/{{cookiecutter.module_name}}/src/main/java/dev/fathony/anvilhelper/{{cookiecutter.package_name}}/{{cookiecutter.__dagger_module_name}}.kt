@@ -1,4 +1,4 @@
-package dev.fathony.anvilhelper.{{cookiecutter.package_name}}
+package {{cookiecutter.__full_package_name}}
 
 import dagger.Module
 import dagger.Provides
@@ -18,7 +18,7 @@ import javax.inject.Named
         // endregion
     ]
 )
-interface {{cookiecutter.module}}Module {
+interface {{cookiecutter.__dagger_module_name}} {
 
     @Multibinds
     @Named("{{cookiecutter.module}}")

@@ -1,4 +1,4 @@
-package dev.fathony.anvilhelper.component1
+package {{cookiecutter.__full_package_name}}
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -17,11 +17,11 @@ import dev.fathony.anvilhelper.common.NumberProvider
 import javax.inject.Inject
 import javax.inject.Singleton
 
-class Page1Activity : AppCompatActivity(), DaggerComponentOwner {
+class {{cookiecutter.__full_activity_name}} : AppCompatActivity(), DaggerComponentOwner {
 
-    override val component: DaggerComponent<Page1Activity>
-            by applicationComponent { component: Page1ActivityComponentFactory ->
-                component.createPage1ActivityComponent(this)
+    override val component: DaggerComponent<{{cookiecutter.__full_activity_name}}>
+            by applicationComponent { component: {{cookiecutter.__full_activity_component_factory_name}} ->
+                component.{{cookiecutter.__activity_component_factory_create_function_name}}(this)
             }
 
     @Inject
@@ -31,7 +31,7 @@ class Page1Activity : AppCompatActivity(), DaggerComponentOwner {
         component.inject(this)
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_page1)
+        setContentView({{ cookiecutter.__full_activity_layout_name }})
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.root)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -45,7 +45,7 @@ class Page1Activity : AppCompatActivity(), DaggerComponentOwner {
     @Singleton
     class Builder @Inject constructor() : IntentBuilder() {
         override fun create(context: Context): Intent {
-            return Intent(context, Page1Activity::class.java)
+            return Intent(context, {{ cookiecutter.__full_activity_name }}::class.java)
         }
 
     }
