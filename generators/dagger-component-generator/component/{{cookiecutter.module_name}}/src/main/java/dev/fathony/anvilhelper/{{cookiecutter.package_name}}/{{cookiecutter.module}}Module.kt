@@ -1,4 +1,4 @@
-package dev.fathony.anvilhelper.component1
+package dev.fathony.anvilhelper.{{cookiecutter.package_name}}
 
 import dagger.Module
 import dagger.Provides
@@ -18,30 +18,24 @@ import javax.inject.Named
         // endregion
     ]
 )
-interface Component1Module {
+interface {{cookiecutter.module}}Module {
 
     @Multibinds
-    @Named("Component1")
+    @Named("{{cookiecutter.module}}")
     fun pages(): Set<Page>
 
     companion object {
         @Provides
         @IntoSet
-        fun providePageGroup(@Named("Component1") pages: Set<Page>): PageGroup {
+        fun providePageGroup(@Named("{{cookiecutter.module}}") pages: Set<Page>): PageGroup {
             return PageGroup(
-                name = "Component1",
+                name = "{{cookiecutter.module}}",
                 pages = pages.sortedBy { it.name },
             )
         }
 
         // region Provide page for each activity
         
-        // endregion        
-        @Provides
-        @IntoSet
-        @Named("Component1")
-        fun providePages1(builder: Page1Activity.Builder): Page {
-            return Page("Component1Page1", builder)
-        }
+        // endregion
     }
 }
