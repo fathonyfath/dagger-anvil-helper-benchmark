@@ -1,1 +1,4 @@
-{}
+{
+    "activity_name": "Page",
+    "__full_layout_name": "activity_{{ cookiecutter.activity_name|lower|replace(' ', '_') }}"
+}
