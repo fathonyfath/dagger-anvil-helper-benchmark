@@ -13,7 +13,9 @@ import javax.inject.Named
 
 @Module(
     subcomponents = [
-        Page1ActivityComponent::class,
+        // region Register activity components
+
+        // endregion
     ]
 )
 interface Component1Module {
@@ -23,14 +25,6 @@ interface Component1Module {
     fun pages(): Set<Page>
 
     companion object {
-
-        @Provides
-        @IntoSet
-        @Named("Component1")
-        fun providePages1(builder: Page1Activity.Builder): Page {
-            return Page("Component1Page1", builder)
-        }
-
         @Provides
         @IntoSet
         fun providePageGroup(@Named("Component1") pages: Set<Page>): PageGroup {
@@ -38,6 +32,16 @@ interface Component1Module {
                 name = "Component1",
                 pages = pages.sortedBy { it.name },
             )
+        }
+
+        // region Provide page for each activity
+        
+        // endregion        
+        @Provides
+        @IntoSet
+        @Named("Component1")
+        fun providePages1(builder: Page1Activity.Builder): Page {
+            return Page("Component1Page1", builder)
         }
     }
 }
