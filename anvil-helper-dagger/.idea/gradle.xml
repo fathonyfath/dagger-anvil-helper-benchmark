@@ -31,7 +31,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/base" />
             <option value="$PROJECT_DIR$/common" />
-            <option value="$PROJECT_DIR$/component1" />
+            <option value="$PROJECT_DIR$/foobar" />
             <option value="$PROJECT_DIR$/gradle/meta-plugins" />
             <option value="$PROJECT_DIR$/gradle/meta-plugins/settings-plugins" />
             <option value="$PROJECT_DIR$/gradle/plugins" />
