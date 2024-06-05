@@ -1,9 +1,7 @@
 package dev.fathony.anvilhelper.dagger
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -12,11 +10,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import dev.fathony.anvilhelper.base.dagger.DaggerComponent
 import dev.fathony.anvilhelper.base.dagger.DaggerComponentOwner
 import dev.fathony.anvilhelper.base.dagger.applicationComponent
-import dev.fathony.anvilhelper.base.page.IntentBuilder
-import dev.fathony.anvilhelper.base.page.Page
 import dev.fathony.anvilhelper.base.page.PageGroup
 import dev.fathony.anvilhelper.dagger.databinding.ActivityMainBinding
 import dev.fathony.anvilhelper.dagger.di.MainActivityComponentFactory
+import javax.inject.Inject
 
 class MainActivity : AppCompatActivity(), ActivityLauncher, DaggerComponentOwner {
 
@@ -27,6 +24,8 @@ class MainActivity : AppCompatActivity(), ActivityLauncher, DaggerComponentOwner
 
     private lateinit var binding: ActivityMainBinding
 
+    @Inject
+    lateinit var pageGroups: Set<PageGroup>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         component.inject(this)
@@ -40,17 +39,16 @@ class MainActivity : AppCompatActivity(), ActivityLauncher, DaggerComponentOwner
             insets
         }
 
+        val items = pageGroups
+            .sortedBy { it.name }
+            .flatMap { item ->
+                return@flatMap listOf(MainItem.Header(item)) + item.pages.map { MainItem.Item(it) }
+            }
+
         val mainAdapter = MainAdapter(
-            this,
-            this,
-            listOf(
-                MainItem.Header(PageGroup("Sample-1")),
-                MainItem.Item(Page("Test", object : IntentBuilder() {
-                    override fun create(context: Context): Intent {
-                        return Intent(context, MainActivity::class.java)
-                    }
-                }))
-            )
+            context = this,
+            activityLauncher = this,
+            items = items
         )
 
         binding.recycler.apply {

@@ -8,7 +8,7 @@ import dev.fathony.anvilhelper.dagger.DaggerApplication
 import dev.fathony.anvilhelper.dagger.MainActivity
 import javax.inject.Singleton
 
-//region Importing activities definition
+//region Importing activities injection definition
 
 //endregion
 
@@ -36,6 +36,6 @@ abstract class ApplicationComponent : DaggerComponent<DaggerApplication>,
         mainActivityComponentFactory().create(activity)
 
     //region Activities registration
-
+    
     //endregion
 }
