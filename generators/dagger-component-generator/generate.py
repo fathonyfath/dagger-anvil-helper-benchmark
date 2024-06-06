@@ -44,9 +44,9 @@ def generate_layout(activity_name: str):
 
 def generate_module(module: str, module_name: str, activity_names: list[str]):
     assert len(activity_names) > 0, "Activity names should not be empty."
-    generate_component(module=module, module_name=module_name)
+    generate_component(module, module_name)
     for name in activity_names:
-        generate_activity(package_name=module_name, activity_name=name)
+        generate_activity(module_name, activity_name=name)
         generate_layout(activity_name=name)
 
 
@@ -70,7 +70,7 @@ def get_result_module_layout_folder(module_name: str) -> str:
 
 def move_activities(module_name: str):
     subfolders = [f.path for f in os.scandir(activities_dir) if f.is_dir()]
-    target = get_result_module_activity_folder(module_name=module_name)
+    target = get_result_module_activity_folder(module_name)
     for folder in subfolders:
         names = [i.path for i in os.scandir(folder)]
         for name in names:
@@ -80,7 +80,7 @@ def move_activities(module_name: str):
 
 def move_layouts(module_name: str):
     subfolders = [f.path for f in os.scandir(layouts_dir) if f.is_dir()]
-    target = get_result_module_layout_folder(module_name=module_name)
+    target = get_result_module_layout_folder(module_name)
     for folder in subfolders:
         names = [i.path for i in os.scandir(folder)]
         for name in names:
@@ -89,13 +89,9 @@ def move_layouts(module_name: str):
 
 
 def generate(module: str, module_name: str, activity_names: list[str]):
-    generate_module(
-        module=module,
-        module_name=module_name,
-        activity_names=activity_names,
-    )
-    move_activities(module_name=module_name)
-    move_layouts(module_name=module_name)
+    generate_module(module, module_name, activity_names)
+    move_activities(module_name)
+    move_layouts(module_name)
 
 
 generate(

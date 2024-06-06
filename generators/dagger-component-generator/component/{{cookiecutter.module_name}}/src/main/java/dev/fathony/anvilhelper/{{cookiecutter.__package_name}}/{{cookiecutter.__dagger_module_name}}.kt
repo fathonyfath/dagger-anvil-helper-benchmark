@@ -14,7 +14,6 @@ import javax.inject.Named
 @Module(
     subcomponents = [
         // region Register activity components
-
         // endregion
     ]
 )
@@ -35,7 +34,6 @@ interface {{cookiecutter.__dagger_module_name}} {
         }
 
         // region Provide page for each activity
-        
         // endregion
     }
 }
