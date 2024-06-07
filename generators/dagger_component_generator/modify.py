@@ -96,14 +96,3 @@ def modify(module: str, module_name: str, activity_names: list[str]):
     register_activity_components(module, module_name, activity_names)
     provide_page_for_activities(module, module_name, activity_names)
     update_manifest(module_name, activity_names)
-
-
-modify(
-    module="FooBar",
-    module_name="foobar",
-    activity_names=[
-        "Page1",
-        "Page2",
-        "Page3",
-    ],
-)

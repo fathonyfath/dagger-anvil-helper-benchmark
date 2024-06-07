@@ -92,14 +92,3 @@ def generate(module: str, module_name: str, activity_names: list[str]):
     generate_module(module, module_name, activity_names)
     move_activities(module_name)
     move_layouts(module_name)
-
-
-generate(
-    module="FooBar",
-    module_name="foobar",
-    activity_names=[
-        "Page1",
-        "Page2",
-        "Page3",
-    ],
-)
