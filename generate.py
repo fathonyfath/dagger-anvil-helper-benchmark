@@ -8,6 +8,9 @@ dagger_component_generator_dir = os.path.join(
     generators_dir, "dagger_component_generator"
 )
 
+base_dir = "base"
+dagger_benchmark_dir = os.path.join(base_dir, "dagger-benchmark")
+
 
 def get_normalized_working_dir() -> str:
     return os.path.dirname(os.path.abspath(__file__))
