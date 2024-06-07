@@ -2,6 +2,8 @@ import os
 import shutil
 from generators.dagger_component_generator.generate import generate
 from generators.dagger_component_generator.modify import modify, appends_after_match
+import random
+import string
 
 
 def get_normalized_working_dir() -> str:
@@ -91,24 +93,24 @@ def register_activities_definition(
     )
     import_activities = list(
         map(
-            lambda i: "import dev.fathony.anvilhelper.{module_name}.{activity_name}Activity".format(
-                module_name=module_name, activity_name=i
+            lambda i: "import dev.fathony.anvilhelper.{module_name}.{module}{activity_name}Activity".format(
+                module=module, module_name=module_name, activity_name=i
             ),
             activity_names,
         )
     )
     import_component = list(
         map(
-            lambda i: "import dev.fathony.anvilhelper.{module_name}.{activity_name}ActivityComponent".format(
-                module_name=module_name, activity_name=i
+            lambda i: "import dev.fathony.anvilhelper.{module_name}.{module}{activity_name}ActivityComponent".format(
+                module=module, module_name=module_name, activity_name=i
             ),
             activity_names,
         )
     )
     import_component_factory = list(
         map(
-            lambda i: "import dev.fathony.anvilhelper.{module_name}.{activity_name}ActivityComponentFactory".format(
-                module_name=module_name, activity_name=i
+            lambda i: "import dev.fathony.anvilhelper.{module_name}.{module}{activity_name}ActivityComponentFactory".format(
+                module=module, module_name=module_name, activity_name=i
             ),
             activity_names,
         )
@@ -122,8 +124,8 @@ def register_activities_definition(
 
     component_factories = list(
         map(
-            lambda i: "    {activity_name}ActivityComponentFactory,".format(
-                activity_name=i
+            lambda i: "    {module}{activity_name}ActivityComponentFactory,".format(
+                module=module, activity_name=i
             ),
             activity_names,
         )
@@ -136,7 +138,7 @@ def register_activities_definition(
 
     abstract_factories = list(
         map(
-            lambda i: "    abstract fun provide{module}{activity_name}ActivityComponentFactory(): MainActivityComponent.Factory".format(
+            lambda i: "    abstract fun provide{module}{activity_name}ActivityComponentFactory(): {module}{activity_name}ActivityComponent.Factory".format(
                 module=module, activity_name=i
             ),
             activity_names,
@@ -145,7 +147,7 @@ def register_activities_definition(
 
     overriden_functions = list(
         map(
-            lambda i: "    override fun create{module}{activity_name}ActivityComponent(activity: {activity_name}Activity): {activity_name}ActivityComponent =\n        provide{module}{activity_name}ActivityComponentFactory().create(activity)".format(
+            lambda i: "    override fun create{module}{activity_name}ActivityComponent(activity: {module}{activity_name}Activity): {module}{activity_name}ActivityComponent =\n        provide{module}{activity_name}ActivityComponentFactory().create(activity)".format(
                 module=module, activity_name=i
             ),
             activity_names,
@@ -159,42 +161,54 @@ def register_activities_definition(
     )
 
 
-def generate_dagger_component():
+def generate_dagger_component(module: str, module_name: str, activity_names: list[str]):
     os.chdir(dagger_component_generator_dir)
-    generate(
-        module="BazFoo",
-        module_name="bazfoo",
-        activity_names=[
-            "Page1",
-            "Page2",
-            "Page3",
-        ],
-    )
-    modify(
-        module="BazFoo",
-        module_name="bazfoo",
-        activity_names=[
-            "Page1",
-            "Page2",
-            "Page3",
-        ],
-    )
+    generate(module, module_name, activity_names)
+    modify(module, module_name, activity_names)
 
 
-# shutil.copytree(dagger_benchmark_src_dir, dagger_benchmark_result_dir)
-# add_gradle_submodules(["foobar", "bazfoo", "barfoo"])
-# register_dagger_submodules(
-#     {
-#         "FooBar": "foobar",
-#         "FooBaz": "foobaz",
-#     }
-# )
-register_activities_definition(
-    module="BazFoo",
-    module_name="bazfoo",
-    activity_names=[
-        "Page1",
-        "Page2",
-        "Page3",
-    ],
-)
+def generate_dagger_benchmark(structure: dict[str, list[str]]):
+    shutil.copytree(dagger_benchmark_src_dir, dagger_benchmark_result_dir)
+    for key, value in structure.items():
+        module = key.replace(" ", "")
+        module_name = module.lower()
+        activity_names = list(map(lambda i: i.replace(" ", ""), value))
+
+        generate_dagger_component(module, module_name, activity_names)
+        shutil.move(
+            os.path.join(dagger_component_generator_dir, "result", module_name),
+            os.path.join(dagger_benchmark_result_dir, module_name),
+        )
+        register_activities_definition(module, module_name, activity_names)
+
+    module_names = list(
+        map(lambda kv: kv[0].replace(" ", "").lower(), structure.items())
+    )
+    submodules = dict(
+        map(
+            lambda kv: (kv[0].replace(" ", ""), kv[0].replace(" ", "").lower()),
+            structure.items(),
+        )
+    )
+    add_gradle_submodules(module_names)
+    register_dagger_submodules(submodules)
+
+
+def generate_random_names(count: int) -> set[str]:
+    starting_length = 4
+    result = set()
+    while len(result) < count:
+        random_string = "".join(
+            random.choices(string.ascii_lowercase, k=starting_length)
+        ).capitalize()
+        if random_string in result:
+            starting_length += 1
+        else:
+            result.add(random_string)
+
+    return result
+
+
+modules = generate_random_names(100)
+structure = dict(map(lambda i: (i, list(generate_random_names(100))), modules))
+generate_dagger_benchmark(structure)

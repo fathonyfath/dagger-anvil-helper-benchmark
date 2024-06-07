@@ -40,8 +40,8 @@ def register_activity_components(
     module_path = get_module_file_path(module, module_name)
     result = list(
         map(
-            lambda i: "        {activity_name}Component::class,".format(
-                activity_name=i
+            lambda i: "        {module}{activity_name}Component::class,".format(
+                module=module, activity_name=i
             ),
             activity_names,
         )
@@ -59,7 +59,7 @@ def provide_page_for_activities(
     module_path = get_module_file_path(module, module_name)
 
     def create_provider(module: str, activity_name: str) -> str:
-        return '        @Provides\n        @IntoSet\n        @Named("{module}")\n        fun provide{module}{activity_name}Page(builder: {activity_name}.Builder): Page {{\n            return Page("{activity_name}", builder)\n        }}'.format(
+        return '        @Provides\n        @IntoSet\n        @Named("{module}")\n        fun provide{module}{activity_name}Page(builder: {module}{activity_name}.Builder): Page {{\n            return Page("{activity_name}", builder)\n        }}'.format(
             module=module,
             activity_name=activity_name,
         )
@@ -72,12 +72,12 @@ def provide_page_for_activities(
     )
 
 
-def update_manifest(module_name: str, activity_names: list[str]):
+def update_manifest(module: str, module_name: str, activity_names: list[str]):
     manifest_path = get_manifest_file_path(module_name)
     result = list(
         map(
-            lambda i: '        <activity android:name=".{activity_name}" />'.format(
-                activity_name=i
+            lambda i: '        <activity android:name=".{module}{activity_name}" />'.format(
+                module=module, activity_name=i
             ),
             activity_names,
         )
@@ -95,4 +95,4 @@ def modify(module: str, module_name: str, activity_names: list[str]):
     )
     register_activity_components(module, module_name, activity_names)
     provide_page_for_activities(module, module_name, activity_names)
-    update_manifest(module_name, activity_names)
+    update_manifest(module, module_name, activity_names)
