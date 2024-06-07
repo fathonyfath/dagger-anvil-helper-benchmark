@@ -1,11 +1,12 @@
 {
+    "module": "Component",
     "package_name": "component",
     "activity_name": "Page",
     "__full_activity_name": "{{ cookiecutter.activity_name }}Activity",
     "__full_activity_component_name": "{{ cookiecutter.__full_activity_name }}Component",
     "__full_activity_component_factory_name": "{{ cookiecutter.__full_activity_name }}ComponentFactory",
     "__full_package_name": "dev.fathony.anvilhelper.{{ cookiecutter.package_name }}",
-    "__activity_component_factory_create_function_name": "create{{ cookiecutter.__full_activity_component_name }}", 
+    "__activity_component_factory_create_function_name": "create{{ cookiecutter.module }}{{ cookiecutter.__full_activity_component_name }}", 
     "__activity_layout_name": "activity_{{ cookiecutter.activity_name|lower|replace(' ', '_') }}",
     "__full_activity_layout_name": "R.layout.{{ cookiecutter.__activity_layout_name }}"
 }
