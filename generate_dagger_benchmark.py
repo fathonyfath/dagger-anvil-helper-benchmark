@@ -209,6 +209,6 @@ def generate_random_names(count: int) -> set[str]:
     return result
 
 
-modules = generate_random_names(50)
-structure = dict(map(lambda i: (i, list(generate_random_names(10))), modules))
+modules = generate_random_names(1)
+structure = dict(map(lambda i: (i, list(generate_random_names(1))), modules))
 generate_dagger_benchmark(structure)

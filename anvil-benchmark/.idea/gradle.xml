@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <compositeConfiguration>
+          <compositeBuild compositeDefinitionSource="SCRIPT">
+            <builds>
+              <build path="$PROJECT_DIR$/gradle/anvil-helper" name="anvil-helper">
+                <projects>
+                  <project path="$PROJECT_DIR$/gradle/anvil-helper" />
+                  <project path="$PROJECT_DIR$/gradle/anvil-helper/api" />
+                  <project path="$PROJECT_DIR$/gradle/anvil-helper/processor" />
+                </projects>
+              </build>
+              <build path="$PROJECT_DIR$/gradle/meta-plugins" name="meta-plugins">
+                <projects>
+                  <project path="$PROJECT_DIR$/gradle/meta-plugins" />
+                  <project path="$PROJECT_DIR$/gradle/meta-plugins/settings-plugins" />
+                </projects>
+              </build>
+              <build path="$PROJECT_DIR$/gradle/plugins" name="plugins">
+                <projects>
+                  <project path="$PROJECT_DIR$/gradle/plugins" />
+                  <project path="$PROJECT_DIR$/gradle/plugins/android-plugins" />
+                  <project path="$PROJECT_DIR$/gradle/plugins/dagger-plugins" />
+                </projects>
+              </build>
+            </builds>
+          </compositeBuild>
+        </compositeConfiguration>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="jbr-17" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/base" />
+            <option value="$PROJECT_DIR$/common" />
+            <option value="$PROJECT_DIR$/foobar" />
+            <option value="$PROJECT_DIR$/gradle/anvil-helper" />
+            <option value="$PROJECT_DIR$/gradle/anvil-helper/api" />
+            <option value="$PROJECT_DIR$/gradle/anvil-helper/processor" />
+            <option value="$PROJECT_DIR$/gradle/meta-plugins" />
+            <option value="$PROJECT_DIR$/gradle/meta-plugins/settings-plugins" />
+            <option value="$PROJECT_DIR$/gradle/plugins" />
+            <option value="$PROJECT_DIR$/gradle/plugins/android-plugins" />
+            <option value="$PROJECT_DIR$/gradle/plugins/dagger-plugins" />
+          </set>
+        </option>
+        <option name="resolveExternalAnnotations" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
