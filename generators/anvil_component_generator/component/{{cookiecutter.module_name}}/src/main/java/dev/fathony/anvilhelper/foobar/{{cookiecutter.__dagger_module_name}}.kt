@@ -28,11 +28,7 @@ interface FooBarModule {
             )
         }
 
-        @Provides
-        @IntoSet
-        @Named("FooBar")
-        fun providePageActivityPage(builder: PageActivity.Builder): Page {
-            return Page("PageActivity", builder)
-        }
+        // region Provide page for each activity
+        // endregion
     }
 }

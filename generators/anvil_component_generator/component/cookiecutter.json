@@ -1,0 +1,7 @@
+{
+    "module": "Component", 
+    "module_name": "component", 
+    "__package_name": "{{ cookiecutter.module_name }}", 
+    "__dagger_module_name": "{{ cookiecutter.module|replace(' ', '') }}Module", 
+    "__full_package_name": "dev.fathony.anvilhelper.{{ cookiecutter.__package_name }}"
+}
