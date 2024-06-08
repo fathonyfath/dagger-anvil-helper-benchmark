@@ -1,4 +1,4 @@
-package dev.fathony.anvilhelper.foobar
+package {{ cookiecutter.__full_package_name }}
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -19,8 +19,8 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 @ActivityScope
-@DefineEntryPoint(PageActivityScope::class, ApplicationScope::class)
-class PageActivity : AppCompatActivity() {
+@DefineEntryPoint({{ cookiecutter.__full_activity_scope_name }}::class, ApplicationScope::class)
+class {{ cookiecutter.__full_activity_name }} : AppCompatActivity() {
 
     @Inject
     lateinit var numberProvider: NumberProvider
@@ -29,7 +29,7 @@ class PageActivity : AppCompatActivity() {
         AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_page)
+        setContentView({{ cookiecutter.__full_activity_layout_name }})
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.root)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -43,7 +43,7 @@ class PageActivity : AppCompatActivity() {
     @Singleton
     class Builder @Inject constructor() : IntentBuilder() {
         override fun create(context: Context): Intent {
-            return Intent(context, PageActivity::class.java)
+            return Intent(context, {{ cookiecutter.__full_activity_name }}::class.java)
         }
 
     }

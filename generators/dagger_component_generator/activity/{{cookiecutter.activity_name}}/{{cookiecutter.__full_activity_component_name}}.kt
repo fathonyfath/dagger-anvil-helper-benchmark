@@ -1,4 +1,4 @@
-package {{cookiecutter.__full_package_name}}
+package {{ cookiecutter.__full_package_name }}
 
 import dagger.BindsInstance
 import dagger.Subcomponent

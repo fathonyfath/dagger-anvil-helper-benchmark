@@ -1,4 +1,4 @@
-package {{cookiecutter.__full_package_name}}
+package {{ cookiecutter.__full_package_name }}
 
 import dagger.Module
 import dagger.Provides
@@ -17,18 +17,18 @@ import javax.inject.Named
         // endregion
     ]
 )
-interface {{cookiecutter.__dagger_module_name}} {
+interface {{ cookiecutter.__dagger_module_name }} {
 
     @Multibinds
-    @Named("{{cookiecutter.module}}")
+    @Named("{{ cookiecutter.module }}")
     fun pages(): Set<Page>
 
     companion object {
         @Provides
         @IntoSet
-        fun providePageGroup(@Named("{{cookiecutter.module}}") pages: Set<Page>): PageGroup {
+        fun providePageGroup(@Named("{{ cookiecutter.module }}") pages: Set<Page>): PageGroup {
             return PageGroup(
-                name = "{{cookiecutter.module}}",
+                name = "{{ cookiecutter.module }}",
                 pages = pages.sortedBy { it.name },
             )
         }

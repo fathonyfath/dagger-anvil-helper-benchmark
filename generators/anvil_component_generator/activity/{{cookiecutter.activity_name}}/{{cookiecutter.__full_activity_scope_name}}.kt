@@ -1,3 +1,3 @@
-package dev.fathony.anvilhelper.foobar
+package {{ cookiecutter.__full_package_name }}
 
-abstract class PageActivityScope private constructor()
+abstract class {{ cookiecutter.__full_activity_scope_name }} private constructor()

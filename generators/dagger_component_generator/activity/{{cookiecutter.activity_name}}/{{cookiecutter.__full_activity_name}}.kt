@@ -1,4 +1,4 @@
-package {{cookiecutter.__full_package_name}}
+package {{ cookiecutter.__full_package_name }}
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -17,11 +17,11 @@ import dev.fathony.anvilhelper.common.NumberProvider
 import javax.inject.Inject
 import javax.inject.Singleton
 
-class {{cookiecutter.__full_activity_name}} : AppCompatActivity(), DaggerComponentOwner {
+class {{ cookiecutter.__full_activity_name }} : AppCompatActivity(), DaggerComponentOwner {
 
-    override val component: DaggerComponent<{{cookiecutter.__full_activity_name}}>
-            by applicationComponent { component: {{cookiecutter.__full_activity_component_factory_name}} ->
-                component.{{cookiecutter.__activity_component_factory_create_function_name}}(this)
+    override val component: DaggerComponent<{{ cookiecutter.__full_activity_name }}>
+            by applicationComponent { component: {{ cookiecutter.__full_activity_component_factory_name}} ->
+                component.{{ cookiecutter.__activity_component_factory_create_function_name}}(this)
             }
 
     @Inject
