@@ -1,4 +1,4 @@
-package dev.fathony.anvilhelper.dagger
+package dev.fathony.anvilhelper.anvil
 
 import android.content.Intent
 import android.os.Bundle
@@ -12,8 +12,8 @@ import dev.fathony.anvilhelper.base.anvil.ApplicationScope
 import dev.fathony.anvilhelper.base.dagger.AndroidInjection
 import dev.fathony.anvilhelper.base.dagger.scope.ActivityScope
 import dev.fathony.anvilhelper.base.page.PageGroup
-import dev.fathony.anvilhelper.dagger.databinding.ActivityMainBinding
-import dev.fathony.anvilhelper.dagger.di.MainActivityScope
+import dev.fathony.anvilhelper.anvil.databinding.ActivityMainBinding
+import dev.fathony.anvilhelper.anvil.di.MainActivityScope
 import javax.inject.Inject
 
 @ActivityScope

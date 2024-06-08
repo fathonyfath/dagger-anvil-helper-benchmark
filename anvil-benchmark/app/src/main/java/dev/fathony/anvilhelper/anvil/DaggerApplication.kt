@@ -1,10 +1,10 @@
-package dev.fathony.anvilhelper.dagger
+package dev.fathony.anvilhelper.anvil
 
 import android.app.Application
 import dev.fathony.anvil.helper.api.DispatchingInjector
 import dev.fathony.anvil.helper.api.HasInjector
-import dev.fathony.anvilhelper.dagger.di.ApplicationComponent
-import dev.fathony.anvilhelper.dagger.di.DaggerApplicationComponent
+import dev.fathony.anvilhelper.anvil.di.ApplicationComponent
+import dev.fathony.anvilhelper.anvil.di.DaggerApplicationComponent
 import javax.inject.Inject
 
 class DaggerApplication : Application(), HasInjector {

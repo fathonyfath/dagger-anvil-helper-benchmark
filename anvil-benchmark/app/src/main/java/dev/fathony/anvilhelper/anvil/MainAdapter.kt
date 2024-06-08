@@ -1,11 +1,11 @@
-package dev.fathony.anvilhelper.dagger
+package dev.fathony.anvilhelper.anvil
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import dev.fathony.anvilhelper.dagger.databinding.ItemGroupBinding
-import dev.fathony.anvilhelper.dagger.databinding.ItemPageBinding
+import dev.fathony.anvilhelper.anvil.databinding.ItemGroupBinding
+import dev.fathony.anvilhelper.anvil.databinding.ItemPageBinding
 
 class MainAdapter(
     private val context: Context,

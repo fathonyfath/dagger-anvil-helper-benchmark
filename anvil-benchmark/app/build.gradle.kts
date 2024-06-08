@@ -6,10 +6,10 @@ plugins {
 }
 
 android {
-    namespace = "dev.fathony.anvilhelper.dagger"
+    namespace = "dev.fathony.anvilhelper.anvil"
 
     defaultConfig {
-        applicationId = "dev.fathony.anvilhelper.dagger"
+        applicationId = "dev.fathony.anvilhelper.anvil"
         versionCode = 1
         versionName = "1.0"
     }

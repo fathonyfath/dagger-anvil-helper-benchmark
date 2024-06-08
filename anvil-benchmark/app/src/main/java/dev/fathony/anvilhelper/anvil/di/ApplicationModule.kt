@@ -1,4 +1,4 @@
-package dev.fathony.anvilhelper.dagger.di
+package dev.fathony.anvilhelper.anvil.di
 
 import dagger.Module
 import dagger.multibindings.Multibinds

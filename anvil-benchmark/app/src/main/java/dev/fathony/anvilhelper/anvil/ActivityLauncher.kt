@@ -1,4 +1,4 @@
-package dev.fathony.anvilhelper.dagger
+package dev.fathony.anvilhelper.anvil
 
 import android.content.Intent
 

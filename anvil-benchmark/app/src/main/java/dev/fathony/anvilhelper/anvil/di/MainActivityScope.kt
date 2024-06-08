@@ -1,3 +1,3 @@
-package dev.fathony.anvilhelper.dagger.di
+package dev.fathony.anvilhelper.anvil.di
 
 abstract class MainActivityScope private constructor()

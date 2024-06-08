@@ -1,4 +1,4 @@
-package dev.fathony.anvilhelper.dagger
+package dev.fathony.anvilhelper.anvil
 
 import dev.fathony.anvilhelper.base.page.Page
 import dev.fathony.anvilhelper.base.page.PageGroup
