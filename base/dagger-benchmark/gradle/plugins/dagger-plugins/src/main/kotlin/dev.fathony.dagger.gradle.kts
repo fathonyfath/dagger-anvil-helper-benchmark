@@ -2,7 +2,7 @@ plugins {
     kotlin("kapt")
 }
 
-val libs = the<VersionCatalogsExtension>().named("libs")
+val libs: VersionCatalog = the<VersionCatalogsExtension>().named("libs")
 
 dependencies {
     "implementation"(libs.findLibrary("dagger.runtime").get())

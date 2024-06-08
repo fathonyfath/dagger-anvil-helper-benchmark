@@ -36,6 +36,5 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     // region Subproject modules
-    implementation(project(":foobar"))
     // endregion
 }
