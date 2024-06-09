@@ -1,4 +1,4 @@
-package dev.fathony.anvilhelper.foobar
+package {{ cookiecutter.__full_package_name }}
 
 import com.squareup.anvil.annotations.ContributesTo
 import dagger.Module
