@@ -4,6 +4,35 @@ from generators.dagger_component_generator.generate import generate
 from generators.dagger_component_generator.modify import modify, appends_after_match
 import random
 import string
+import argparse
+
+
+parser = argparse.ArgumentParser(description="Generate the Dagger Benchmark")
+parser.add_argument(
+    "-m",
+    "--module",
+    help="Number of modules that will be generated",
+    required=False,
+    default=1,
+)
+parser.add_argument(
+    "-a",
+    "--activity",
+    help="Number of activities that will be generated for each module",
+    required=False,
+    default=1,
+)
+parser.add_argument(
+    "-o",
+    "--output",
+    help="The name of the folder that will be the output of this command",
+    required=False,
+    default="dagger-benchmark",
+)
+args = parser.parse_args()
+module_count = int(args.module)
+activity_count = int(args.activity)
+output_folder_name = args.output
 
 
 def get_normalized_working_dir() -> str:
@@ -19,7 +48,7 @@ dagger_component_generator_dir = os.path.join(
 )
 
 result_dir = os.path.join(get_normalized_working_dir(), "result")
-dagger_benchmark_result_dir = os.path.join(result_dir, "dagger-benchmark")
+dagger_benchmark_result_dir = os.path.join(result_dir, output_folder_name)
 
 
 def add_gradle_submodules(module_names: list[str]):
@@ -209,6 +238,8 @@ def generate_random_names(count: int) -> set[str]:
     return result
 
 
-modules = generate_random_names(1)
-structure = dict(map(lambda i: (i, list(generate_random_names(1))), modules))
+modules = generate_random_names(module_count)
+structure = dict(
+    map(lambda i: (i, list(generate_random_names(activity_count))), modules)
+)
 generate_dagger_benchmark(structure)
