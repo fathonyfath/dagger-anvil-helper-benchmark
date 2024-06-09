@@ -76,5 +76,3 @@ def modify(module: str, module_name: str, activity_names: list[str]):
     )
     provide_page_for_activities(module, module_name, activity_names)
     update_manifest(module, module_name, activity_names)
-
-modify("FooBar", "foobar", ["Page"])
