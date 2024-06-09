@@ -1,5 +1,6 @@
 plugins {
     id("dev.fathony.android-library")
+    id("dev.fathony.dagger")
 }
 
 android {
