@@ -1,0 +1,16 @@
+scenario,clean_build_without_cache
+version,Gradle 8.7
+tasks,clean :app:assembleDebug
+value,total execution time
+warm-up build #1,28499.96
+warm-up build #2,9867.91
+measured build #1,8174.98
+measured build #2,8045.15
+measured build #3,7893.74
+measured build #4,7450.24
+measured build #5,7002.15
+measured build #6,6795.10
+measured build #7,7223.41
+measured build #8,6658.21
+measured build #9,6659.67
+measured build #10,6168.04

@@ -1,29 +1,19 @@
 import os
 
 dagger_folders = [
-    "dagger-1-10", 
-    "dagger-2-10",
-    "dagger-3-10",
-    "dagger-4-10",
-    "dagger-5-10",
-    "dagger-6-10",
-    "dagger-7-10",
-    "dagger-8-10",
-    "dagger-9-10",
+    "dagger-5-10", 
     "dagger-10-10",
+    "dagger-15-15",
+    "dagger-20-20",
+    "dagger-25-25",
 ]
 
 anvil_folders = [
-    "anvil-1-10", 
-    "anvil-2-10",
-    "anvil-3-10",
-    "anvil-4-10",
-    "anvil-5-10",
-    "anvil-6-10",
-    "anvil-7-10",
-    "anvil-8-10",
-    "anvil-9-10",
+    "anvil-5-10", 
     "anvil-10-10",
+    "anvil-15-15",
+    "anvil-20-20",
+    "anvil-25-25",
 ]
 
 def get_normalized_working_dir() -> str:
@@ -40,8 +30,8 @@ def benchmark(project_dir: str, output_dir: str):
         output_dir=os.path.join(benchmark_result_dir, output_dir),
     ))
 
-for dagger in dagger_folders:
-    benchmark(dagger, dagger)
-
 for anvil in anvil_folders:
     benchmark(anvil, anvil)
+
+for dagger in dagger_folders:
+    benchmark(dagger, dagger)

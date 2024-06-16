@@ -1,0 +1,3275 @@
+
+* Started at 2024-06-16T11:51:35.062937Z
+
+* Settings
+Project dir: /Users/fathony.irawan/Projects/dagger-anvil-helper-benchmark/result/dagger-5-10
+Output dir: /Users/fathony.irawan/Projects/dagger-anvil-helper-benchmark/benchmark/dagger-5-10
+Profiler: none
+Benchmark: true
+Versions: []
+Gradle User Home: /Users/fathony.irawan/Projects/dagger-anvil-helper-benchmark/gradle-user-home
+Targets: []
+Warm-ups: 2
+
+* Inspecting the build using its default Gradle version
+Calculating task graph as configuration cache cannot be reused because content of 1st init script, '../../../../../../private/var/folders/9_/0cyx21d92vjchzgm1k55b5rh0000gq/T/gradle-profiler10304978468537164803.gradle', has changed.
+> Task :meta-plugins:settings-plugins:checkKotlinGradlePluginConfigurationErrors
+> Task :meta-plugins:settings-plugins:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :meta-plugins:settings-plugins:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :meta-plugins:settings-plugins:compilePluginsBlocks UP-TO-DATE
+> Task :meta-plugins:settings-plugins:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :meta-plugins:settings-plugins:generateScriptPluginAdapters UP-TO-DATE
+> Task :meta-plugins:settings-plugins:compileKotlin UP-TO-DATE
+> Task :meta-plugins:settings-plugins:compileJava NO-SOURCE
+> Task :meta-plugins:settings-plugins:pluginDescriptors UP-TO-DATE
+> Task :meta-plugins:settings-plugins:processResources UP-TO-DATE
+> Task :meta-plugins:settings-plugins:classes UP-TO-DATE
+> Task :meta-plugins:settings-plugins:jar UP-TO-DATE
+> Task :plugins:android-plugins:checkKotlinGradlePluginConfigurationErrors
+> Task :plugins:android-plugins:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :plugins:android-plugins:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :plugins:android-plugins:compilePluginsBlocks UP-TO-DATE
+> Task :plugins:android-plugins:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :plugins:android-plugins:generateScriptPluginAdapters UP-TO-DATE
+> Task :plugins:android-plugins:compileKotlin UP-TO-DATE
+> Task :plugins:android-plugins:compileJava NO-SOURCE
+> Task :plugins:android-plugins:pluginDescriptors UP-TO-DATE
+> Task :plugins:android-plugins:processResources UP-TO-DATE
+> Task :plugins:android-plugins:classes UP-TO-DATE
+> Task :plugins:android-plugins:jar UP-TO-DATE
+> Task :plugins:dagger-plugins:checkKotlinGradlePluginConfigurationErrors
+> Task :plugins:dagger-plugins:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :plugins:dagger-plugins:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :plugins:dagger-plugins:compilePluginsBlocks UP-TO-DATE
+> Task :plugins:dagger-plugins:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :plugins:dagger-plugins:generateScriptPluginAdapters UP-TO-DATE
+> Task :plugins:dagger-plugins:compileKotlin UP-TO-DATE
+> Task :plugins:dagger-plugins:compileJava NO-SOURCE
+> Task :plugins:dagger-plugins:pluginDescriptors UP-TO-DATE
+> Task :plugins:dagger-plugins:processResources UP-TO-DATE
+> Task :plugins:dagger-plugins:classes UP-TO-DATE
+> Task :plugins:dagger-plugins:jar UP-TO-DATE
+
+> Task :help
+
+Welcome to Gradle 8.7.
+
+To run a build, run gradle <task> ...
+
+To see a list of available tasks, run gradle tasks
+
+To see more detail about a task, run gradle help --task <task>
+
+To see a list of command-line options, run gradle --help
+
+For more detail on using Gradle, see https://docs.gradle.org/8.7/userguide/command_line_interface.html
+
+For troubleshooting, visit https://help.gradle.org
+
+BUILD SUCCESSFUL in 8s
+31 actionable tasks: 4 executed, 27 up-to-date
+Configuration cache entry stored.
+
+* Stopping daemons
+Running command /Users/fathony.irawan/Projects/dagger-anvil-helper-benchmark/gradle-user-home/wrapper/dists/gradle-8.7-bin/bhs2wmbdwecv87pi65oeuq5iu/gradle-8.7/bin/gradle --stop --gradle-user-home /Users/fathony.irawan/Projects/dagger-anvil-helper-benchmark/gradle-user-home
+Stopping Daemon(s)
+1 Daemon stopped
+
+* Scenarios
+Scenario: clean_build_without_cache using Gradle 8.7
+  Gradle 8.7 (/Users/fathony.irawan/Projects/dagger-anvil-helper-benchmark/gradle-user-home/wrapper/dists/gradle-8.7-bin/bhs2wmbdwecv87pi65oeuq5iu/gradle-8.7)
+  Run using: Tooling API
+  Run: run tasks clean :app:assembleDebug
+  Cleanup: do nothing
+  Gradle args: [--no-build-cache]
+  Build changes: []
+  Warm-ups: 2
+  Builds: 10
+
+* Running scenario clean_build_without_cache using Gradle 8.7 (scenario 1/1)
+
+* Stopping daemons
+Running command /Users/fathony.irawan/Projects/dagger-anvil-helper-benchmark/gradle-user-home/wrapper/dists/gradle-8.7-bin/bhs2wmbdwecv87pi65oeuq5iu/gradle-8.7/bin/gradle --stop --gradle-user-home /Users/fathony.irawan/Projects/dagger-anvil-helper-benchmark/gradle-user-home
+No Gradle daemons are running.
+
+* Build details
+Gradle version: Gradle 8.7
+Java home: /Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+OS: mac os x aarch64 14.5
+JVM args:
+  --add-opens=java.base/java.util=ALL-UNNAMED
+  --add-opens=java.base/java.lang=ALL-UNNAMED
+  --add-opens=java.base/java.lang.invoke=ALL-UNNAMED
+  --add-opens=java.prefs/java.util.prefs=ALL-UNNAMED
+  --add-opens=java.base/java.nio.charset=ALL-UNNAMED
+  --add-opens=java.base/java.net=ALL-UNNAMED
+  --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED
+  -Xmx2048m
+  -Dfile.encoding=UTF-8
+  -Duser.country=JP
+  -Duser.language=en
+  -Duser.variant
+  -Dfile.encoding=UTF-8
+  -Dorg.gradle.profiler.scenario=clean_build_without_cache
+Gradle args:
+  --gradle-user-home
+  /Users/fathony.irawan/Projects/dagger-anvil-helper-benchmark/gradle-user-home
+  --no-build-cache
+  -I
+  /private/var/folders/9_/0cyx21d92vjchzgm1k55b5rh0000gq/T/gradleProfiler4443125093235304887.gradle
+
+* Running warm-up build #1
+Calculating task graph as configuration cache cannot be reused because content of 1st init script, '../../../../../../private/var/folders/9_/0cyx21d92vjchzgm1k55b5rh0000gq/T/gradleProfiler4443125093235304887.gradle', has changed.
+> Task :meta-plugins:settings-plugins:checkKotlinGradlePluginConfigurationErrors
+> Task :meta-plugins:settings-plugins:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :meta-plugins:settings-plugins:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :meta-plugins:settings-plugins:compilePluginsBlocks UP-TO-DATE
+> Task :meta-plugins:settings-plugins:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :meta-plugins:settings-plugins:generateScriptPluginAdapters UP-TO-DATE
+> Task :meta-plugins:settings-plugins:compileKotlin UP-TO-DATE
+> Task :meta-plugins:settings-plugins:compileJava NO-SOURCE
+> Task :meta-plugins:settings-plugins:pluginDescriptors UP-TO-DATE
+> Task :meta-plugins:settings-plugins:processResources UP-TO-DATE
+> Task :meta-plugins:settings-plugins:classes UP-TO-DATE
+> Task :meta-plugins:settings-plugins:jar UP-TO-DATE
+> Task :plugins:android-plugins:checkKotlinGradlePluginConfigurationErrors
+> Task :plugins:android-plugins:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :plugins:android-plugins:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :plugins:android-plugins:compilePluginsBlocks UP-TO-DATE
+> Task :plugins:android-plugins:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :plugins:android-plugins:generateScriptPluginAdapters UP-TO-DATE
+> Task :plugins:android-plugins:compileKotlin UP-TO-DATE
+> Task :plugins:android-plugins:compileJava NO-SOURCE
+> Task :plugins:android-plugins:pluginDescriptors UP-TO-DATE
+> Task :plugins:android-plugins:processResources UP-TO-DATE
+> Task :plugins:android-plugins:classes UP-TO-DATE
+> Task :plugins:android-plugins:jar UP-TO-DATE
+> Task :plugins:dagger-plugins:checkKotlinGradlePluginConfigurationErrors
+> Task :plugins:dagger-plugins:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :plugins:dagger-plugins:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :plugins:dagger-plugins:compilePluginsBlocks UP-TO-DATE
+> Task :plugins:dagger-plugins:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :plugins:dagger-plugins:generateScriptPluginAdapters UP-TO-DATE
+> Task :plugins:dagger-plugins:compileKotlin UP-TO-DATE
+> Task :plugins:dagger-plugins:compileJava NO-SOURCE
+> Task :plugins:dagger-plugins:pluginDescriptors UP-TO-DATE
+> Task :plugins:dagger-plugins:processResources UP-TO-DATE
+> Task :plugins:dagger-plugins:classes UP-TO-DATE
+> Task :plugins:dagger-plugins:jar UP-TO-DATE
+> Task :app:preBuild UP-TO-DATE
+> Task :app:checkKotlinGradlePluginConfigurationErrors
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :base:preBuild UP-TO-DATE
+> Task :base:preDebugBuild UP-TO-DATE
+> Task :common:preBuild UP-TO-DATE
+> Task :common:preDebugBuild UP-TO-DATE
+> Task :dqag:preBuild UP-TO-DATE
+> Task :eeit:preBuild UP-TO-DATE
+> Task :dqag:preDebugBuild UP-TO-DATE
+> Task :oxcv:preBuild UP-TO-DATE
+> Task :oxcv:preDebugBuild UP-TO-DATE
+> Task :eeit:preDebugBuild UP-TO-DATE
+> Task :siub:preBuild UP-TO-DATE
+> Task :siub:preDebugBuild UP-TO-DATE
+> Task :yjfw:preBuild UP-TO-DATE
+> Task :yjfw:preDebugBuild UP-TO-DATE
+> Task :base:checkKotlinGradlePluginConfigurationErrors
+> Task :common:checkKotlinGradlePluginConfigurationErrors
+> Task :dqag:checkKotlinGradlePluginConfigurationErrors
+> Task :eeit:checkKotlinGradlePluginConfigurationErrors
+> Task :oxcv:checkKotlinGradlePluginConfigurationErrors
+> Task :siub:checkKotlinGradlePluginConfigurationErrors
+> Task :yjfw:checkKotlinGradlePluginConfigurationErrors
+> Task :common:clean
+> Task :base:clean
+> Task :common:generateDebugResValues
+> Task :base:generateDebugResValues
+> Task :common:generateDebugResources
+> Task :base:generateDebugResources
+> Task :siub:clean
+> Task :eeit:clean
+> Task :oxcv:clean
+> Task :siub:generateDebugResValues
+> Task :eeit:generateDebugResValues
+> Task :dqag:clean
+> Task :oxcv:generateDebugResValues
+> Task :yjfw:clean
+> Task :dqag:generateDebugResValues
+> Task :yjfw:generateDebugResValues
+> Task :eeit:generateDebugResources
+> Task :siub:generateDebugResources
+> Task :oxcv:generateDebugResources
+> Task :dqag:generateDebugResources
+> Task :yjfw:generateDebugResources
+> Task :common:packageDebugResources
+> Task :base:packageDebugResources
+> Task :common:writeDebugAarMetadata
+> Task :base:writeDebugAarMetadata
+> Task :dqag:writeDebugAarMetadata
+> Task :eeit:writeDebugAarMetadata
+> Task :oxcv:writeDebugAarMetadata
+> Task :siub:writeDebugAarMetadata
+> Task :eeit:packageDebugResources
+> Task :yjfw:packageDebugResources
+> Task :siub:packageDebugResources
+> Task :dqag:packageDebugResources
+> Task :yjfw:writeDebugAarMetadata
+> Task :oxcv:packageDebugResources
+> Task :base:extractDeepLinksDebug
+> Task :common:extractDeepLinksDebug
+> Task :base:parseDebugLocalResources
+> Task :common:parseDebugLocalResources
+> Task :oxcv:parseDebugLocalResources
+> Task :eeit:parseDebugLocalResources
+> Task :dqag:parseDebugLocalResources
+> Task :siub:parseDebugLocalResources
+> Task :yjfw:parseDebugLocalResources
+> Task :common:processDebugManifest
+> Task :base:processDebugManifest
+> Task :dqag:extractDeepLinksDebug
+> Task :eeit:extractDeepLinksDebug
+> Task :app:clean
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :dqag:processDebugManifest
+> Task :eeit:processDebugManifest
+> Task :app:generateDebugResValues
+> Task :yjfw:generateDebugRFile
+> Task :app:generateDebugResources
+> Task :siub:generateDebugRFile
+> Task :base:generateDebugRFile
+> Task :app:createDebugCompatibleScreenManifests
+> Task :common:generateDebugRFile
+> Task :app:extractDeepLinksDebug
+> Task :oxcv:extractDeepLinksDebug
+> Task :dqag:generateDebugRFile
+> Task :siub:extractDeepLinksDebug
+> Task :eeit:generateDebugRFile
+> Task :yjfw:extractDeepLinksDebug
+> Task :oxcv:generateDebugRFile
+> Task :siub:processDebugManifest
+> Task :common:compileDebugLibraryResources
+> Task :app:packageDebugResources
+> Task :app:parseDebugLocalResources
+> Task :oxcv:processDebugManifest
+> Task :base:compileDebugLibraryResources
+> Task :dqag:compileDebugLibraryResources
+> Task :yjfw:processDebugManifest
+> Task :oxcv:compileDebugLibraryResources
+> Task :eeit:compileDebugLibraryResources
+> Task :siub:compileDebugLibraryResources
+> Task :yjfw:compileDebugLibraryResources
+> Task :dqag:javaPreCompileDebug
+> Task :common:javaPreCompileDebug
+> Task :eeit:javaPreCompileDebug
+> Task :base:javaPreCompileDebug
+> Task :oxcv:javaPreCompileDebug
+> Task :siub:javaPreCompileDebug
+> Task :yjfw:javaPreCompileDebug
+> Task :app:javaPreCompileDebug
+> Task :base:mergeDebugShaders
+> Task :app:mergeDebugShaders
+> Task :base:compileDebugShaders NO-SOURCE
+> Task :base:generateDebugAssets UP-TO-DATE
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :dqag:mergeDebugShaders
+> Task :base:packageDebugAssets
+> Task :dqag:compileDebugShaders NO-SOURCE
+> Task :dqag:generateDebugAssets UP-TO-DATE
+> Task :common:mergeDebugShaders
+> Task :common:compileDebugShaders NO-SOURCE
+> Task :common:generateDebugAssets UP-TO-DATE
+> Task :eeit:mergeDebugShaders
+> Task :eeit:compileDebugShaders NO-SOURCE
+> Task :eeit:generateDebugAssets UP-TO-DATE
+> Task :app:mapDebugSourceSetPaths
+> Task :oxcv:mergeDebugShaders
+> Task :dqag:packageDebugAssets
+> Task :oxcv:compileDebugShaders NO-SOURCE
+> Task :oxcv:generateDebugAssets UP-TO-DATE
+> Task :app:checkDebugAarMetadata
+> Task :siub:mergeDebugShaders
+> Task :siub:compileDebugShaders NO-SOURCE
+> Task :siub:generateDebugAssets UP-TO-DATE
+> Task :app:dataBindingMergeDependencyArtifactsDebug
+> Task :eeit:packageDebugAssets
+> Task :oxcv:packageDebugAssets
+> Task :siub:packageDebugAssets
+> Task :app:mergeDebugStartupProfile UP-TO-DATE
+> Task :common:packageDebugAssets
+> Task :yjfw:mergeDebugShaders
+> Task :yjfw:compileDebugShaders NO-SOURCE
+> Task :yjfw:generateDebugAssets UP-TO-DATE
+> Task :yjfw:packageDebugAssets
+> Task :app:desugarDebugFileDependencies
+> Task :app:mergeDebugJniLibFolders
+> Task :eeit:mergeDebugJniLibFolders
+> Task :common:mergeDebugJniLibFolders
+> Task :base:mergeDebugJniLibFolders
+> Task :dqag:mergeDebugJniLibFolders
+> Task :common:mergeDebugNativeLibs NO-SOURCE
+> Task :base:mergeDebugNativeLibs NO-SOURCE
+> Task :eeit:mergeDebugNativeLibs NO-SOURCE
+> Task :dqag:mergeDebugNativeLibs NO-SOURCE
+> Task :app:mergeDebugAssets
+> Task :dqag:copyDebugJniLibsProjectOnly
+> Task :eeit:copyDebugJniLibsProjectOnly
+> Task :base:copyDebugJniLibsProjectOnly
+> Task :common:copyDebugJniLibsProjectOnly
+> Task :siub:mergeDebugJniLibFolders
+> Task :app:compressDebugAssets
+> Task :oxcv:mergeDebugJniLibFolders
+> Task :yjfw:mergeDebugJniLibFolders
+> Task :app:checkDebugDuplicateClasses
+> Task :yjfw:mergeDebugNativeLibs NO-SOURCE
+> Task :app:writeDebugAppMetadata
+> Task :siub:mergeDebugNativeLibs NO-SOURCE
+> Task :oxcv:mergeDebugNativeLibs NO-SOURCE
+> Task :yjfw:copyDebugJniLibsProjectOnly
+> Task :oxcv:copyDebugJniLibsProjectOnly
+> Task :siub:copyDebugJniLibsProjectOnly
+> Task :app:writeDebugSigningConfigVersions
+> Task :app:processDebugMainManifest
+> Task :app:validateSigningDebug
+> Task :app:processDebugManifest
+> Task :app:mergeDebugNativeLibs NO-SOURCE
+> Task :app:stripDebugDebugSymbols NO-SOURCE
+> Task :app:processDebugManifestForPackage
+> Task :app:mergeDebugResources
+> Task :app:dataBindingGenBaseClassesDebug
+> Task :app:processDebugResources
+> Task :common:kaptGenerateStubsDebugKotlin
+> Task :base:kaptGenerateStubsDebugKotlin
+> Task :app:mergeExtDexDebug
+> Task :base:kaptDebugKotlin
+> Task :common:kaptDebugKotlin
+> Task :common:compileDebugKotlin
+> Task :common:processDebugJavaRes
+> Task :common:compileDebugJavaWithJavac
+> Task :common:bundleLibRuntimeToJarDebug
+> Task :common:bundleLibCompileToJarDebug
+> Task :base:compileDebugKotlin
+> Task :base:compileDebugJavaWithJavac NO-SOURCE
+> Task :base:processDebugJavaRes
+> Task :base:bundleLibRuntimeToJarDebug
+> Task :base:bundleLibCompileToJarDebug
+> Task :oxcv:kaptGenerateStubsDebugKotlin
+> Task :eeit:kaptGenerateStubsDebugKotlin
+> Task :dqag:kaptGenerateStubsDebugKotlin
+> Task :siub:kaptGenerateStubsDebugKotlin
+> Task :yjfw:kaptGenerateStubsDebugKotlin
+> Task :siub:kaptDebugKotlin
+> Task :eeit:kaptDebugKotlin
+> Task :yjfw:kaptDebugKotlin
+> Task :oxcv:kaptDebugKotlin
+> Task :dqag:kaptDebugKotlin
+> Task :yjfw:compileDebugKotlin
+> Task :yjfw:processDebugJavaRes
+> Task :siub:compileDebugKotlin
+> Task :siub:processDebugJavaRes
+> Task :dqag:compileDebugKotlin
+> Task :dqag:processDebugJavaRes
+> Task :eeit:compileDebugKotlin
+> Task :oxcv:compileDebugKotlin
+> Task :eeit:processDebugJavaRes
+> Task :oxcv:processDebugJavaRes
+> Task :yjfw:compileDebugJavaWithJavac
+> Task :siub:compileDebugJavaWithJavac
+> Task :yjfw:bundleLibCompileToJarDebug
+> Task :dqag:compileDebugJavaWithJavac
+> Task :yjfw:bundleLibRuntimeToJarDebug
+> Task :siub:bundleLibRuntimeToJarDebug
+> Task :siub:bundleLibCompileToJarDebug
+> Task :dqag:bundleLibRuntimeToJarDebug
+> Task :dqag:bundleLibCompileToJarDebug
+> Task :eeit:compileDebugJavaWithJavac
+> Task :oxcv:compileDebugJavaWithJavac
+> Task :oxcv:bundleLibRuntimeToJarDebug
+> Task :eeit:bundleLibRuntimeToJarDebug
+> Task :eeit:bundleLibCompileToJarDebug
+> Task :oxcv:bundleLibCompileToJarDebug
+> Task :app:mergeLibDexDebug
+> Task :app:kaptGenerateStubsDebugKotlin
+> Task :app:kaptDebugKotlin
+> Task :app:compileDebugKotlin
+> Task :app:processDebugJavaRes
+> Task :app:mergeDebugJavaResource
+> Task :app:compileDebugJavaWithJavac
+> Task :app:dexBuilderDebug
+> Task :app:mergeProjectDexDebug
+> Task :app:packageDebug
+> Task :app:assembleDebug
+> Task :app:createDebugApkListingFileRedirect
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.7/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 28s
+230 actionable tasks: 202 executed, 28 up-to-date
+Configuration cache entry stored.
+Used daemon with pid 7522
+Execution time 28499 ms
+
+* Running warm-up build #2
+Reusing configuration cache.
+> Task :app:preBuild UP-TO-DATE
+> Task :app:checkKotlinGradlePluginConfigurationErrors
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :base:preBuild UP-TO-DATE
+> Task :common:preBuild UP-TO-DATE
+> Task :common:preDebugBuild UP-TO-DATE
+> Task :dqag:preBuild UP-TO-DATE
+> Task :dqag:preDebugBuild UP-TO-DATE
+> Task :eeit:preBuild UP-TO-DATE
+> Task :base:preDebugBuild UP-TO-DATE
+> Task :eeit:preDebugBuild UP-TO-DATE
+> Task :oxcv:preBuild UP-TO-DATE
+> Task :siub:preBuild UP-TO-DATE
+> Task :oxcv:preDebugBuild UP-TO-DATE
+> Task :siub:preDebugBuild UP-TO-DATE
+> Task :yjfw:preBuild UP-TO-DATE
+> Task :yjfw:preDebugBuild UP-TO-DATE
+> Task :base:checkKotlinGradlePluginConfigurationErrors
+> Task :common:checkKotlinGradlePluginConfigurationErrors
+> Task :dqag:checkKotlinGradlePluginConfigurationErrors
+> Task :oxcv:checkKotlinGradlePluginConfigurationErrors
+> Task :eeit:checkKotlinGradlePluginConfigurationErrors
+> Task :siub:checkKotlinGradlePluginConfigurationErrors
+> Task :yjfw:checkKotlinGradlePluginConfigurationErrors
+> Task :base:clean
+> Task :common:clean
+> Task :base:generateDebugResValues
+> Task :common:generateDebugResValues
+> Task :common:writeDebugAarMetadata
+> Task :base:writeDebugAarMetadata
+> Task :common:generateDebugResources
+> Task :base:generateDebugResources
+> Task :base:extractDeepLinksDebug
+> Task :common:extractDeepLinksDebug
+> Task :base:processDebugManifest
+> Task :siub:clean
+> Task :eeit:clean
+> Task :siub:generateDebugResValues
+> Task :eeit:generateDebugResValues
+> Task :yjfw:clean
+> Task :siub:writeDebugAarMetadata
+> Task :base:packageDebugResources
+> Task :eeit:generateDebugResources
+> Task :siub:generateDebugResources
+> Task :yjfw:generateDebugResValues
+> Task :oxcv:clean
+> Task :eeit:writeDebugAarMetadata
+> Task :common:processDebugManifest
+> Task :oxcv:generateDebugResValues
+> Task :base:parseDebugLocalResources
+> Task :yjfw:writeDebugAarMetadata
+> Task :oxcv:generateDebugResources
+> Task :oxcv:writeDebugAarMetadata
+> Task :eeit:extractDeepLinksDebug
+> Task :dqag:clean
+> Task :oxcv:extractDeepLinksDebug
+> Task :common:packageDebugResources
+> Task :dqag:writeDebugAarMetadata
+> Task :dqag:generateDebugResValues
+> Task :yjfw:generateDebugResources
+> Task :base:generateDebugRFile
+> Task :siub:packageDebugResources
+> Task :eeit:processDebugManifest
+> Task :eeit:packageDebugResources
+> Task :oxcv:packageDebugResources
+> Task :dqag:extractDeepLinksDebug
+> Task :common:parseDebugLocalResources
+> Task :oxcv:processDebugManifest
+> Task :dqag:processDebugManifest
+> Task :siub:extractDeepLinksDebug
+> Task :yjfw:extractDeepLinksDebug
+> Task :dqag:generateDebugResources
+> Task :siub:parseDebugLocalResources
+> Task :eeit:parseDebugLocalResources
+> Task :common:generateDebugRFile
+> Task :siub:processDebugManifest
+> Task :base:compileDebugLibraryResources
+> Task :oxcv:parseDebugLocalResources
+> Task :yjfw:processDebugManifest
+> Task :common:compileDebugLibraryResources
+> Task :siub:generateDebugRFile
+> Task :eeit:compileDebugLibraryResources
+> Task :eeit:generateDebugRFile
+> Task :oxcv:generateDebugRFile
+> Task :oxcv:compileDebugLibraryResources
+> Task :siub:compileDebugLibraryResources
+> Task :base:javaPreCompileDebug
+> Task :dqag:packageDebugResources
+> Task :dqag:javaPreCompileDebug
+> Task :yjfw:packageDebugResources
+> Task :eeit:javaPreCompileDebug
+> Task :oxcv:javaPreCompileDebug
+> Task :dqag:parseDebugLocalResources
+> Task :common:javaPreCompileDebug
+> Task :siub:javaPreCompileDebug
+> Task :base:mergeDebugShaders
+> Task :common:mergeDebugShaders
+> Task :yjfw:parseDebugLocalResources
+> Task :base:compileDebugShaders NO-SOURCE
+> Task :common:compileDebugShaders NO-SOURCE
+> Task :base:generateDebugAssets UP-TO-DATE
+> Task :common:generateDebugAssets UP-TO-DATE
+> Task :dqag:generateDebugRFile
+> Task :yjfw:javaPreCompileDebug
+> Task :base:packageDebugAssets
+> Task :dqag:mergeDebugShaders
+> Task :common:packageDebugAssets
+> Task :yjfw:compileDebugLibraryResources
+> Task :dqag:compileDebugShaders NO-SOURCE
+> Task :dqag:generateDebugAssets UP-TO-DATE
+> Task :dqag:compileDebugLibraryResources
+> Task :eeit:mergeDebugShaders
+> Task :eeit:compileDebugShaders NO-SOURCE
+> Task :eeit:generateDebugAssets UP-TO-DATE
+> Task :yjfw:generateDebugRFile
+> Task :oxcv:mergeDebugShaders
+> Task :siub:mergeDebugShaders
+> Task :yjfw:mergeDebugShaders
+> Task :oxcv:compileDebugShaders NO-SOURCE
+> Task :oxcv:generateDebugAssets UP-TO-DATE
+> Task :siub:compileDebugShaders NO-SOURCE
+> Task :yjfw:compileDebugShaders NO-SOURCE
+> Task :yjfw:generateDebugAssets UP-TO-DATE
+> Task :siub:generateDebugAssets UP-TO-DATE
+> Task :dqag:packageDebugAssets
+> Task :base:mergeDebugJniLibFolders
+> Task :base:mergeDebugNativeLibs NO-SOURCE
+> Task :eeit:packageDebugAssets
+> Task :common:mergeDebugJniLibFolders
+> Task :common:mergeDebugNativeLibs NO-SOURCE
+> Task :oxcv:packageDebugAssets
+> Task :siub:packageDebugAssets
+> Task :dqag:mergeDebugJniLibFolders
+> Task :yjfw:packageDebugAssets
+> Task :dqag:mergeDebugNativeLibs NO-SOURCE
+> Task :base:copyDebugJniLibsProjectOnly
+> Task :eeit:mergeDebugJniLibFolders
+> Task :eeit:mergeDebugNativeLibs NO-SOURCE
+> Task :common:copyDebugJniLibsProjectOnly
+> Task :siub:mergeDebugJniLibFolders
+> Task :yjfw:mergeDebugJniLibFolders
+> Task :dqag:copyDebugJniLibsProjectOnly
+> Task :oxcv:mergeDebugJniLibFolders
+> Task :yjfw:mergeDebugNativeLibs NO-SOURCE
+> Task :siub:mergeDebugNativeLibs NO-SOURCE
+> Task :oxcv:mergeDebugNativeLibs NO-SOURCE
+> Task :eeit:copyDebugJniLibsProjectOnly
+> Task :siub:copyDebugJniLibsProjectOnly
+> Task :oxcv:copyDebugJniLibsProjectOnly
+> Task :yjfw:copyDebugJniLibsProjectOnly
+> Task :app:clean
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:generateDebugResValues
+> Task :app:extractDeepLinksDebug
+> Task :app:dataBindingMergeDependencyArtifactsDebug
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:mergeDebugShaders
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:desugarDebugFileDependencies
+> Task :app:mergeDebugStartupProfile UP-TO-DATE
+> Task :app:mergeDebugJniLibFolders
+> Task :app:generateDebugResources
+> Task :app:mergeDebugNativeLibs NO-SOURCE
+> Task :app:mapDebugSourceSetPaths
+> Task :app:stripDebugDebugSymbols NO-SOURCE
+> Task :app:mergeDebugAssets
+> Task :app:compressDebugAssets
+> Task :app:javaPreCompileDebug
+> Task :app:validateSigningDebug
+> Task :app:writeDebugAppMetadata
+> Task :app:writeDebugSigningConfigVersions
+> Task :app:checkDebugAarMetadata
+> Task :app:checkDebugDuplicateClasses
+> Task :app:packageDebugResources
+> Task :app:parseDebugLocalResources
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
+> Task :common:kaptGenerateStubsDebugKotlin
+> Task :base:kaptGenerateStubsDebugKotlin
+> Task :base:kaptDebugKotlin
+> Task :common:kaptDebugKotlin
+> Task :common:compileDebugKotlin
+> Task :base:compileDebugKotlin
+> Task :base:compileDebugJavaWithJavac NO-SOURCE
+> Task :common:processDebugJavaRes
+> Task :base:processDebugJavaRes
+> Task :base:bundleLibRuntimeToJarDebug
+> Task :base:bundleLibCompileToJarDebug
+> Task :common:compileDebugJavaWithJavac
+> Task :common:bundleLibRuntimeToJarDebug
+> Task :common:bundleLibCompileToJarDebug
+> Task :app:mergeDebugResources
+> Task :app:dataBindingGenBaseClassesDebug
+> Task :app:mergeExtDexDebug
+> Task :app:processDebugResources
+> Task :eeit:kaptGenerateStubsDebugKotlin
+> Task :oxcv:kaptGenerateStubsDebugKotlin
+> Task :siub:kaptGenerateStubsDebugKotlin
+> Task :dqag:kaptGenerateStubsDebugKotlin
+> Task :yjfw:kaptGenerateStubsDebugKotlin
+> Task :eeit:kaptDebugKotlin
+> Task :oxcv:kaptDebugKotlin
+> Task :siub:kaptDebugKotlin
+> Task :yjfw:kaptDebugKotlin
+> Task :dqag:kaptDebugKotlin
+> Task :eeit:compileDebugKotlin
+> Task :eeit:processDebugJavaRes
+> Task :siub:compileDebugKotlin
+> Task :siub:processDebugJavaRes
+> Task :oxcv:compileDebugKotlin
+> Task :oxcv:processDebugJavaRes
+> Task :dqag:compileDebugKotlin
+> Task :yjfw:compileDebugKotlin
+> Task :dqag:processDebugJavaRes
+> Task :yjfw:processDebugJavaRes
+> Task :eeit:compileDebugJavaWithJavac
+> Task :eeit:bundleLibRuntimeToJarDebug
+> Task :eeit:bundleLibCompileToJarDebug
+> Task :siub:compileDebugJavaWithJavac
+> Task :oxcv:compileDebugJavaWithJavac
+> Task :dqag:compileDebugJavaWithJavac
+> Task :siub:bundleLibRuntimeToJarDebug
+> Task :siub:bundleLibCompileToJarDebug
+> Task :yjfw:compileDebugJavaWithJavac
+> Task :oxcv:bundleLibRuntimeToJarDebug
+> Task :oxcv:bundleLibCompileToJarDebug
+> Task :dqag:bundleLibRuntimeToJarDebug
+> Task :dqag:bundleLibCompileToJarDebug
+> Task :yjfw:bundleLibRuntimeToJarDebug
+> Task :yjfw:bundleLibCompileToJarDebug
+> Task :app:mergeLibDexDebug
+> Task :app:kaptGenerateStubsDebugKotlin
+> Task :app:kaptDebugKotlin
+> Task :app:compileDebugKotlin
+> Task :app:processDebugJavaRes
+> Task :app:mergeDebugJavaResource
+> Task :app:compileDebugJavaWithJavac
+> Task :app:dexBuilderDebug
+> Task :app:mergeProjectDexDebug
+> Task :app:packageDebug
+> Task :app:assembleDebug
+> Task :app:createDebugApkListingFileRedirect
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.7/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 9s
+200 actionable tasks: 199 executed, 1 up-to-date
+Configuration cache entry reused.
+Used daemon with pid 7522
+Execution time 9867 ms
+
+* Using args for instrumented builds:
+
+* Running measured build #1
+Reusing configuration cache.
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :base:preBuild UP-TO-DATE
+> Task :base:preDebugBuild UP-TO-DATE
+> Task :common:preBuild UP-TO-DATE
+> Task :common:preDebugBuild UP-TO-DATE
+> Task :dqag:preBuild UP-TO-DATE
+> Task :dqag:preDebugBuild UP-TO-DATE
+> Task :eeit:preBuild UP-TO-DATE
+> Task :eeit:preDebugBuild UP-TO-DATE
+> Task :oxcv:preBuild UP-TO-DATE
+> Task :oxcv:preDebugBuild UP-TO-DATE
+> Task :siub:preBuild UP-TO-DATE
+> Task :siub:preDebugBuild UP-TO-DATE
+> Task :yjfw:preBuild UP-TO-DATE
+> Task :yjfw:preDebugBuild UP-TO-DATE
+> Task :app:checkKotlinGradlePluginConfigurationErrors
+> Task :base:checkKotlinGradlePluginConfigurationErrors
+> Task :common:checkKotlinGradlePluginConfigurationErrors
+> Task :dqag:checkKotlinGradlePluginConfigurationErrors
+> Task :eeit:checkKotlinGradlePluginConfigurationErrors
+> Task :oxcv:checkKotlinGradlePluginConfigurationErrors
+> Task :siub:checkKotlinGradlePluginConfigurationErrors
+> Task :yjfw:checkKotlinGradlePluginConfigurationErrors
+> Task :common:clean
+> Task :common:generateDebugResValues
+> Task :common:writeDebugAarMetadata
+> Task :base:clean
+> Task :common:extractDeepLinksDebug
+> Task :common:generateDebugResources
+> Task :base:writeDebugAarMetadata
+> Task :base:generateDebugResValues
+> Task :base:generateDebugResources
+> Task :common:packageDebugResources
+> Task :common:processDebugManifest
+> Task :base:extractDeepLinksDebug
+> Task :base:processDebugManifest
+> Task :common:parseDebugLocalResources
+> Task :common:compileDebugLibraryResources
+> Task :base:packageDebugResources
+> Task :base:parseDebugLocalResources
+> Task :siub:clean
+> Task :dqag:clean
+> Task :oxcv:clean
+> Task :base:javaPreCompileDebug
+> Task :eeit:clean
+> Task :base:generateDebugRFile
+> Task :common:javaPreCompileDebug
+> Task :dqag:generateDebugResValues
+> Task :siub:generateDebugResValues
+> Task :common:generateDebugRFile
+> Task :oxcv:generateDebugResValues
+> Task :eeit:generateDebugResValues
+> Task :dqag:writeDebugAarMetadata
+> Task :oxcv:writeDebugAarMetadata
+> Task :siub:writeDebugAarMetadata
+> Task :eeit:writeDebugAarMetadata
+> Task :siub:generateDebugResources
+> Task :dqag:generateDebugResources
+> Task :yjfw:clean
+> Task :eeit:extractDeepLinksDebug
+> Task :dqag:extractDeepLinksDebug
+> Task :eeit:generateDebugResources
+> Task :oxcv:generateDebugResources
+> Task :oxcv:extractDeepLinksDebug
+> Task :yjfw:writeDebugAarMetadata
+> Task :yjfw:generateDebugResValues
+> Task :siub:extractDeepLinksDebug
+> Task :yjfw:generateDebugResources
+> Task :dqag:processDebugManifest
+> Task :eeit:processDebugManifest
+> Task :yjfw:extractDeepLinksDebug
+> Task :oxcv:processDebugManifest
+> Task :base:compileDebugLibraryResources
+> Task :siub:processDebugManifest
+> Task :yjfw:processDebugManifest
+> Task :siub:packageDebugResources
+> Task :eeit:packageDebugResources
+> Task :dqag:packageDebugResources
+> Task :oxcv:packageDebugResources
+> Task :dqag:javaPreCompileDebug
+> Task :eeit:javaPreCompileDebug
+> Task :yjfw:packageDebugResources
+> Task :eeit:parseDebugLocalResources
+> Task :siub:parseDebugLocalResources
+> Task :dqag:parseDebugLocalResources
+> Task :oxcv:parseDebugLocalResources
+> Task :dqag:compileDebugLibraryResources
+> Task :eeit:compileDebugLibraryResources
+> Task :yjfw:parseDebugLocalResources
+> Task :siub:generateDebugRFile
+> Task :oxcv:generateDebugRFile
+> Task :dqag:generateDebugRFile
+> Task :eeit:generateDebugRFile
+> Task :yjfw:generateDebugRFile
+> Task :siub:javaPreCompileDebug
+> Task :oxcv:javaPreCompileDebug
+> Task :base:mergeDebugShaders
+> Task :base:compileDebugShaders NO-SOURCE
+> Task :common:mergeDebugShaders
+> Task :base:generateDebugAssets UP-TO-DATE
+> Task :yjfw:javaPreCompileDebug
+> Task :common:compileDebugShaders NO-SOURCE
+> Task :common:generateDebugAssets UP-TO-DATE
+> Task :dqag:mergeDebugShaders
+> Task :dqag:compileDebugShaders NO-SOURCE
+> Task :oxcv:compileDebugLibraryResources
+> Task :dqag:generateDebugAssets UP-TO-DATE
+> Task :eeit:mergeDebugShaders
+> Task :eeit:compileDebugShaders NO-SOURCE
+> Task :eeit:generateDebugAssets UP-TO-DATE
+> Task :siub:compileDebugLibraryResources
+> Task :yjfw:compileDebugLibraryResources
+> Task :base:packageDebugAssets
+> Task :common:packageDebugAssets
+> Task :oxcv:mergeDebugShaders
+> Task :dqag:packageDebugAssets
+> Task :oxcv:compileDebugShaders NO-SOURCE
+> Task :oxcv:generateDebugAssets UP-TO-DATE
+> Task :common:mergeDebugJniLibFolders
+> Task :eeit:packageDebugAssets
+> Task :yjfw:mergeDebugShaders
+> Task :common:mergeDebugNativeLibs NO-SOURCE
+> Task :base:mergeDebugJniLibFolders
+> Task :yjfw:compileDebugShaders NO-SOURCE
+> Task :base:mergeDebugNativeLibs NO-SOURCE
+> Task :yjfw:generateDebugAssets UP-TO-DATE
+> Task :siub:mergeDebugShaders
+> Task :dqag:mergeDebugJniLibFolders
+> Task :siub:compileDebugShaders NO-SOURCE
+> Task :dqag:mergeDebugNativeLibs NO-SOURCE
+> Task :siub:generateDebugAssets UP-TO-DATE
+> Task :common:copyDebugJniLibsProjectOnly
+> Task :oxcv:packageDebugAssets
+> Task :eeit:mergeDebugJniLibFolders
+> Task :siub:packageDebugAssets
+> Task :eeit:mergeDebugNativeLibs NO-SOURCE
+> Task :siub:mergeDebugJniLibFolders
+> Task :siub:mergeDebugNativeLibs NO-SOURCE
+> Task :dqag:copyDebugJniLibsProjectOnly
+> Task :base:copyDebugJniLibsProjectOnly
+> Task :eeit:copyDebugJniLibsProjectOnly
+> Task :yjfw:packageDebugAssets
+> Task :oxcv:mergeDebugJniLibFolders
+> Task :siub:copyDebugJniLibsProjectOnly
+> Task :oxcv:mergeDebugNativeLibs NO-SOURCE
+> Task :yjfw:mergeDebugJniLibFolders
+> Task :yjfw:mergeDebugNativeLibs NO-SOURCE
+> Task :oxcv:copyDebugJniLibsProjectOnly
+> Task :yjfw:copyDebugJniLibsProjectOnly
+> Task :app:clean
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:generateDebugResValues
+> Task :app:desugarDebugFileDependencies
+> Task :app:mergeDebugShaders
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:extractDeepLinksDebug
+> Task :app:mapDebugSourceSetPaths
+> Task :app:javaPreCompileDebug
+> Task :app:mergeDebugStartupProfile UP-TO-DATE
+> Task :app:mergeDebugAssets
+> Task :app:generateDebugResources
+> Task :app:validateSigningDebug
+> Task :app:compressDebugAssets
+> Task :app:mergeDebugJniLibFolders
+> Task :app:writeDebugAppMetadata
+> Task :app:writeDebugSigningConfigVersions
+> Task :app:mergeDebugNativeLibs NO-SOURCE
+> Task :app:stripDebugDebugSymbols NO-SOURCE
+> Task :app:checkDebugAarMetadata
+> Task :app:dataBindingMergeDependencyArtifactsDebug
+> Task :app:checkDebugDuplicateClasses
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
+> Task :app:packageDebugResources
+> Task :app:parseDebugLocalResources
+> Task :common:kaptGenerateStubsDebugKotlin
+> Task :base:kaptGenerateStubsDebugKotlin
+> Task :base:kaptDebugKotlin
+> Task :common:kaptDebugKotlin
+> Task :base:compileDebugKotlin
+> Task :base:compileDebugJavaWithJavac NO-SOURCE
+> Task :base:processDebugJavaRes
+> Task :base:bundleLibCompileToJarDebug
+> Task :base:bundleLibRuntimeToJarDebug
+> Task :app:mergeDebugResources
+> Task :common:compileDebugKotlin
+> Task :common:processDebugJavaRes
+> Task :common:compileDebugJavaWithJavac
+> Task :common:bundleLibRuntimeToJarDebug
+> Task :common:bundleLibCompileToJarDebug
+> Task :app:dataBindingGenBaseClassesDebug
+> Task :app:mergeExtDexDebug
+> Task :app:processDebugResources
+> Task :yjfw:kaptGenerateStubsDebugKotlin
+> Task :dqag:kaptGenerateStubsDebugKotlin
+> Task :siub:kaptGenerateStubsDebugKotlin
+> Task :eeit:kaptGenerateStubsDebugKotlin
+> Task :oxcv:kaptGenerateStubsDebugKotlin
+> Task :yjfw:kaptDebugKotlin
+> Task :dqag:kaptDebugKotlin
+> Task :siub:kaptDebugKotlin
+> Task :eeit:kaptDebugKotlin
+> Task :oxcv:kaptDebugKotlin
+> Task :yjfw:compileDebugKotlin
+> Task :yjfw:processDebugJavaRes
+> Task :oxcv:compileDebugKotlin
+> Task :eeit:compileDebugKotlin
+> Task :oxcv:processDebugJavaRes
+> Task :eeit:processDebugJavaRes
+> Task :siub:compileDebugKotlin
+> Task :siub:processDebugJavaRes
+> Task :dqag:compileDebugKotlin
+> Task :yjfw:compileDebugJavaWithJavac
+> Task :dqag:processDebugJavaRes
+> Task :yjfw:bundleLibCompileToJarDebug
+> Task :yjfw:bundleLibRuntimeToJarDebug
+> Task :siub:compileDebugJavaWithJavac
+> Task :dqag:compileDebugJavaWithJavac
+> Task :oxcv:compileDebugJavaWithJavac
+> Task :eeit:compileDebugJavaWithJavac
+> Task :siub:bundleLibRuntimeToJarDebug
+> Task :siub:bundleLibCompileToJarDebug
+> Task :dqag:bundleLibRuntimeToJarDebug
+> Task :dqag:bundleLibCompileToJarDebug
+> Task :oxcv:bundleLibRuntimeToJarDebug
+> Task :oxcv:bundleLibCompileToJarDebug
+> Task :eeit:bundleLibRuntimeToJarDebug
+> Task :eeit:bundleLibCompileToJarDebug
+> Task :app:mergeLibDexDebug
+> Task :app:kaptGenerateStubsDebugKotlin
+> Task :app:kaptDebugKotlin
+> Task :app:compileDebugKotlin
+> Task :app:processDebugJavaRes
+> Task :app:compileDebugJavaWithJavac
+> Task :app:mergeDebugJavaResource
+> Task :app:dexBuilderDebug
+> Task :app:mergeProjectDexDebug
+> Task :app:packageDebug
+> Task :app:assembleDebug
+> Task :app:createDebugApkListingFileRedirect
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.7/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 8s
+200 actionable tasks: 199 executed, 1 up-to-date
+Configuration cache entry reused.
+Used daemon with pid 7522
+Execution time 8174 ms
+
+* Running measured build #2
+Reusing configuration cache.
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:checkKotlinGradlePluginConfigurationErrors
+> Task :common:preBuild UP-TO-DATE
+> Task :common:preDebugBuild UP-TO-DATE
+> Task :dqag:preBuild UP-TO-DATE
+> Task :base:preBuild UP-TO-DATE
+> Task :dqag:preDebugBuild UP-TO-DATE
+> Task :base:preDebugBuild UP-TO-DATE
+> Task :eeit:preBuild UP-TO-DATE
+> Task :oxcv:preBuild UP-TO-DATE
+> Task :eeit:preDebugBuild UP-TO-DATE
+> Task :oxcv:preDebugBuild UP-TO-DATE
+> Task :siub:preBuild UP-TO-DATE
+> Task :yjfw:preBuild UP-TO-DATE
+> Task :siub:preDebugBuild UP-TO-DATE
+> Task :yjfw:preDebugBuild UP-TO-DATE
+> Task :base:checkKotlinGradlePluginConfigurationErrors
+> Task :common:checkKotlinGradlePluginConfigurationErrors
+> Task :dqag:checkKotlinGradlePluginConfigurationErrors
+> Task :eeit:checkKotlinGradlePluginConfigurationErrors
+> Task :siub:checkKotlinGradlePluginConfigurationErrors
+> Task :oxcv:checkKotlinGradlePluginConfigurationErrors
+> Task :yjfw:checkKotlinGradlePluginConfigurationErrors
+> Task :common:clean
+> Task :common:generateDebugResValues
+> Task :common:writeDebugAarMetadata
+> Task :common:extractDeepLinksDebug
+> Task :common:generateDebugResources
+> Task :base:clean
+> Task :common:processDebugManifest
+> Task :base:writeDebugAarMetadata
+> Task :common:javaPreCompileDebug
+> Task :base:generateDebugResValues
+> Task :common:packageDebugResources
+> Task :base:generateDebugResources
+> Task :base:processDebugManifest
+> Task :base:javaPreCompileDebug
+> Task :common:parseDebugLocalResources
+> Task :base:extractDeepLinksDebug
+> Task :common:compileDebugLibraryResources
+> Task :base:mergeDebugShaders
+> Task :base:compileDebugShaders NO-SOURCE
+> Task :base:generateDebugAssets UP-TO-DATE
+> Task :common:generateDebugRFile
+> Task :common:mergeDebugShaders
+> Task :common:compileDebugShaders NO-SOURCE
+> Task :common:generateDebugAssets UP-TO-DATE
+> Task :base:packageDebugAssets
+> Task :base:packageDebugResources
+> Task :siub:clean
+> Task :oxcv:clean
+> Task :common:packageDebugAssets
+> Task :base:mergeDebugJniLibFolders
+> Task :siub:generateDebugResValues
+> Task :oxcv:generateDebugResValues
+> Task :siub:writeDebugAarMetadata
+> Task :oxcv:writeDebugAarMetadata
+> Task :siub:generateDebugResources
+> Task :oxcv:generateDebugResources
+> Task :oxcv:extractDeepLinksDebug
+> Task :siub:extractDeepLinksDebug
+> Task :base:parseDebugLocalResources
+> Task :oxcv:processDebugManifest
+> Task :siub:processDebugManifest
+> Task :base:compileDebugLibraryResources
+> Task :dqag:clean
+> Task :base:generateDebugRFile
+> Task :eeit:clean
+> Task :dqag:writeDebugAarMetadata
+> Task :dqag:generateDebugResValues
+> Task :eeit:generateDebugResValues
+> Task :yjfw:clean
+> Task :eeit:writeDebugAarMetadata
+> Task :dqag:generateDebugResources
+> Task :eeit:generateDebugResources
+> Task :siub:packageDebugResources
+> Task :oxcv:packageDebugResources
+> Task :yjfw:writeDebugAarMetadata
+> Task :siub:javaPreCompileDebug
+> Task :oxcv:javaPreCompileDebug
+> Task :yjfw:generateDebugResValues
+> Task :dqag:extractDeepLinksDebug
+> Task :eeit:extractDeepLinksDebug
+> Task :yjfw:generateDebugResources
+> Task :yjfw:extractDeepLinksDebug
+> Task :siub:parseDebugLocalResources
+> Task :oxcv:parseDebugLocalResources
+> Task :dqag:processDebugManifest
+> Task :eeit:processDebugManifest
+> Task :yjfw:processDebugManifest
+> Task :siub:generateDebugRFile
+> Task :oxcv:generateDebugRFile
+> Task :siub:compileDebugLibraryResources
+> Task :dqag:javaPreCompileDebug
+> Task :eeit:javaPreCompileDebug
+> Task :oxcv:compileDebugLibraryResources
+> Task :yjfw:packageDebugResources
+> Task :eeit:mergeDebugShaders
+> Task :dqag:mergeDebugShaders
+> Task :dqag:compileDebugShaders NO-SOURCE
+> Task :dqag:generateDebugAssets UP-TO-DATE
+> Task :eeit:packageDebugResources
+> Task :dqag:packageDebugResources
+> Task :dqag:packageDebugAssets
+> Task :yjfw:javaPreCompileDebug
+> Task :yjfw:parseDebugLocalResources
+> Task :yjfw:compileDebugLibraryResources
+> Task :eeit:compileDebugShaders NO-SOURCE
+> Task :eeit:generateDebugAssets UP-TO-DATE
+> Task :dqag:parseDebugLocalResources
+> Task :eeit:packageDebugAssets
+> Task :oxcv:mergeDebugShaders
+> Task :oxcv:compileDebugShaders NO-SOURCE
+> Task :eeit:parseDebugLocalResources
+> Task :oxcv:generateDebugAssets UP-TO-DATE
+> Task :siub:mergeDebugShaders
+> Task :siub:compileDebugShaders NO-SOURCE
+> Task :siub:generateDebugAssets UP-TO-DATE
+> Task :dqag:compileDebugLibraryResources
+> Task :yjfw:generateDebugRFile
+> Task :base:mergeDebugNativeLibs NO-SOURCE
+> Task :dqag:generateDebugRFile
+> Task :eeit:compileDebugLibraryResources
+> Task :yjfw:mergeDebugShaders
+> Task :siub:packageDebugAssets
+> Task :base:copyDebugJniLibsProjectOnly
+> Task :yjfw:compileDebugShaders NO-SOURCE
+> Task :yjfw:generateDebugAssets UP-TO-DATE
+> Task :common:mergeDebugJniLibFolders
+> Task :dqag:mergeDebugJniLibFolders
+> Task :common:mergeDebugNativeLibs NO-SOURCE
+> Task :dqag:mergeDebugNativeLibs NO-SOURCE
+> Task :oxcv:mergeDebugJniLibFolders
+> Task :yjfw:packageDebugAssets
+> Task :eeit:mergeDebugJniLibFolders
+> Task :oxcv:mergeDebugNativeLibs NO-SOURCE
+> Task :eeit:mergeDebugNativeLibs NO-SOURCE
+> Task :dqag:copyDebugJniLibsProjectOnly
+> Task :common:copyDebugJniLibsProjectOnly
+> Task :oxcv:copyDebugJniLibsProjectOnly
+> Task :eeit:copyDebugJniLibsProjectOnly
+> Task :siub:mergeDebugJniLibFolders
+> Task :siub:mergeDebugNativeLibs NO-SOURCE
+> Task :yjfw:mergeDebugJniLibFolders
+> Task :yjfw:mergeDebugNativeLibs NO-SOURCE
+> Task :oxcv:packageDebugAssets
+> Task :siub:copyDebugJniLibsProjectOnly
+> Task :yjfw:copyDebugJniLibsProjectOnly
+> Task :eeit:generateDebugRFile
+> Task :common:kaptGenerateStubsDebugKotlin
+> Task :app:clean
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:generateDebugResValues
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:generateDebugResources
+> Task :app:extractDeepLinksDebug
+> Task :app:mergeDebugShaders
+> Task :app:mapDebugSourceSetPaths
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:dataBindingMergeDependencyArtifactsDebug
+> Task :app:desugarDebugFileDependencies
+> Task :app:mergeDebugStartupProfile UP-TO-DATE
+> Task :app:mergeDebugAssets
+> Task :app:compressDebugAssets
+> Task :app:mergeDebugJniLibFolders
+> Task :app:mergeDebugNativeLibs NO-SOURCE
+> Task :app:validateSigningDebug
+> Task :app:stripDebugDebugSymbols NO-SOURCE
+> Task :app:writeDebugAppMetadata
+> Task :app:javaPreCompileDebug
+> Task :app:writeDebugSigningConfigVersions
+> Task :app:checkDebugAarMetadata
+> Task :app:checkDebugDuplicateClasses
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:packageDebugResources
+> Task :app:processDebugManifestForPackage
+> Task :app:parseDebugLocalResources
+> Task :base:kaptGenerateStubsDebugKotlin
+> Task :base:kaptDebugKotlin
+> Task :common:kaptDebugKotlin
+> Task :base:compileDebugKotlin
+> Task :base:compileDebugJavaWithJavac NO-SOURCE
+> Task :base:bundleLibCompileToJarDebug
+> Task :base:processDebugJavaRes
+> Task :base:bundleLibRuntimeToJarDebug
+> Task :common:compileDebugKotlin
+> Task :common:processDebugJavaRes
+> Task :common:compileDebugJavaWithJavac
+> Task :common:bundleLibRuntimeToJarDebug
+> Task :common:bundleLibCompileToJarDebug
+> Task :app:mergeDebugResources
+> Task :app:dataBindingGenBaseClassesDebug
+> Task :app:mergeExtDexDebug
+> Task :app:processDebugResources
+> Task :siub:kaptGenerateStubsDebugKotlin
+> Task :oxcv:kaptGenerateStubsDebugKotlin
+> Task :yjfw:kaptGenerateStubsDebugKotlin
+> Task :dqag:kaptGenerateStubsDebugKotlin
+> Task :eeit:kaptGenerateStubsDebugKotlin
+> Task :dqag:kaptDebugKotlin
+> Task :yjfw:kaptDebugKotlin
+> Task :oxcv:kaptDebugKotlin
+> Task :siub:kaptDebugKotlin
+> Task :eeit:kaptDebugKotlin
+> Task :eeit:compileDebugKotlin
+> Task :eeit:processDebugJavaRes
+> Task :oxcv:compileDebugKotlin
+> Task :dqag:compileDebugKotlin
+> Task :oxcv:processDebugJavaRes
+> Task :dqag:processDebugJavaRes
+> Task :siub:compileDebugKotlin
+> Task :siub:processDebugJavaRes
+> Task :yjfw:compileDebugKotlin
+> Task :yjfw:processDebugJavaRes
+> Task :eeit:compileDebugJavaWithJavac
+> Task :dqag:compileDebugJavaWithJavac
+> Task :oxcv:compileDebugJavaWithJavac
+> Task :eeit:bundleLibRuntimeToJarDebug
+> Task :eeit:bundleLibCompileToJarDebug
+> Task :dqag:bundleLibRuntimeToJarDebug
+> Task :dqag:bundleLibCompileToJarDebug
+> Task :oxcv:bundleLibRuntimeToJarDebug
+> Task :siub:compileDebugJavaWithJavac
+> Task :oxcv:bundleLibCompileToJarDebug
+> Task :siub:bundleLibRuntimeToJarDebug
+> Task :siub:bundleLibCompileToJarDebug
+> Task :yjfw:compileDebugJavaWithJavac
+> Task :yjfw:bundleLibRuntimeToJarDebug
+> Task :yjfw:bundleLibCompileToJarDebug
+> Task :app:mergeLibDexDebug
+> Task :app:kaptGenerateStubsDebugKotlin
+> Task :app:kaptDebugKotlin
+> Task :app:compileDebugKotlin
+> Task :app:processDebugJavaRes
+> Task :app:compileDebugJavaWithJavac
+> Task :app:mergeDebugJavaResource
+> Task :app:dexBuilderDebug
+> Task :app:mergeProjectDexDebug
+> Task :app:packageDebug
+> Task :app:assembleDebug
+> Task :app:createDebugApkListingFileRedirect
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.7/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 8s
+200 actionable tasks: 199 executed, 1 up-to-date
+Configuration cache entry reused.
+Used daemon with pid 7522
+Execution time 8045 ms
+
+* Running measured build #3
+Reusing configuration cache.
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :base:preBuild UP-TO-DATE
+> Task :base:preDebugBuild UP-TO-DATE
+> Task :common:preBuild UP-TO-DATE
+> Task :common:preDebugBuild UP-TO-DATE
+> Task :dqag:preBuild UP-TO-DATE
+> Task :dqag:preDebugBuild UP-TO-DATE
+> Task :eeit:preBuild UP-TO-DATE
+> Task :eeit:preDebugBuild UP-TO-DATE
+> Task :oxcv:preBuild UP-TO-DATE
+> Task :oxcv:preDebugBuild UP-TO-DATE
+> Task :siub:preBuild UP-TO-DATE
+> Task :app:checkKotlinGradlePluginConfigurationErrors
+> Task :siub:preDebugBuild UP-TO-DATE
+> Task :yjfw:preBuild UP-TO-DATE
+> Task :yjfw:preDebugBuild UP-TO-DATE
+> Task :base:checkKotlinGradlePluginConfigurationErrors
+> Task :common:checkKotlinGradlePluginConfigurationErrors
+> Task :dqag:checkKotlinGradlePluginConfigurationErrors
+> Task :eeit:checkKotlinGradlePluginConfigurationErrors
+> Task :oxcv:checkKotlinGradlePluginConfigurationErrors
+> Task :siub:checkKotlinGradlePluginConfigurationErrors
+> Task :yjfw:checkKotlinGradlePluginConfigurationErrors
+> Task :common:clean
+> Task :common:generateDebugResValues
+> Task :base:clean
+> Task :common:writeDebugAarMetadata
+> Task :base:generateDebugResValues
+> Task :base:writeDebugAarMetadata
+> Task :common:generateDebugResources
+> Task :base:generateDebugResources
+> Task :base:extractDeepLinksDebug
+> Task :common:processDebugManifest
+> Task :common:packageDebugResources
+> Task :common:extractDeepLinksDebug
+> Task :base:packageDebugResources
+> Task :base:processDebugManifest
+> Task :common:compileDebugLibraryResources
+> Task :common:parseDebugLocalResources
+> Task :base:parseDebugLocalResources
+> Task :base:compileDebugLibraryResources
+> Task :base:javaPreCompileDebug
+> Task :common:generateDebugRFile
+> Task :base:generateDebugRFile
+> Task :siub:clean
+> Task :base:mergeDebugShaders
+> Task :siub:generateDebugResValues
+> Task :common:javaPreCompileDebug
+> Task :dqag:clean
+> Task :siub:writeDebugAarMetadata
+> Task :dqag:generateDebugResValues
+> Task :oxcv:clean
+> Task :siub:extractDeepLinksDebug
+> Task :siub:generateDebugResources
+> Task :dqag:writeDebugAarMetadata
+> Task :yjfw:clean
+> Task :eeit:clean
+> Task :oxcv:generateDebugResValues
+> Task :oxcv:writeDebugAarMetadata
+> Task :dqag:generateDebugResources
+> Task :eeit:generateDebugResValues
+> Task :eeit:writeDebugAarMetadata
+> Task :dqag:extractDeepLinksDebug
+> Task :oxcv:generateDebugResources
+> Task :yjfw:writeDebugAarMetadata
+> Task :eeit:generateDebugResources
+> Task :eeit:extractDeepLinksDebug
+> Task :yjfw:generateDebugResValues
+> Task :dqag:processDebugManifest
+> Task :oxcv:extractDeepLinksDebug
+> Task :siub:packageDebugResources
+> Task :eeit:processDebugManifest
+> Task :dqag:packageDebugResources
+> Task :oxcv:packageDebugResources
+> Task :yjfw:generateDebugResources
+> Task :eeit:packageDebugResources
+> Task :siub:parseDebugLocalResources
+> Task :oxcv:processDebugManifest
+> Task :siub:processDebugManifest
+> Task :yjfw:extractDeepLinksDebug
+> Task :dqag:parseDebugLocalResources
+> Task :oxcv:parseDebugLocalResources
+> Task :eeit:parseDebugLocalResources
+> Task :siub:generateDebugRFile
+> Task :dqag:generateDebugRFile
+> Task :dqag:compileDebugLibraryResources
+> Task :eeit:generateDebugRFile
+> Task :oxcv:generateDebugRFile
+> Task :yjfw:processDebugManifest
+> Task :oxcv:compileDebugLibraryResources
+> Task :siub:compileDebugLibraryResources
+> Task :eeit:compileDebugLibraryResources
+> Task :base:compileDebugShaders NO-SOURCE
+> Task :base:generateDebugAssets UP-TO-DATE
+> Task :dqag:javaPreCompileDebug
+> Task :base:packageDebugAssets
+> Task :common:mergeDebugShaders
+> Task :common:compileDebugShaders NO-SOURCE
+> Task :common:generateDebugAssets UP-TO-DATE
+> Task :dqag:mergeDebugShaders
+> Task :dqag:compileDebugShaders NO-SOURCE
+> Task :dqag:generateDebugAssets UP-TO-DATE
+> Task :eeit:javaPreCompileDebug
+> Task :common:packageDebugAssets
+> Task :oxcv:javaPreCompileDebug
+> Task :dqag:packageDebugAssets
+> Task :siub:javaPreCompileDebug
+> Task :eeit:mergeDebugShaders
+> Task :eeit:compileDebugShaders NO-SOURCE
+> Task :eeit:generateDebugAssets UP-TO-DATE
+> Task :yjfw:javaPreCompileDebug
+> Task :siub:mergeDebugShaders
+> Task :siub:compileDebugShaders NO-SOURCE
+> Task :siub:generateDebugAssets UP-TO-DATE
+> Task :common:mergeDebugJniLibFolders
+> Task :siub:packageDebugAssets
+> Task :common:mergeDebugNativeLibs NO-SOURCE
+> Task :common:copyDebugJniLibsProjectOnly
+> Task :dqag:mergeDebugJniLibFolders
+> Task :eeit:packageDebugAssets
+> Task :dqag:mergeDebugNativeLibs NO-SOURCE
+> Task :base:mergeDebugJniLibFolders
+> Task :base:mergeDebugNativeLibs NO-SOURCE
+> Task :dqag:copyDebugJniLibsProjectOnly
+> Task :eeit:mergeDebugJniLibFolders
+> Task :eeit:mergeDebugNativeLibs NO-SOURCE
+> Task :oxcv:mergeDebugShaders
+> Task :oxcv:compileDebugShaders NO-SOURCE
+> Task :oxcv:generateDebugAssets UP-TO-DATE
+> Task :base:copyDebugJniLibsProjectOnly
+> Task :eeit:copyDebugJniLibsProjectOnly
+> Task :yjfw:mergeDebugShaders
+> Task :oxcv:mergeDebugJniLibFolders
+> Task :oxcv:mergeDebugNativeLibs NO-SOURCE
+> Task :yjfw:compileDebugShaders NO-SOURCE
+> Task :siub:mergeDebugJniLibFolders
+> Task :siub:mergeDebugNativeLibs NO-SOURCE
+> Task :yjfw:generateDebugAssets UP-TO-DATE
+> Task :oxcv:copyDebugJniLibsProjectOnly
+> Task :yjfw:mergeDebugJniLibFolders
+> Task :siub:copyDebugJniLibsProjectOnly
+> Task :yjfw:mergeDebugNativeLibs NO-SOURCE
+> Task :oxcv:packageDebugAssets
+> Task :yjfw:copyDebugJniLibsProjectOnly
+> Task :yjfw:packageDebugAssets
+> Task :yjfw:packageDebugResources
+> Task :yjfw:compileDebugLibraryResources
+> Task :yjfw:parseDebugLocalResources
+> Task :yjfw:generateDebugRFile
+> Task :app:clean
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:generateDebugResValues
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:mergeDebugShaders
+> Task :app:dataBindingMergeDependencyArtifactsDebug
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:extractDeepLinksDebug
+> Task :app:desugarDebugFileDependencies
+> Task :app:mapDebugSourceSetPaths
+> Task :app:generateDebugResources
+> Task :app:mergeDebugAssets
+> Task :app:javaPreCompileDebug
+> Task :app:mergeDebugJniLibFolders
+> Task :app:compressDebugAssets
+> Task :app:mergeDebugStartupProfile UP-TO-DATE
+> Task :app:mergeDebugNativeLibs NO-SOURCE
+> Task :app:stripDebugDebugSymbols NO-SOURCE
+> Task :app:validateSigningDebug
+> Task :app:writeDebugAppMetadata
+> Task :app:writeDebugSigningConfigVersions
+> Task :app:checkDebugAarMetadata
+> Task :app:checkDebugDuplicateClasses
+> Task :app:processDebugMainManifest
+> Task :common:kaptGenerateStubsDebugKotlin
+> Task :app:packageDebugResources
+> Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
+> Task :app:parseDebugLocalResources
+> Task :base:kaptGenerateStubsDebugKotlin
+> Task :base:kaptDebugKotlin
+> Task :common:kaptDebugKotlin
+> Task :base:compileDebugKotlin
+> Task :base:compileDebugJavaWithJavac NO-SOURCE
+> Task :base:processDebugJavaRes
+> Task :base:bundleLibRuntimeToJarDebug
+> Task :base:bundleLibCompileToJarDebug
+> Task :common:compileDebugKotlin
+> Task :app:mergeDebugResources
+> Task :common:processDebugJavaRes
+> Task :common:compileDebugJavaWithJavac
+> Task :app:dataBindingGenBaseClassesDebug
+> Task :common:bundleLibCompileToJarDebug
+> Task :common:bundleLibRuntimeToJarDebug
+> Task :app:mergeExtDexDebug
+> Task :app:processDebugResources
+> Task :siub:kaptGenerateStubsDebugKotlin
+> Task :yjfw:kaptGenerateStubsDebugKotlin
+> Task :eeit:kaptGenerateStubsDebugKotlin
+> Task :oxcv:kaptGenerateStubsDebugKotlin
+> Task :dqag:kaptGenerateStubsDebugKotlin
+> Task :siub:kaptDebugKotlin
+> Task :yjfw:kaptDebugKotlin
+> Task :oxcv:kaptDebugKotlin
+> Task :eeit:kaptDebugKotlin
+> Task :dqag:kaptDebugKotlin
+> Task :oxcv:compileDebugKotlin
+> Task :oxcv:processDebugJavaRes
+> Task :dqag:compileDebugKotlin
+> Task :eeit:compileDebugKotlin
+> Task :dqag:processDebugJavaRes
+> Task :eeit:processDebugJavaRes
+> Task :yjfw:compileDebugKotlin
+> Task :yjfw:processDebugJavaRes
+> Task :siub:compileDebugKotlin
+> Task :siub:processDebugJavaRes
+> Task :oxcv:compileDebugJavaWithJavac
+> Task :dqag:compileDebugJavaWithJavac
+> Task :yjfw:compileDebugJavaWithJavac
+> Task :eeit:compileDebugJavaWithJavac
+> Task :oxcv:bundleLibRuntimeToJarDebug
+> Task :oxcv:bundleLibCompileToJarDebug
+> Task :dqag:bundleLibRuntimeToJarDebug
+> Task :dqag:bundleLibCompileToJarDebug
+> Task :yjfw:bundleLibRuntimeToJarDebug
+> Task :eeit:bundleLibRuntimeToJarDebug
+> Task :yjfw:bundleLibCompileToJarDebug
+> Task :eeit:bundleLibCompileToJarDebug
+> Task :siub:compileDebugJavaWithJavac
+> Task :siub:bundleLibRuntimeToJarDebug
+> Task :siub:bundleLibCompileToJarDebug
+> Task :app:mergeLibDexDebug
+> Task :app:kaptGenerateStubsDebugKotlin
+> Task :app:kaptDebugKotlin
+> Task :app:compileDebugKotlin
+> Task :app:processDebugJavaRes
+> Task :app:compileDebugJavaWithJavac
+> Task :app:mergeDebugJavaResource
+> Task :app:dexBuilderDebug
+> Task :app:mergeProjectDexDebug
+> Task :app:packageDebug
+> Task :app:assembleDebug
+> Task :app:createDebugApkListingFileRedirect
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.7/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 7s
+200 actionable tasks: 199 executed, 1 up-to-date
+Configuration cache entry reused.
+Used daemon with pid 7522
+Execution time 7893 ms
+
+* Running measured build #4
+Reusing configuration cache.
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :base:preBuild UP-TO-DATE
+> Task :base:preDebugBuild UP-TO-DATE
+> Task :common:preBuild UP-TO-DATE
+> Task :common:preDebugBuild UP-TO-DATE
+> Task :dqag:preBuild UP-TO-DATE
+> Task :dqag:preDebugBuild UP-TO-DATE
+> Task :eeit:preBuild UP-TO-DATE
+> Task :eeit:preDebugBuild UP-TO-DATE
+> Task :oxcv:preBuild UP-TO-DATE
+> Task :app:checkKotlinGradlePluginConfigurationErrors
+> Task :oxcv:preDebugBuild UP-TO-DATE
+> Task :siub:preBuild UP-TO-DATE
+> Task :siub:preDebugBuild UP-TO-DATE
+> Task :yjfw:preBuild UP-TO-DATE
+> Task :yjfw:preDebugBuild UP-TO-DATE
+> Task :base:checkKotlinGradlePluginConfigurationErrors
+> Task :common:checkKotlinGradlePluginConfigurationErrors
+> Task :dqag:checkKotlinGradlePluginConfigurationErrors
+> Task :eeit:checkKotlinGradlePluginConfigurationErrors
+> Task :oxcv:checkKotlinGradlePluginConfigurationErrors
+> Task :siub:checkKotlinGradlePluginConfigurationErrors
+> Task :yjfw:checkKotlinGradlePluginConfigurationErrors
+> Task :common:clean
+> Task :common:generateDebugResValues
+> Task :common:writeDebugAarMetadata
+> Task :common:generateDebugResources
+> Task :common:extractDeepLinksDebug
+> Task :base:clean
+> Task :base:generateDebugResValues
+> Task :common:processDebugManifest
+> Task :base:generateDebugResources
+> Task :common:packageDebugResources
+> Task :base:writeDebugAarMetadata
+> Task :base:extractDeepLinksDebug
+> Task :common:javaPreCompileDebug
+> Task :common:parseDebugLocalResources
+> Task :common:compileDebugLibraryResources
+> Task :base:packageDebugResources
+> Task :base:processDebugManifest
+> Task :common:generateDebugRFile
+> Task :base:parseDebugLocalResources
+> Task :base:compileDebugLibraryResources
+> Task :base:javaPreCompileDebug
+> Task :base:mergeDebugShaders
+> Task :base:compileDebugShaders NO-SOURCE
+> Task :base:generateDebugAssets UP-TO-DATE
+> Task :common:mergeDebugShaders
+> Task :common:compileDebugShaders NO-SOURCE
+> Task :common:generateDebugAssets UP-TO-DATE
+> Task :base:generateDebugRFile
+> Task :base:packageDebugAssets
+> Task :common:packageDebugAssets
+> Task :oxcv:clean
+> Task :base:mergeDebugJniLibFolders
+> Task :common:mergeDebugJniLibFolders
+> Task :oxcv:generateDebugResValues
+> Task :oxcv:writeDebugAarMetadata
+> Task :eeit:clean
+> Task :oxcv:generateDebugResources
+> Task :oxcv:extractDeepLinksDebug
+> Task :siub:clean
+> Task :eeit:generateDebugResValues
+> Task :eeit:writeDebugAarMetadata
+> Task :siub:generateDebugResValues
+> Task :eeit:generateDebugResources
+> Task :siub:writeDebugAarMetadata
+> Task :dqag:clean
+> Task :oxcv:processDebugManifest
+> Task :yjfw:clean
+> Task :eeit:extractDeepLinksDebug
+> Task :siub:generateDebugResources
+> Task :dqag:generateDebugResValues
+> Task :yjfw:generateDebugResValues
+> Task :yjfw:writeDebugAarMetadata
+> Task :dqag:generateDebugResources
+> Task :yjfw:generateDebugResources
+> Task :dqag:writeDebugAarMetadata
+> Task :dqag:extractDeepLinksDebug
+> Task :eeit:processDebugManifest
+> Task :oxcv:packageDebugResources
+> Task :dqag:processDebugManifest
+> Task :eeit:packageDebugResources
+> Task :siub:extractDeepLinksDebug
+> Task :siub:packageDebugResources
+> Task :yjfw:extractDeepLinksDebug
+> Task :siub:processDebugManifest
+> Task :yjfw:processDebugManifest
+> Task :oxcv:parseDebugLocalResources
+> Task :yjfw:packageDebugResources
+> Task :eeit:parseDebugLocalResources
+> Task :eeit:compileDebugLibraryResources
+> Task :oxcv:compileDebugLibraryResources
+> Task :dqag:packageDebugResources
+> Task :siub:compileDebugLibraryResources
+> Task :yjfw:parseDebugLocalResources
+> Task :dqag:compileDebugLibraryResources
+> Task :dqag:parseDebugLocalResources
+> Task :yjfw:compileDebugLibraryResources
+> Task :dqag:javaPreCompileDebug
+> Task :oxcv:generateDebugRFile
+> Task :eeit:generateDebugRFile
+> Task :dqag:generateDebugRFile
+> Task :eeit:javaPreCompileDebug
+> Task :yjfw:generateDebugRFile
+> Task :oxcv:javaPreCompileDebug
+> Task :oxcv:mergeDebugShaders
+> Task :eeit:mergeDebugShaders
+> Task :oxcv:compileDebugShaders NO-SOURCE
+> Task :eeit:compileDebugShaders NO-SOURCE
+> Task :eeit:generateDebugAssets UP-TO-DATE
+> Task :oxcv:generateDebugAssets UP-TO-DATE
+> Task :oxcv:packageDebugAssets
+> Task :eeit:packageDebugAssets
+> Task :siub:mergeDebugShaders
+> Task :yjfw:javaPreCompileDebug
+> Task :base:mergeDebugNativeLibs NO-SOURCE
+> Task :common:mergeDebugNativeLibs NO-SOURCE
+> Task :siub:compileDebugShaders NO-SOURCE
+> Task :siub:generateDebugAssets UP-TO-DATE
+> Task :yjfw:mergeDebugShaders
+> Task :base:copyDebugJniLibsProjectOnly
+> Task :yjfw:compileDebugShaders NO-SOURCE
+> Task :yjfw:generateDebugAssets UP-TO-DATE
+> Task :dqag:mergeDebugShaders
+> Task :common:copyDebugJniLibsProjectOnly
+> Task :siub:javaPreCompileDebug
+> Task :siub:packageDebugAssets
+> Task :dqag:mergeDebugJniLibFolders
+> Task :dqag:mergeDebugNativeLibs NO-SOURCE
+> Task :dqag:compileDebugShaders NO-SOURCE
+> Task :dqag:generateDebugAssets UP-TO-DATE
+> Task :yjfw:packageDebugAssets
+> Task :eeit:mergeDebugJniLibFolders
+> Task :eeit:mergeDebugNativeLibs NO-SOURCE
+> Task :siub:mergeDebugJniLibFolders
+> Task :dqag:copyDebugJniLibsProjectOnly
+> Task :siub:mergeDebugNativeLibs NO-SOURCE
+> Task :eeit:copyDebugJniLibsProjectOnly
+> Task :yjfw:mergeDebugJniLibFolders
+> Task :yjfw:mergeDebugNativeLibs NO-SOURCE
+> Task :dqag:packageDebugAssets
+> Task :oxcv:mergeDebugJniLibFolders
+> Task :siub:copyDebugJniLibsProjectOnly
+> Task :oxcv:mergeDebugNativeLibs NO-SOURCE
+> Task :yjfw:copyDebugJniLibsProjectOnly
+> Task :siub:parseDebugLocalResources
+> Task :oxcv:copyDebugJniLibsProjectOnly
+> Task :siub:generateDebugRFile
+> Task :common:kaptGenerateStubsDebugKotlin
+> Task :app:clean
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:generateDebugResValues
+> Task :app:mergeDebugStartupProfile UP-TO-DATE
+> Task :app:desugarDebugFileDependencies
+> Task :app:generateDebugResources
+> Task :app:extractDeepLinksDebug
+> Task :app:dataBindingMergeDependencyArtifactsDebug
+> Task :app:mapDebugSourceSetPaths
+> Task :app:javaPreCompileDebug
+> Task :app:mergeDebugJniLibFolders
+> Task :app:validateSigningDebug
+> Task :app:mergeDebugNativeLibs NO-SOURCE
+> Task :app:stripDebugDebugSymbols NO-SOURCE
+> Task :app:mergeDebugShaders
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:writeDebugAppMetadata
+> Task :app:checkDebugAarMetadata
+> Task :app:writeDebugSigningConfigVersions
+> Task :app:mergeDebugAssets
+> Task :app:compressDebugAssets
+> Task :app:checkDebugDuplicateClasses
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:packageDebugResources
+> Task :app:processDebugManifestForPackage
+> Task :app:parseDebugLocalResources
+> Task :base:kaptGenerateStubsDebugKotlin
+> Task :base:kaptDebugKotlin
+> Task :common:kaptDebugKotlin
+> Task :common:compileDebugKotlin
+> Task :common:processDebugJavaRes
+> Task :base:compileDebugKotlin
+> Task :base:compileDebugJavaWithJavac NO-SOURCE
+> Task :base:processDebugJavaRes
+> Task :base:bundleLibCompileToJarDebug
+> Task :base:bundleLibRuntimeToJarDebug
+> Task :common:compileDebugJavaWithJavac
+> Task :common:bundleLibRuntimeToJarDebug
+> Task :common:bundleLibCompileToJarDebug
+> Task :app:mergeDebugResources
+> Task :app:dataBindingGenBaseClassesDebug
+> Task :app:mergeExtDexDebug
+> Task :siub:kaptGenerateStubsDebugKotlin
+> Task :eeit:kaptGenerateStubsDebugKotlin
+> Task :yjfw:kaptGenerateStubsDebugKotlin
+> Task :dqag:kaptGenerateStubsDebugKotlin
+> Task :app:processDebugResources
+> Task :oxcv:kaptGenerateStubsDebugKotlin
+> Task :yjfw:kaptDebugKotlin
+> Task :dqag:kaptDebugKotlin
+> Task :eeit:kaptDebugKotlin
+> Task :siub:kaptDebugKotlin
+> Task :oxcv:kaptDebugKotlin
+> Task :dqag:compileDebugKotlin
+> Task :dqag:processDebugJavaRes
+> Task :siub:compileDebugKotlin
+> Task :siub:processDebugJavaRes
+> Task :yjfw:compileDebugKotlin
+> Task :yjfw:processDebugJavaRes
+> Task :oxcv:compileDebugKotlin
+> Task :oxcv:processDebugJavaRes
+> Task :eeit:compileDebugKotlin
+> Task :eeit:processDebugJavaRes
+> Task :dqag:compileDebugJavaWithJavac
+> Task :dqag:bundleLibRuntimeToJarDebug
+> Task :dqag:bundleLibCompileToJarDebug
+> Task :siub:compileDebugJavaWithJavac
+> Task :yjfw:compileDebugJavaWithJavac
+> Task :oxcv:compileDebugJavaWithJavac
+> Task :siub:bundleLibRuntimeToJarDebug
+> Task :siub:bundleLibCompileToJarDebug
+> Task :yjfw:bundleLibRuntimeToJarDebug
+> Task :yjfw:bundleLibCompileToJarDebug
+> Task :oxcv:bundleLibRuntimeToJarDebug
+> Task :oxcv:bundleLibCompileToJarDebug
+> Task :eeit:compileDebugJavaWithJavac
+> Task :eeit:bundleLibRuntimeToJarDebug
+> Task :eeit:bundleLibCompileToJarDebug
+> Task :app:mergeLibDexDebug
+> Task :app:kaptGenerateStubsDebugKotlin
+> Task :app:kaptDebugKotlin
+> Task :app:compileDebugKotlin
+> Task :app:processDebugJavaRes
+> Task :app:compileDebugJavaWithJavac
+> Task :app:mergeDebugJavaResource
+> Task :app:dexBuilderDebug
+> Task :app:mergeProjectDexDebug
+> Task :app:packageDebug
+> Task :app:assembleDebug
+> Task :app:createDebugApkListingFileRedirect
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.7/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 7s
+200 actionable tasks: 199 executed, 1 up-to-date
+Configuration cache entry reused.
+Used daemon with pid 7522
+Execution time 7450 ms
+
+* Running measured build #5
+Reusing configuration cache.
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :base:preBuild UP-TO-DATE
+> Task :base:preDebugBuild UP-TO-DATE
+> Task :common:preBuild UP-TO-DATE
+> Task :common:preDebugBuild UP-TO-DATE
+> Task :dqag:preBuild UP-TO-DATE
+> Task :dqag:preDebugBuild UP-TO-DATE
+> Task :eeit:preBuild UP-TO-DATE
+> Task :eeit:preDebugBuild UP-TO-DATE
+> Task :app:checkKotlinGradlePluginConfigurationErrors
+> Task :oxcv:preBuild UP-TO-DATE
+> Task :siub:preBuild UP-TO-DATE
+> Task :oxcv:preDebugBuild UP-TO-DATE
+> Task :siub:preDebugBuild UP-TO-DATE
+> Task :yjfw:preBuild UP-TO-DATE
+> Task :yjfw:preDebugBuild UP-TO-DATE
+> Task :base:checkKotlinGradlePluginConfigurationErrors
+> Task :common:checkKotlinGradlePluginConfigurationErrors
+> Task :dqag:checkKotlinGradlePluginConfigurationErrors
+> Task :eeit:checkKotlinGradlePluginConfigurationErrors
+> Task :oxcv:checkKotlinGradlePluginConfigurationErrors
+> Task :siub:checkKotlinGradlePluginConfigurationErrors
+> Task :yjfw:checkKotlinGradlePluginConfigurationErrors
+> Task :base:clean
+> Task :base:generateDebugResValues
+> Task :base:writeDebugAarMetadata
+> Task :base:extractDeepLinksDebug
+> Task :common:clean
+> Task :base:generateDebugResources
+> Task :common:generateDebugResValues
+> Task :base:processDebugManifest
+> Task :common:generateDebugResources
+> Task :common:writeDebugAarMetadata
+> Task :base:packageDebugResources
+> Task :common:extractDeepLinksDebug
+> Task :base:javaPreCompileDebug
+> Task :base:parseDebugLocalResources
+> Task :common:packageDebugResources
+> Task :base:compileDebugLibraryResources
+> Task :common:compileDebugLibraryResources
+> Task :common:parseDebugLocalResources
+> Task :common:processDebugManifest
+> Task :base:generateDebugRFile
+> Task :common:generateDebugRFile
+> Task :yjfw:clean
+> Task :base:mergeDebugShaders
+> Task :yjfw:generateDebugResValues
+> Task :common:javaPreCompileDebug
+> Task :yjfw:writeDebugAarMetadata
+> Task :yjfw:extractDeepLinksDebug
+> Task :yjfw:generateDebugResources
+> Task :eeit:clean
+> Task :yjfw:processDebugManifest
+> Task :siub:clean
+> Task :eeit:generateDebugResValues
+> Task :eeit:writeDebugAarMetadata
+> Task :siub:generateDebugResValues
+> Task :yjfw:javaPreCompileDebug
+> Task :oxcv:clean
+> Task :siub:writeDebugAarMetadata
+> Task :eeit:generateDebugResources
+> Task :dqag:clean
+> Task :siub:generateDebugResources
+> Task :eeit:extractDeepLinksDebug
+> Task :oxcv:generateDebugResValues
+> Task :oxcv:writeDebugAarMetadata
+> Task :dqag:writeDebugAarMetadata
+> Task :dqag:generateDebugResValues
+> Task :oxcv:generateDebugResources
+> Task :dqag:extractDeepLinksDebug
+> Task :dqag:generateDebugResources
+> Task :dqag:processDebugManifest
+> Task :yjfw:packageDebugResources
+> Task :oxcv:extractDeepLinksDebug
+> Task :eeit:processDebugManifest
+> Task :siub:extractDeepLinksDebug
+> Task :eeit:packageDebugResources
+> Task :siub:packageDebugResources
+> Task :yjfw:parseDebugLocalResources
+> Task :oxcv:processDebugManifest
+> Task :dqag:packageDebugResources
+> Task :siub:processDebugManifest
+> Task :oxcv:packageDebugResources
+> Task :siub:parseDebugLocalResources
+> Task :eeit:parseDebugLocalResources
+> Task :dqag:parseDebugLocalResources
+> Task :yjfw:generateDebugRFile
+> Task :oxcv:parseDebugLocalResources
+> Task :dqag:compileDebugLibraryResources
+> Task :eeit:compileDebugLibraryResources
+> Task :dqag:generateDebugRFile
+> Task :siub:generateDebugRFile
+> Task :eeit:generateDebugRFile
+> Task :oxcv:generateDebugRFile
+> Task :oxcv:compileDebugLibraryResources
+> Task :base:compileDebugShaders NO-SOURCE
+> Task :base:generateDebugAssets UP-TO-DATE
+> Task :base:packageDebugAssets
+> Task :common:mergeDebugShaders
+> Task :common:compileDebugShaders NO-SOURCE
+> Task :common:generateDebugAssets UP-TO-DATE
+> Task :common:packageDebugAssets
+> Task :yjfw:compileDebugLibraryResources
+> Task :dqag:javaPreCompileDebug
+> Task :eeit:javaPreCompileDebug
+> Task :siub:compileDebugLibraryResources
+> Task :dqag:mergeDebugShaders
+> Task :dqag:compileDebugShaders NO-SOURCE
+> Task :dqag:generateDebugAssets UP-TO-DATE
+> Task :oxcv:mergeDebugShaders
+> Task :oxcv:javaPreCompileDebug
+> Task :oxcv:compileDebugShaders NO-SOURCE
+> Task :oxcv:generateDebugAssets UP-TO-DATE
+> Task :siub:javaPreCompileDebug
+> Task :siub:mergeDebugShaders
+> Task :yjfw:mergeDebugShaders
+> Task :siub:compileDebugShaders NO-SOURCE
+> Task :dqag:packageDebugAssets
+> Task :siub:generateDebugAssets UP-TO-DATE
+> Task :yjfw:compileDebugShaders NO-SOURCE
+> Task :yjfw:generateDebugAssets UP-TO-DATE
+> Task :eeit:mergeDebugShaders
+> Task :oxcv:packageDebugAssets
+> Task :eeit:compileDebugShaders NO-SOURCE
+> Task :base:mergeDebugJniLibFolders
+> Task :base:mergeDebugNativeLibs NO-SOURCE
+> Task :eeit:generateDebugAssets UP-TO-DATE
+> Task :common:mergeDebugJniLibFolders
+> Task :common:mergeDebugNativeLibs NO-SOURCE
+> Task :siub:packageDebugAssets
+> Task :base:copyDebugJniLibsProjectOnly
+> Task :yjfw:packageDebugAssets
+> Task :dqag:mergeDebugJniLibFolders
+> Task :dqag:mergeDebugNativeLibs NO-SOURCE
+> Task :eeit:mergeDebugJniLibFolders
+> Task :eeit:mergeDebugNativeLibs NO-SOURCE
+> Task :common:copyDebugJniLibsProjectOnly
+> Task :eeit:packageDebugAssets
+> Task :oxcv:mergeDebugJniLibFolders
+> Task :oxcv:mergeDebugNativeLibs NO-SOURCE
+> Task :dqag:copyDebugJniLibsProjectOnly
+> Task :siub:mergeDebugJniLibFolders
+> Task :yjfw:mergeDebugJniLibFolders
+> Task :siub:mergeDebugNativeLibs NO-SOURCE
+> Task :yjfw:mergeDebugNativeLibs NO-SOURCE
+> Task :eeit:copyDebugJniLibsProjectOnly
+> Task :oxcv:copyDebugJniLibsProjectOnly
+> Task :siub:copyDebugJniLibsProjectOnly
+> Task :yjfw:copyDebugJniLibsProjectOnly
+> Task :app:clean
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:generateDebugResValues
+> Task :app:mergeDebugShaders
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:generateDebugResources
+> Task :app:extractDeepLinksDebug
+> Task :app:desugarDebugFileDependencies
+> Task :app:dataBindingMergeDependencyArtifactsDebug
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:mapDebugSourceSetPaths
+> Task :app:mergeDebugStartupProfile UP-TO-DATE
+> Task :app:mergeDebugAssets
+> Task :app:mergeDebugJniLibFolders
+> Task :app:javaPreCompileDebug
+> Task :app:compressDebugAssets
+> Task :app:mergeDebugNativeLibs NO-SOURCE
+> Task :app:stripDebugDebugSymbols NO-SOURCE
+> Task :app:writeDebugAppMetadata
+> Task :app:validateSigningDebug
+> Task :app:writeDebugSigningConfigVersions
+> Task :app:checkDebugAarMetadata
+> Task :app:checkDebugDuplicateClasses
+> Task :common:kaptGenerateStubsDebugKotlin
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
+> Task :app:packageDebugResources
+> Task :app:parseDebugLocalResources
+> Task :base:kaptGenerateStubsDebugKotlin
+> Task :base:kaptDebugKotlin
+> Task :common:kaptDebugKotlin
+> Task :base:compileDebugKotlin
+> Task :base:compileDebugJavaWithJavac NO-SOURCE
+> Task :base:processDebugJavaRes
+> Task :base:bundleLibCompileToJarDebug
+> Task :base:bundleLibRuntimeToJarDebug
+> Task :app:mergeDebugResources
+> Task :app:dataBindingGenBaseClassesDebug
+> Task :common:compileDebugKotlin
+> Task :common:processDebugJavaRes
+> Task :common:compileDebugJavaWithJavac
+> Task :common:bundleLibRuntimeToJarDebug
+> Task :common:bundleLibCompileToJarDebug
+> Task :app:mergeExtDexDebug
+> Task :siub:kaptGenerateStubsDebugKotlin
+> Task :app:processDebugResources
+> Task :oxcv:kaptGenerateStubsDebugKotlin
+> Task :eeit:kaptGenerateStubsDebugKotlin
+> Task :yjfw:kaptGenerateStubsDebugKotlin
+> Task :dqag:kaptGenerateStubsDebugKotlin
+> Task :siub:kaptDebugKotlin
+> Task :oxcv:kaptDebugKotlin
+> Task :yjfw:kaptDebugKotlin
+> Task :dqag:kaptDebugKotlin
+> Task :eeit:kaptDebugKotlin
+> Task :siub:compileDebugKotlin
+> Task :siub:processDebugJavaRes
+> Task :oxcv:compileDebugKotlin
+> Task :oxcv:processDebugJavaRes
+> Task :siub:compileDebugJavaWithJavac
+> Task :siub:bundleLibRuntimeToJarDebug
+> Task :siub:bundleLibCompileToJarDebug
+> Task :oxcv:compileDebugJavaWithJavac
+> Task :eeit:compileDebugKotlin
+> Task :eeit:processDebugJavaRes
+> Task :oxcv:bundleLibRuntimeToJarDebug
+> Task :oxcv:bundleLibCompileToJarDebug
+> Task :yjfw:compileDebugKotlin
+> Task :dqag:compileDebugKotlin
+> Task :yjfw:processDebugJavaRes
+> Task :dqag:processDebugJavaRes
+> Task :yjfw:compileDebugJavaWithJavac
+> Task :eeit:compileDebugJavaWithJavac
+> Task :dqag:compileDebugJavaWithJavac
+> Task :yjfw:bundleLibRuntimeToJarDebug
+> Task :yjfw:bundleLibCompileToJarDebug
+> Task :eeit:bundleLibRuntimeToJarDebug
+> Task :eeit:bundleLibCompileToJarDebug
+> Task :dqag:bundleLibRuntimeToJarDebug
+> Task :dqag:bundleLibCompileToJarDebug
+> Task :app:mergeLibDexDebug
+> Task :app:kaptGenerateStubsDebugKotlin
+> Task :app:kaptDebugKotlin
+> Task :app:compileDebugKotlin
+> Task :app:processDebugJavaRes
+> Task :app:compileDebugJavaWithJavac
+> Task :app:mergeDebugJavaResource
+> Task :app:dexBuilderDebug
+> Task :app:mergeProjectDexDebug
+> Task :app:packageDebug
+> Task :app:assembleDebug
+> Task :app:createDebugApkListingFileRedirect
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.7/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 6s
+200 actionable tasks: 199 executed, 1 up-to-date
+Configuration cache entry reused.
+Used daemon with pid 7522
+Execution time 7002 ms
+
+* Running measured build #6
+Reusing configuration cache.
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :base:preBuild UP-TO-DATE
+> Task :base:preDebugBuild UP-TO-DATE
+> Task :common:preBuild UP-TO-DATE
+> Task :app:checkKotlinGradlePluginConfigurationErrors
+> Task :common:preDebugBuild UP-TO-DATE
+> Task :dqag:preBuild UP-TO-DATE
+> Task :eeit:preBuild UP-TO-DATE
+> Task :dqag:preDebugBuild UP-TO-DATE
+> Task :eeit:preDebugBuild UP-TO-DATE
+> Task :oxcv:preBuild UP-TO-DATE
+> Task :siub:preBuild UP-TO-DATE
+> Task :siub:preDebugBuild UP-TO-DATE
+> Task :oxcv:preDebugBuild UP-TO-DATE
+> Task :yjfw:preBuild UP-TO-DATE
+> Task :yjfw:preDebugBuild UP-TO-DATE
+> Task :base:checkKotlinGradlePluginConfigurationErrors
+> Task :common:checkKotlinGradlePluginConfigurationErrors
+> Task :dqag:checkKotlinGradlePluginConfigurationErrors
+> Task :eeit:checkKotlinGradlePluginConfigurationErrors
+> Task :oxcv:checkKotlinGradlePluginConfigurationErrors
+> Task :siub:checkKotlinGradlePluginConfigurationErrors
+> Task :yjfw:checkKotlinGradlePluginConfigurationErrors
+> Task :base:clean
+> Task :common:clean
+> Task :common:generateDebugResValues
+> Task :base:generateDebugResValues
+> Task :base:writeDebugAarMetadata
+> Task :base:generateDebugResources
+> Task :common:generateDebugResources
+> Task :common:writeDebugAarMetadata
+> Task :base:extractDeepLinksDebug
+> Task :common:extractDeepLinksDebug
+> Task :common:packageDebugResources
+> Task :base:processDebugManifest
+> Task :base:packageDebugResources
+> Task :common:parseDebugLocalResources
+> Task :common:compileDebugLibraryResources
+> Task :base:parseDebugLocalResources
+> Task :base:compileDebugLibraryResources
+> Task :common:processDebugManifest
+> Task :common:generateDebugRFile
+> Task :base:generateDebugRFile
+> Task :base:javaPreCompileDebug
+> Task :common:javaPreCompileDebug
+> Task :common:mergeDebugShaders
+> Task :common:compileDebugShaders NO-SOURCE
+> Task :common:generateDebugAssets UP-TO-DATE
+> Task :base:mergeDebugShaders
+> Task :base:compileDebugShaders NO-SOURCE
+> Task :base:generateDebugAssets UP-TO-DATE
+> Task :oxcv:clean
+> Task :eeit:clean
+> Task :oxcv:generateDebugResValues
+> Task :common:packageDebugAssets
+> Task :base:packageDebugAssets
+> Task :eeit:generateDebugResValues
+> Task :oxcv:generateDebugResources
+> Task :oxcv:writeDebugAarMetadata
+> Task :eeit:writeDebugAarMetadata
+> Task :yjfw:clean
+> Task :eeit:generateDebugResources
+> Task :eeit:extractDeepLinksDebug
+> Task :yjfw:generateDebugResValues
+> Task :siub:clean
+> Task :yjfw:writeDebugAarMetadata
+> Task :dqag:clean
+> Task :siub:generateDebugResValues
+> Task :yjfw:generateDebugResources
+> Task :dqag:generateDebugResValues
+> Task :siub:writeDebugAarMetadata
+> Task :siub:generateDebugResources
+> Task :dqag:generateDebugResources
+> Task :dqag:writeDebugAarMetadata
+> Task :dqag:extractDeepLinksDebug
+> Task :eeit:processDebugManifest
+> Task :oxcv:extractDeepLinksDebug
+> Task :dqag:processDebugManifest
+> Task :oxcv:packageDebugResources
+> Task :eeit:packageDebugResources
+> Task :siub:extractDeepLinksDebug
+> Task :oxcv:processDebugManifest
+> Task :yjfw:extractDeepLinksDebug
+> Task :yjfw:packageDebugResources
+> Task :dqag:packageDebugResources
+> Task :siub:packageDebugResources
+> Task :oxcv:parseDebugLocalResources
+> Task :eeit:parseDebugLocalResources
+> Task :siub:processDebugManifest
+> Task :yjfw:processDebugManifest
+> Task :yjfw:parseDebugLocalResources
+> Task :oxcv:generateDebugRFile
+> Task :eeit:generateDebugRFile
+> Task :dqag:parseDebugLocalResources
+> Task :siub:parseDebugLocalResources
+> Task :yjfw:generateDebugRFile
+> Task :dqag:generateDebugRFile
+> Task :siub:generateDebugRFile
+> Task :siub:compileDebugLibraryResources
+> Task :dqag:compileDebugLibraryResources
+> Task :eeit:compileDebugLibraryResources
+> Task :oxcv:compileDebugLibraryResources
+> Task :dqag:mergeDebugShaders
+> Task :dqag:compileDebugShaders NO-SOURCE
+> Task :dqag:generateDebugAssets UP-TO-DATE
+> Task :dqag:packageDebugAssets
+> Task :yjfw:compileDebugLibraryResources
+> Task :eeit:javaPreCompileDebug
+> Task :eeit:mergeDebugShaders
+> Task :eeit:compileDebugShaders NO-SOURCE
+> Task :dqag:javaPreCompileDebug
+> Task :eeit:generateDebugAssets UP-TO-DATE
+> Task :oxcv:mergeDebugShaders
+> Task :oxcv:compileDebugShaders NO-SOURCE
+> Task :oxcv:generateDebugAssets UP-TO-DATE
+> Task :siub:mergeDebugShaders
+> Task :yjfw:javaPreCompileDebug
+> Task :siub:compileDebugShaders NO-SOURCE
+> Task :siub:generateDebugAssets UP-TO-DATE
+> Task :yjfw:mergeDebugShaders
+> Task :eeit:packageDebugAssets
+> Task :yjfw:compileDebugShaders NO-SOURCE
+> Task :siub:javaPreCompileDebug
+> Task :yjfw:generateDebugAssets UP-TO-DATE
+> Task :oxcv:packageDebugAssets
+> Task :oxcv:javaPreCompileDebug
+> Task :base:mergeDebugJniLibFolders
+> Task :base:mergeDebugNativeLibs NO-SOURCE
+> Task :siub:packageDebugAssets
+> Task :dqag:mergeDebugJniLibFolders
+> Task :common:mergeDebugJniLibFolders
+> Task :yjfw:packageDebugAssets
+> Task :eeit:mergeDebugJniLibFolders
+> Task :dqag:mergeDebugNativeLibs NO-SOURCE
+> Task :oxcv:mergeDebugJniLibFolders
+> Task :common:mergeDebugNativeLibs NO-SOURCE
+> Task :base:copyDebugJniLibsProjectOnly
+> Task :eeit:mergeDebugNativeLibs NO-SOURCE
+> Task :siub:mergeDebugJniLibFolders
+> Task :oxcv:mergeDebugNativeLibs NO-SOURCE
+> Task :siub:mergeDebugNativeLibs NO-SOURCE
+> Task :dqag:copyDebugJniLibsProjectOnly
+> Task :yjfw:mergeDebugJniLibFolders
+> Task :common:copyDebugJniLibsProjectOnly
+> Task :yjfw:mergeDebugNativeLibs NO-SOURCE
+> Task :oxcv:copyDebugJniLibsProjectOnly
+> Task :siub:copyDebugJniLibsProjectOnly
+> Task :eeit:copyDebugJniLibsProjectOnly
+> Task :yjfw:copyDebugJniLibsProjectOnly
+> Task :app:clean
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:generateDebugResValues
+> Task :app:desugarDebugFileDependencies
+> Task :app:dataBindingMergeDependencyArtifactsDebug
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:mergeDebugShaders
+> Task :app:mergeDebugStartupProfile UP-TO-DATE
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:generateDebugResources
+> Task :app:mapDebugSourceSetPaths
+> Task :app:extractDeepLinksDebug
+> Task :app:mergeDebugJniLibFolders
+> Task :app:mergeDebugAssets
+> Task :app:mergeDebugNativeLibs NO-SOURCE
+> Task :app:compressDebugAssets
+> Task :app:stripDebugDebugSymbols NO-SOURCE
+> Task :app:validateSigningDebug
+> Task :app:writeDebugAppMetadata
+> Task :app:javaPreCompileDebug
+> Task :app:writeDebugSigningConfigVersions
+> Task :app:checkDebugAarMetadata
+> Task :app:checkDebugDuplicateClasses
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
+> Task :common:kaptGenerateStubsDebugKotlin
+> Task :app:packageDebugResources
+> Task :app:parseDebugLocalResources
+> Task :base:kaptGenerateStubsDebugKotlin
+> Task :base:kaptDebugKotlin
+> Task :common:kaptDebugKotlin
+> Task :base:compileDebugKotlin
+> Task :base:compileDebugJavaWithJavac NO-SOURCE
+> Task :base:processDebugJavaRes
+> Task :base:bundleLibRuntimeToJarDebug
+> Task :base:bundleLibCompileToJarDebug
+> Task :app:mergeDebugResources
+> Task :common:compileDebugKotlin
+> Task :common:processDebugJavaRes
+> Task :app:dataBindingGenBaseClassesDebug
+> Task :common:compileDebugJavaWithJavac
+> Task :common:bundleLibRuntimeToJarDebug
+> Task :common:bundleLibCompileToJarDebug
+> Task :app:mergeExtDexDebug
+> Task :yjfw:kaptGenerateStubsDebugKotlin
+> Task :siub:kaptGenerateStubsDebugKotlin
+> Task :dqag:kaptGenerateStubsDebugKotlin
+> Task :oxcv:kaptGenerateStubsDebugKotlin
+> Task :app:processDebugResources
+> Task :eeit:kaptGenerateStubsDebugKotlin
+> Task :yjfw:kaptDebugKotlin
+> Task :dqag:kaptDebugKotlin
+> Task :siub:kaptDebugKotlin
+> Task :eeit:kaptDebugKotlin
+> Task :oxcv:kaptDebugKotlin
+> Task :yjfw:compileDebugKotlin
+> Task :yjfw:processDebugJavaRes
+> Task :yjfw:compileDebugJavaWithJavac
+> Task :yjfw:bundleLibRuntimeToJarDebug
+> Task :yjfw:bundleLibCompileToJarDebug
+> Task :dqag:compileDebugKotlin
+> Task :dqag:processDebugJavaRes
+> Task :eeit:compileDebugKotlin
+> Task :eeit:processDebugJavaRes
+> Task :siub:compileDebugKotlin
+> Task :siub:processDebugJavaRes
+> Task :oxcv:compileDebugKotlin
+> Task :oxcv:processDebugJavaRes
+> Task :dqag:compileDebugJavaWithJavac
+> Task :dqag:bundleLibRuntimeToJarDebug
+> Task :dqag:bundleLibCompileToJarDebug
+> Task :eeit:compileDebugJavaWithJavac
+> Task :eeit:bundleLibRuntimeToJarDebug
+> Task :eeit:bundleLibCompileToJarDebug
+> Task :siub:compileDebugJavaWithJavac
+> Task :oxcv:compileDebugJavaWithJavac
+> Task :siub:bundleLibRuntimeToJarDebug
+> Task :siub:bundleLibCompileToJarDebug
+> Task :oxcv:bundleLibRuntimeToJarDebug
+> Task :oxcv:bundleLibCompileToJarDebug
+> Task :app:mergeLibDexDebug
+> Task :app:kaptGenerateStubsDebugKotlin
+> Task :app:kaptDebugKotlin
+> Task :app:compileDebugKotlin
+> Task :app:processDebugJavaRes
+> Task :app:compileDebugJavaWithJavac
+> Task :app:mergeDebugJavaResource
+> Task :app:dexBuilderDebug
+> Task :app:mergeProjectDexDebug
+> Task :app:packageDebug
+> Task :app:assembleDebug
+> Task :app:createDebugApkListingFileRedirect
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.7/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 6s
+200 actionable tasks: 199 executed, 1 up-to-date
+Configuration cache entry reused.
+Used daemon with pid 7522
+Execution time 6795 ms
+
+* Running measured build #7
+Reusing configuration cache.
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :base:preBuild UP-TO-DATE
+> Task :base:preDebugBuild UP-TO-DATE
+> Task :common:preBuild UP-TO-DATE
+> Task :common:preDebugBuild UP-TO-DATE
+> Task :dqag:preBuild UP-TO-DATE
+> Task :dqag:preDebugBuild UP-TO-DATE
+> Task :app:checkKotlinGradlePluginConfigurationErrors
+> Task :eeit:preBuild UP-TO-DATE
+> Task :oxcv:preBuild UP-TO-DATE
+> Task :eeit:preDebugBuild UP-TO-DATE
+> Task :oxcv:preDebugBuild UP-TO-DATE
+> Task :siub:preBuild UP-TO-DATE
+> Task :yjfw:preBuild UP-TO-DATE
+> Task :siub:preDebugBuild UP-TO-DATE
+> Task :yjfw:preDebugBuild UP-TO-DATE
+> Task :base:checkKotlinGradlePluginConfigurationErrors
+> Task :common:checkKotlinGradlePluginConfigurationErrors
+> Task :dqag:checkKotlinGradlePluginConfigurationErrors
+> Task :eeit:checkKotlinGradlePluginConfigurationErrors
+> Task :oxcv:checkKotlinGradlePluginConfigurationErrors
+> Task :siub:checkKotlinGradlePluginConfigurationErrors
+> Task :yjfw:checkKotlinGradlePluginConfigurationErrors
+> Task :common:clean
+> Task :common:generateDebugResValues
+> Task :common:generateDebugResources
+> Task :common:writeDebugAarMetadata
+> Task :common:extractDeepLinksDebug
+> Task :base:clean
+> Task :base:generateDebugResValues
+> Task :common:processDebugManifest
+> Task :common:packageDebugResources
+> Task :base:generateDebugResources
+> Task :base:writeDebugAarMetadata
+> Task :common:parseDebugLocalResources
+> Task :base:extractDeepLinksDebug
+> Task :common:javaPreCompileDebug
+> Task :common:compileDebugLibraryResources
+> Task :base:packageDebugResources
+> Task :common:generateDebugRFile
+> Task :base:compileDebugLibraryResources
+> Task :base:processDebugManifest
+> Task :base:parseDebugLocalResources
+> Task :base:mergeDebugShaders
+> Task :base:compileDebugShaders NO-SOURCE
+> Task :base:javaPreCompileDebug
+> Task :base:generateDebugAssets UP-TO-DATE
+> Task :common:mergeDebugShaders
+> Task :common:compileDebugShaders NO-SOURCE
+> Task :common:generateDebugAssets UP-TO-DATE
+> Task :base:packageDebugAssets
+> Task :base:generateDebugRFile
+> Task :oxcv:clean
+> Task :common:packageDebugAssets
+> Task :base:mergeDebugJniLibFolders
+> Task :oxcv:generateDebugResValues
+> Task :oxcv:writeDebugAarMetadata
+> Task :yjfw:clean
+> Task :oxcv:generateDebugResources
+> Task :oxcv:extractDeepLinksDebug
+> Task :yjfw:generateDebugResValues
+> Task :yjfw:writeDebugAarMetadata
+> Task :yjfw:extractDeepLinksDebug
+> Task :yjfw:generateDebugResources
+> Task :dqag:clean
+> Task :oxcv:processDebugManifest
+> Task :siub:clean
+> Task :dqag:generateDebugResValues
+> Task :eeit:clean
+> Task :dqag:writeDebugAarMetadata
+> Task :siub:generateDebugResValues
+> Task :dqag:generateDebugResources
+> Task :eeit:writeDebugAarMetadata
+> Task :eeit:generateDebugResValues
+> Task :siub:writeDebugAarMetadata
+> Task :siub:generateDebugResources
+> Task :yjfw:processDebugManifest
+> Task :dqag:extractDeepLinksDebug
+> Task :eeit:generateDebugResources
+> Task :eeit:extractDeepLinksDebug
+> Task :oxcv:packageDebugResources
+> Task :dqag:processDebugManifest
+> Task :yjfw:packageDebugResources
+> Task :siub:extractDeepLinksDebug
+> Task :eeit:processDebugManifest
+> Task :dqag:packageDebugResources
+> Task :siub:packageDebugResources
+> Task :oxcv:parseDebugLocalResources
+> Task :yjfw:parseDebugLocalResources
+> Task :eeit:packageDebugResources
+> Task :siub:processDebugManifest
+> Task :oxcv:compileDebugLibraryResources
+> Task :oxcv:generateDebugRFile
+> Task :yjfw:generateDebugRFile
+> Task :dqag:parseDebugLocalResources
+> Task :siub:parseDebugLocalResources
+> Task :eeit:parseDebugLocalResources
+> Task :dqag:compileDebugLibraryResources
+> Task :siub:generateDebugRFile
+> Task :dqag:generateDebugRFile
+> Task :eeit:generateDebugRFile
+> Task :siub:compileDebugLibraryResources
+> Task :yjfw:compileDebugLibraryResources
+> Task :dqag:javaPreCompileDebug
+> Task :eeit:compileDebugLibraryResources
+> Task :dqag:mergeDebugShaders
+> Task :dqag:compileDebugShaders NO-SOURCE
+> Task :dqag:generateDebugAssets UP-TO-DATE
+> Task :eeit:mergeDebugShaders
+> Task :eeit:compileDebugShaders NO-SOURCE
+> Task :eeit:generateDebugAssets UP-TO-DATE
+> Task :eeit:javaPreCompileDebug
+> Task :oxcv:mergeDebugShaders
+> Task :oxcv:compileDebugShaders NO-SOURCE
+> Task :oxcv:generateDebugAssets UP-TO-DATE
+> Task :dqag:packageDebugAssets
+> Task :eeit:packageDebugAssets
+> Task :base:mergeDebugNativeLibs NO-SOURCE
+> Task :siub:mergeDebugShaders
+> Task :oxcv:packageDebugAssets
+> Task :siub:compileDebugShaders NO-SOURCE
+> Task :oxcv:javaPreCompileDebug
+> Task :siub:generateDebugAssets UP-TO-DATE
+> Task :yjfw:mergeDebugShaders
+> Task :siub:javaPreCompileDebug
+> Task :yjfw:compileDebugShaders NO-SOURCE
+> Task :yjfw:generateDebugAssets UP-TO-DATE
+> Task :base:copyDebugJniLibsProjectOnly
+> Task :yjfw:javaPreCompileDebug
+> Task :eeit:mergeDebugJniLibFolders
+> Task :siub:packageDebugAssets
+> Task :oxcv:mergeDebugJniLibFolders
+> Task :common:mergeDebugJniLibFolders
+> Task :dqag:mergeDebugJniLibFolders
+> Task :eeit:mergeDebugNativeLibs NO-SOURCE
+> Task :siub:mergeDebugJniLibFolders
+> Task :yjfw:packageDebugAssets
+> Task :common:mergeDebugNativeLibs NO-SOURCE
+> Task :oxcv:mergeDebugNativeLibs NO-SOURCE
+> Task :dqag:mergeDebugNativeLibs NO-SOURCE
+> Task :siub:mergeDebugNativeLibs NO-SOURCE
+> Task :yjfw:mergeDebugJniLibFolders
+> Task :yjfw:mergeDebugNativeLibs NO-SOURCE
+> Task :common:copyDebugJniLibsProjectOnly
+> Task :oxcv:copyDebugJniLibsProjectOnly
+> Task :siub:copyDebugJniLibsProjectOnly
+> Task :dqag:copyDebugJniLibsProjectOnly
+> Task :yjfw:copyDebugJniLibsProjectOnly
+> Task :eeit:copyDebugJniLibsProjectOnly
+> Task :app:clean
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:generateDebugResValues
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:mergeDebugShaders
+> Task :app:desugarDebugFileDependencies
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:extractDeepLinksDebug
+> Task :app:dataBindingMergeDependencyArtifactsDebug
+> Task :app:mergeDebugStartupProfile UP-TO-DATE
+> Task :app:generateDebugResources
+> Task :app:mapDebugSourceSetPaths
+> Task :app:mergeDebugJniLibFolders
+> Task :app:mergeDebugAssets
+> Task :app:javaPreCompileDebug
+> Task :app:mergeDebugNativeLibs NO-SOURCE
+> Task :app:stripDebugDebugSymbols NO-SOURCE
+> Task :app:compressDebugAssets
+> Task :app:writeDebugAppMetadata
+> Task :app:writeDebugSigningConfigVersions
+> Task :app:validateSigningDebug
+> Task :app:checkDebugAarMetadata
+> Task :app:checkDebugDuplicateClasses
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
+> Task :app:packageDebugResources
+> Task :common:kaptGenerateStubsDebugKotlin
+> Task :app:parseDebugLocalResources
+> Task :base:kaptGenerateStubsDebugKotlin
+> Task :base:kaptDebugKotlin
+> Task :common:kaptDebugKotlin
+> Task :base:compileDebugKotlin
+> Task :base:compileDebugJavaWithJavac NO-SOURCE
+> Task :base:processDebugJavaRes
+> Task :base:bundleLibCompileToJarDebug
+> Task :base:bundleLibRuntimeToJarDebug
+> Task :common:compileDebugKotlin
+> Task :common:processDebugJavaRes
+> Task :app:mergeDebugResources
+> Task :common:compileDebugJavaWithJavac
+> Task :common:bundleLibRuntimeToJarDebug
+> Task :common:bundleLibCompileToJarDebug
+> Task :app:dataBindingGenBaseClassesDebug
+> Task :app:mergeExtDexDebug
+> Task :oxcv:kaptGenerateStubsDebugKotlin
+> Task :siub:kaptGenerateStubsDebugKotlin
+> Task :eeit:kaptGenerateStubsDebugKotlin
+> Task :dqag:kaptGenerateStubsDebugKotlin
+> Task :app:processDebugResources
+> Task :yjfw:kaptGenerateStubsDebugKotlin
+> Task :oxcv:kaptDebugKotlin
+> Task :eeit:kaptDebugKotlin
+> Task :siub:kaptDebugKotlin
+> Task :dqag:kaptDebugKotlin
+> Task :yjfw:kaptDebugKotlin
+> Task :eeit:compileDebugKotlin
+> Task :dqag:compileDebugKotlin
+> Task :eeit:processDebugJavaRes
+> Task :dqag:processDebugJavaRes
+> Task :siub:compileDebugKotlin
+> Task :siub:processDebugJavaRes
+> Task :yjfw:compileDebugKotlin
+> Task :oxcv:compileDebugKotlin
+> Task :yjfw:processDebugJavaRes
+> Task :oxcv:processDebugJavaRes
+> Task :dqag:compileDebugJavaWithJavac
+> Task :siub:compileDebugJavaWithJavac
+> Task :eeit:compileDebugJavaWithJavac
+> Task :dqag:bundleLibRuntimeToJarDebug
+> Task :dqag:bundleLibCompileToJarDebug
+> Task :eeit:bundleLibRuntimeToJarDebug
+> Task :siub:bundleLibRuntimeToJarDebug
+> Task :eeit:bundleLibCompileToJarDebug
+> Task :siub:bundleLibCompileToJarDebug
+> Task :yjfw:compileDebugJavaWithJavac
+> Task :oxcv:compileDebugJavaWithJavac
+> Task :yjfw:bundleLibRuntimeToJarDebug
+> Task :yjfw:bundleLibCompileToJarDebug
+> Task :oxcv:bundleLibRuntimeToJarDebug
+> Task :oxcv:bundleLibCompileToJarDebug
+> Task :app:mergeLibDexDebug
+> Task :app:kaptGenerateStubsDebugKotlin
+> Task :app:kaptDebugKotlin
+> Task :app:compileDebugKotlin
+> Task :app:processDebugJavaRes
+> Task :app:compileDebugJavaWithJavac
+> Task :app:mergeDebugJavaResource
+> Task :app:dexBuilderDebug
+> Task :app:mergeProjectDexDebug
+> Task :app:packageDebug
+> Task :app:assembleDebug
+> Task :app:createDebugApkListingFileRedirect
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.7/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 7s
+200 actionable tasks: 199 executed, 1 up-to-date
+Configuration cache entry reused.
+Used daemon with pid 7522
+Execution time 7223 ms
+
+* Running measured build #8
+Reusing configuration cache.
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :base:preBuild UP-TO-DATE
+> Task :base:preDebugBuild UP-TO-DATE
+> Task :common:preBuild UP-TO-DATE
+> Task :common:preDebugBuild UP-TO-DATE
+> Task :dqag:preBuild UP-TO-DATE
+> Task :dqag:preDebugBuild UP-TO-DATE
+> Task :app:checkKotlinGradlePluginConfigurationErrors
+> Task :eeit:preBuild UP-TO-DATE
+> Task :oxcv:preBuild UP-TO-DATE
+> Task :eeit:preDebugBuild UP-TO-DATE
+> Task :oxcv:preDebugBuild UP-TO-DATE
+> Task :siub:preBuild UP-TO-DATE
+> Task :siub:preDebugBuild UP-TO-DATE
+> Task :yjfw:preBuild UP-TO-DATE
+> Task :yjfw:preDebugBuild UP-TO-DATE
+> Task :base:checkKotlinGradlePluginConfigurationErrors
+> Task :common:checkKotlinGradlePluginConfigurationErrors
+> Task :dqag:checkKotlinGradlePluginConfigurationErrors
+> Task :eeit:checkKotlinGradlePluginConfigurationErrors
+> Task :oxcv:checkKotlinGradlePluginConfigurationErrors
+> Task :siub:checkKotlinGradlePluginConfigurationErrors
+> Task :yjfw:checkKotlinGradlePluginConfigurationErrors
+> Task :base:clean
+> Task :base:generateDebugResValues
+> Task :common:clean
+> Task :base:writeDebugAarMetadata
+> Task :common:generateDebugResValues
+> Task :common:writeDebugAarMetadata
+> Task :base:generateDebugResources
+> Task :common:generateDebugResources
+> Task :base:extractDeepLinksDebug
+> Task :common:extractDeepLinksDebug
+> Task :base:processDebugManifest
+> Task :common:packageDebugResources
+> Task :base:packageDebugResources
+> Task :common:processDebugManifest
+> Task :base:parseDebugLocalResources
+> Task :common:parseDebugLocalResources
+> Task :base:compileDebugLibraryResources
+> Task :base:javaPreCompileDebug
+> Task :common:compileDebugLibraryResources
+> Task :base:mergeDebugShaders
+> Task :base:compileDebugShaders NO-SOURCE
+> Task :base:generateDebugAssets UP-TO-DATE
+> Task :base:generateDebugRFile
+> Task :common:generateDebugRFile
+> Task :base:packageDebugAssets
+> Task :common:mergeDebugShaders
+> Task :common:compileDebugShaders NO-SOURCE
+> Task :common:generateDebugAssets UP-TO-DATE
+> Task :common:javaPreCompileDebug
+> Task :common:packageDebugAssets
+> Task :base:mergeDebugJniLibFolders
+> Task :base:mergeDebugNativeLibs NO-SOURCE
+> Task :common:mergeDebugJniLibFolders
+> Task :common:mergeDebugNativeLibs NO-SOURCE
+> Task :base:copyDebugJniLibsProjectOnly
+> Task :common:copyDebugJniLibsProjectOnly
+> Task :oxcv:clean
+> Task :siub:clean
+> Task :dqag:clean
+> Task :yjfw:clean
+> Task :oxcv:generateDebugResValues
+> Task :siub:generateDebugResValues
+> Task :oxcv:writeDebugAarMetadata
+> Task :yjfw:generateDebugResValues
+> Task :eeit:clean
+> Task :dqag:generateDebugResValues
+> Task :dqag:writeDebugAarMetadata
+> Task :oxcv:generateDebugResources
+> Task :siub:generateDebugResources
+> Task :eeit:generateDebugResValues
+> Task :eeit:writeDebugAarMetadata
+> Task :yjfw:generateDebugResources
+> Task :dqag:generateDebugResources
+> Task :siub:writeDebugAarMetadata
+> Task :oxcv:processDebugManifest
+> Task :eeit:generateDebugResources
+> Task :yjfw:writeDebugAarMetadata
+> Task :dqag:extractDeepLinksDebug
+> Task :eeit:extractDeepLinksDebug
+> Task :dqag:processDebugManifest
+> Task :oxcv:extractDeepLinksDebug
+> Task :eeit:processDebugManifest
+> Task :yjfw:packageDebugResources
+> Task :siub:extractDeepLinksDebug
+> Task :siub:packageDebugResources
+> Task :oxcv:packageDebugResources
+> Task :eeit:packageDebugResources
+> Task :dqag:packageDebugResources
+> Task :yjfw:extractDeepLinksDebug
+> Task :siub:processDebugManifest
+> Task :siub:parseDebugLocalResources
+> Task :yjfw:parseDebugLocalResources
+> Task :oxcv:parseDebugLocalResources
+> Task :eeit:parseDebugLocalResources
+> Task :dqag:parseDebugLocalResources
+> Task :yjfw:processDebugManifest
+> Task :siub:generateDebugRFile
+> Task :eeit:generateDebugRFile
+> Task :oxcv:generateDebugRFile
+> Task :yjfw:generateDebugRFile
+> Task :dqag:generateDebugRFile
+> Task :dqag:compileDebugLibraryResources
+> Task :eeit:compileDebugLibraryResources
+> Task :yjfw:compileDebugLibraryResources
+> Task :siub:compileDebugLibraryResources
+> Task :eeit:javaPreCompileDebug
+> Task :dqag:javaPreCompileDebug
+> Task :oxcv:compileDebugLibraryResources
+> Task :oxcv:javaPreCompileDebug
+> Task :dqag:mergeDebugShaders
+> Task :dqag:compileDebugShaders NO-SOURCE
+> Task :dqag:generateDebugAssets UP-TO-DATE
+> Task :eeit:mergeDebugShaders
+> Task :oxcv:mergeDebugShaders
+> Task :eeit:compileDebugShaders NO-SOURCE
+> Task :oxcv:compileDebugShaders NO-SOURCE
+> Task :oxcv:generateDebugAssets UP-TO-DATE
+> Task :eeit:generateDebugAssets UP-TO-DATE
+> Task :siub:mergeDebugShaders
+> Task :siub:compileDebugShaders NO-SOURCE
+> Task :siub:generateDebugAssets UP-TO-DATE
+> Task :yjfw:mergeDebugShaders
+> Task :dqag:packageDebugAssets
+> Task :oxcv:packageDebugAssets
+> Task :yjfw:compileDebugShaders NO-SOURCE
+> Task :yjfw:generateDebugAssets UP-TO-DATE
+> Task :eeit:packageDebugAssets
+> Task :yjfw:packageDebugAssets
+> Task :yjfw:javaPreCompileDebug
+> Task :siub:packageDebugAssets
+> Task :dqag:mergeDebugJniLibFolders
+> Task :siub:javaPreCompileDebug
+> Task :oxcv:mergeDebugJniLibFolders
+> Task :dqag:mergeDebugNativeLibs NO-SOURCE
+> Task :eeit:mergeDebugJniLibFolders
+> Task :siub:mergeDebugJniLibFolders
+> Task :yjfw:mergeDebugJniLibFolders
+> Task :oxcv:mergeDebugNativeLibs NO-SOURCE
+> Task :eeit:mergeDebugNativeLibs NO-SOURCE
+> Task :yjfw:mergeDebugNativeLibs NO-SOURCE
+> Task :siub:mergeDebugNativeLibs NO-SOURCE
+> Task :dqag:copyDebugJniLibsProjectOnly
+> Task :eeit:copyDebugJniLibsProjectOnly
+> Task :yjfw:copyDebugJniLibsProjectOnly
+> Task :siub:copyDebugJniLibsProjectOnly
+> Task :oxcv:copyDebugJniLibsProjectOnly
+> Task :app:clean
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:generateDebugResValues
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:desugarDebugFileDependencies
+> Task :app:mergeDebugShaders
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:dataBindingMergeDependencyArtifactsDebug
+> Task :app:mergeDebugStartupProfile UP-TO-DATE
+> Task :app:extractDeepLinksDebug
+> Task :app:mergeDebugJniLibFolders
+> Task :app:mergeDebugAssets
+> Task :app:generateDebugResources
+> Task :app:compressDebugAssets
+> Task :app:mergeDebugNativeLibs NO-SOURCE
+> Task :app:stripDebugDebugSymbols NO-SOURCE
+> Task :app:mapDebugSourceSetPaths
+> Task :app:validateSigningDebug
+> Task :app:javaPreCompileDebug
+> Task :app:writeDebugAppMetadata
+> Task :app:writeDebugSigningConfigVersions
+> Task :app:checkDebugAarMetadata
+> Task :common:kaptGenerateStubsDebugKotlin
+> Task :app:checkDebugDuplicateClasses
+> Task :app:packageDebugResources
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:parseDebugLocalResources
+> Task :app:processDebugManifestForPackage
+> Task :base:kaptGenerateStubsDebugKotlin
+> Task :base:kaptDebugKotlin
+> Task :common:kaptDebugKotlin
+> Task :base:compileDebugKotlin
+> Task :base:compileDebugJavaWithJavac NO-SOURCE
+> Task :base:processDebugJavaRes
+> Task :base:bundleLibRuntimeToJarDebug
+> Task :base:bundleLibCompileToJarDebug
+> Task :common:compileDebugKotlin
+> Task :common:processDebugJavaRes
+> Task :app:mergeDebugResources
+> Task :common:compileDebugJavaWithJavac
+> Task :common:bundleLibRuntimeToJarDebug
+> Task :common:bundleLibCompileToJarDebug
+> Task :app:dataBindingGenBaseClassesDebug
+> Task :app:mergeExtDexDebug
+> Task :yjfw:kaptGenerateStubsDebugKotlin
+> Task :eeit:kaptGenerateStubsDebugKotlin
+> Task :app:processDebugResources
+> Task :siub:kaptGenerateStubsDebugKotlin
+> Task :oxcv:kaptGenerateStubsDebugKotlin
+> Task :dqag:kaptGenerateStubsDebugKotlin
+> Task :eeit:kaptDebugKotlin
+> Task :yjfw:kaptDebugKotlin
+> Task :dqag:kaptDebugKotlin
+> Task :siub:kaptDebugKotlin
+> Task :oxcv:kaptDebugKotlin
+> Task :yjfw:compileDebugKotlin
+> Task :eeit:compileDebugKotlin
+> Task :eeit:processDebugJavaRes
+> Task :yjfw:processDebugJavaRes
+> Task :yjfw:compileDebugJavaWithJavac
+> Task :eeit:compileDebugJavaWithJavac
+> Task :yjfw:bundleLibRuntimeToJarDebug
+> Task :eeit:bundleLibRuntimeToJarDebug
+> Task :yjfw:bundleLibCompileToJarDebug
+> Task :eeit:bundleLibCompileToJarDebug
+> Task :oxcv:compileDebugKotlin
+> Task :oxcv:processDebugJavaRes
+> Task :siub:compileDebugKotlin
+> Task :dqag:compileDebugKotlin
+> Task :siub:processDebugJavaRes
+> Task :dqag:processDebugJavaRes
+> Task :oxcv:compileDebugJavaWithJavac
+> Task :siub:compileDebugJavaWithJavac
+> Task :dqag:compileDebugJavaWithJavac
+> Task :oxcv:bundleLibRuntimeToJarDebug
+> Task :oxcv:bundleLibCompileToJarDebug
+> Task :siub:bundleLibRuntimeToJarDebug
+> Task :siub:bundleLibCompileToJarDebug
+> Task :dqag:bundleLibRuntimeToJarDebug
+> Task :dqag:bundleLibCompileToJarDebug
+> Task :app:mergeLibDexDebug
+> Task :app:kaptGenerateStubsDebugKotlin
+> Task :app:kaptDebugKotlin
+> Task :app:compileDebugKotlin
+> Task :app:processDebugJavaRes
+> Task :app:compileDebugJavaWithJavac
+> Task :app:mergeDebugJavaResource
+> Task :app:dexBuilderDebug
+> Task :app:mergeProjectDexDebug
+> Task :app:packageDebug
+> Task :app:assembleDebug
+> Task :app:createDebugApkListingFileRedirect
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.7/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 6s
+200 actionable tasks: 199 executed, 1 up-to-date
+Configuration cache entry reused.
+Used daemon with pid 7522
+Execution time 6658 ms
+
+* Running measured build #9
+Reusing configuration cache.
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :base:preBuild UP-TO-DATE
+> Task :base:preDebugBuild UP-TO-DATE
+> Task :common:preBuild UP-TO-DATE
+> Task :common:preDebugBuild UP-TO-DATE
+> Task :dqag:preBuild UP-TO-DATE
+> Task :dqag:preDebugBuild UP-TO-DATE
+> Task :eeit:preBuild UP-TO-DATE
+> Task :eeit:preDebugBuild UP-TO-DATE
+> Task :oxcv:preBuild UP-TO-DATE
+> Task :app:checkKotlinGradlePluginConfigurationErrors
+> Task :oxcv:preDebugBuild UP-TO-DATE
+> Task :siub:preBuild UP-TO-DATE
+> Task :siub:preDebugBuild UP-TO-DATE
+> Task :yjfw:preBuild UP-TO-DATE
+> Task :yjfw:preDebugBuild UP-TO-DATE
+> Task :base:checkKotlinGradlePluginConfigurationErrors
+> Task :common:checkKotlinGradlePluginConfigurationErrors
+> Task :dqag:checkKotlinGradlePluginConfigurationErrors
+> Task :eeit:checkKotlinGradlePluginConfigurationErrors
+> Task :oxcv:checkKotlinGradlePluginConfigurationErrors
+> Task :siub:checkKotlinGradlePluginConfigurationErrors
+> Task :yjfw:checkKotlinGradlePluginConfigurationErrors
+> Task :common:clean
+> Task :common:generateDebugResValues
+> Task :common:writeDebugAarMetadata
+> Task :common:generateDebugResources
+> Task :common:extractDeepLinksDebug
+> Task :base:clean
+> Task :base:generateDebugResValues
+> Task :base:generateDebugResources
+> Task :common:packageDebugResources
+> Task :common:processDebugManifest
+> Task :base:writeDebugAarMetadata
+> Task :common:javaPreCompileDebug
+> Task :common:parseDebugLocalResources
+> Task :base:extractDeepLinksDebug
+> Task :base:packageDebugResources
+> Task :common:compileDebugLibraryResources
+> Task :base:compileDebugLibraryResources
+> Task :base:parseDebugLocalResources
+> Task :common:generateDebugRFile
+> Task :base:processDebugManifest
+> Task :base:generateDebugRFile
+> Task :base:mergeDebugShaders
+> Task :base:compileDebugShaders NO-SOURCE
+> Task :base:generateDebugAssets UP-TO-DATE
+> Task :base:javaPreCompileDebug
+> Task :base:packageDebugAssets
+> Task :common:mergeDebugShaders
+> Task :common:compileDebugShaders NO-SOURCE
+> Task :common:generateDebugAssets UP-TO-DATE
+> Task :base:mergeDebugJniLibFolders
+> Task :base:mergeDebugNativeLibs NO-SOURCE
+> Task :dqag:clean
+> Task :common:packageDebugAssets
+> Task :base:copyDebugJniLibsProjectOnly
+> Task :dqag:generateDebugResValues
+> Task :oxcv:clean
+> Task :dqag:writeDebugAarMetadata
+> Task :oxcv:writeDebugAarMetadata
+> Task :oxcv:generateDebugResValues
+> Task :dqag:generateDebugResources
+> Task :eeit:clean
+> Task :siub:clean
+> Task :dqag:extractDeepLinksDebug
+> Task :eeit:generateDebugResValues
+> Task :oxcv:generateDebugResources
+> Task :eeit:writeDebugAarMetadata
+> Task :yjfw:clean
+> Task :siub:generateDebugResValues
+> Task :dqag:processDebugManifest
+> Task :siub:writeDebugAarMetadata
+> Task :yjfw:generateDebugResValues
+> Task :eeit:generateDebugResources
+> Task :eeit:extractDeepLinksDebug
+> Task :siub:generateDebugResources
+> Task :yjfw:writeDebugAarMetadata
+> Task :yjfw:generateDebugResources
+> Task :oxcv:extractDeepLinksDebug
+> Task :eeit:processDebugManifest
+> Task :siub:extractDeepLinksDebug
+> Task :oxcv:processDebugManifest
+> Task :dqag:packageDebugResources
+> Task :yjfw:extractDeepLinksDebug
+> Task :oxcv:packageDebugResources
+> Task :eeit:packageDebugResources
+> Task :siub:processDebugManifest
+> Task :siub:packageDebugResources
+> Task :yjfw:packageDebugResources
+> Task :dqag:parseDebugLocalResources
+> Task :oxcv:parseDebugLocalResources
+> Task :eeit:parseDebugLocalResources
+> Task :yjfw:processDebugManifest
+> Task :siub:parseDebugLocalResources
+> Task :dqag:compileDebugLibraryResources
+> Task :yjfw:parseDebugLocalResources
+> Task :eeit:generateDebugRFile
+> Task :oxcv:generateDebugRFile
+> Task :dqag:generateDebugRFile
+> Task :siub:generateDebugRFile
+> Task :yjfw:generateDebugRFile
+> Task :eeit:compileDebugLibraryResources
+> Task :siub:compileDebugLibraryResources
+> Task :oxcv:compileDebugLibraryResources
+> Task :dqag:javaPreCompileDebug
+> Task :yjfw:compileDebugLibraryResources
+> Task :dqag:mergeDebugShaders
+> Task :eeit:mergeDebugShaders
+> Task :dqag:compileDebugShaders NO-SOURCE
+> Task :dqag:generateDebugAssets UP-TO-DATE
+> Task :eeit:compileDebugShaders NO-SOURCE
+> Task :oxcv:javaPreCompileDebug
+> Task :oxcv:mergeDebugShaders
+> Task :eeit:generateDebugAssets UP-TO-DATE
+> Task :oxcv:compileDebugShaders NO-SOURCE
+> Task :oxcv:generateDebugAssets UP-TO-DATE
+> Task :eeit:javaPreCompileDebug
+> Task :siub:mergeDebugShaders
+> Task :siub:javaPreCompileDebug
+> Task :dqag:packageDebugAssets
+> Task :siub:compileDebugShaders NO-SOURCE
+> Task :siub:generateDebugAssets UP-TO-DATE
+> Task :oxcv:packageDebugAssets
+> Task :eeit:packageDebugAssets
+> Task :yjfw:mergeDebugShaders
+> Task :dqag:mergeDebugJniLibFolders
+> Task :yjfw:compileDebugShaders NO-SOURCE
+> Task :yjfw:generateDebugAssets UP-TO-DATE
+> Task :dqag:mergeDebugNativeLibs NO-SOURCE
+> Task :yjfw:javaPreCompileDebug
+> Task :common:mergeDebugJniLibFolders
+> Task :common:mergeDebugNativeLibs NO-SOURCE
+> Task :siub:packageDebugAssets
+> Task :eeit:mergeDebugJniLibFolders
+> Task :oxcv:mergeDebugJniLibFolders
+> Task :eeit:mergeDebugNativeLibs NO-SOURCE
+> Task :oxcv:mergeDebugNativeLibs NO-SOURCE
+> Task :dqag:copyDebugJniLibsProjectOnly
+> Task :common:copyDebugJniLibsProjectOnly
+> Task :eeit:copyDebugJniLibsProjectOnly
+> Task :oxcv:copyDebugJniLibsProjectOnly
+> Task :yjfw:packageDebugAssets
+> Task :siub:mergeDebugJniLibFolders
+> Task :yjfw:mergeDebugJniLibFolders
+> Task :siub:mergeDebugNativeLibs NO-SOURCE
+> Task :yjfw:mergeDebugNativeLibs NO-SOURCE
+> Task :siub:copyDebugJniLibsProjectOnly
+> Task :yjfw:copyDebugJniLibsProjectOnly
+> Task :app:clean
+> Task :common:kaptGenerateStubsDebugKotlin
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:mergeDebugStartupProfile UP-TO-DATE
+> Task :app:generateDebugResValues
+> Task :app:dataBindingMergeDependencyArtifactsDebug
+> Task :app:desugarDebugFileDependencies
+> Task :app:mergeDebugShaders
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:mergeDebugJniLibFolders
+> Task :app:extractDeepLinksDebug
+> Task :app:mergeDebugNativeLibs NO-SOURCE
+> Task :app:stripDebugDebugSymbols NO-SOURCE
+> Task :app:mapDebugSourceSetPaths
+> Task :app:validateSigningDebug
+> Task :app:generateDebugResources
+> Task :app:javaPreCompileDebug
+> Task :app:writeDebugAppMetadata
+> Task :app:writeDebugSigningConfigVersions
+> Task :app:mergeDebugAssets
+> Task :app:compressDebugAssets
+> Task :app:checkDebugDuplicateClasses
+> Task :app:checkDebugAarMetadata
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:packageDebugResources
+> Task :app:processDebugManifestForPackage
+> Task :app:parseDebugLocalResources
+> Task :base:kaptGenerateStubsDebugKotlin
+> Task :base:kaptDebugKotlin
+> Task :common:kaptDebugKotlin
+> Task :base:compileDebugKotlin
+> Task :base:compileDebugJavaWithJavac NO-SOURCE
+> Task :base:bundleLibRuntimeToJarDebug
+> Task :base:bundleLibCompileToJarDebug
+> Task :base:processDebugJavaRes
+> Task :common:compileDebugKotlin
+> Task :common:processDebugJavaRes
+> Task :common:compileDebugJavaWithJavac
+> Task :common:bundleLibRuntimeToJarDebug
+> Task :common:bundleLibCompileToJarDebug
+> Task :app:mergeDebugResources
+> Task :app:dataBindingGenBaseClassesDebug
+> Task :app:mergeExtDexDebug
+> Task :oxcv:kaptGenerateStubsDebugKotlin
+> Task :dqag:kaptGenerateStubsDebugKotlin
+> Task :siub:kaptGenerateStubsDebugKotlin
+> Task :eeit:kaptGenerateStubsDebugKotlin
+> Task :yjfw:kaptGenerateStubsDebugKotlin
+> Task :app:processDebugResources
+> Task :oxcv:kaptDebugKotlin
+> Task :eeit:kaptDebugKotlin
+> Task :dqag:kaptDebugKotlin
+> Task :yjfw:kaptDebugKotlin
+> Task :siub:kaptDebugKotlin
+> Task :oxcv:compileDebugKotlin
+> Task :oxcv:processDebugJavaRes
+> Task :oxcv:compileDebugJavaWithJavac
+> Task :oxcv:bundleLibRuntimeToJarDebug
+> Task :oxcv:bundleLibCompileToJarDebug
+> Task :eeit:compileDebugKotlin
+> Task :eeit:processDebugJavaRes
+> Task :siub:compileDebugKotlin
+> Task :siub:processDebugJavaRes
+> Task :yjfw:compileDebugKotlin
+> Task :dqag:compileDebugKotlin
+> Task :yjfw:processDebugJavaRes
+> Task :dqag:processDebugJavaRes
+> Task :eeit:compileDebugJavaWithJavac
+> Task :siub:compileDebugJavaWithJavac
+> Task :dqag:compileDebugJavaWithJavac
+> Task :yjfw:compileDebugJavaWithJavac
+> Task :siub:bundleLibRuntimeToJarDebug
+> Task :eeit:bundleLibRuntimeToJarDebug
+> Task :siub:bundleLibCompileToJarDebug
+> Task :eeit:bundleLibCompileToJarDebug
+> Task :yjfw:bundleLibRuntimeToJarDebug
+> Task :dqag:bundleLibRuntimeToJarDebug
+> Task :yjfw:bundleLibCompileToJarDebug
+> Task :dqag:bundleLibCompileToJarDebug
+> Task :app:mergeLibDexDebug
+> Task :app:kaptGenerateStubsDebugKotlin
+> Task :app:kaptDebugKotlin
+> Task :app:compileDebugKotlin
+> Task :app:processDebugJavaRes
+> Task :app:compileDebugJavaWithJavac
+> Task :app:mergeDebugJavaResource
+> Task :app:dexBuilderDebug
+> Task :app:mergeProjectDexDebug
+> Task :app:packageDebug
+> Task :app:assembleDebug
+> Task :app:createDebugApkListingFileRedirect
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.7/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 6s
+200 actionable tasks: 199 executed, 1 up-to-date
+Configuration cache entry reused.
+Used daemon with pid 7522
+Execution time 6659 ms
+
+* Running measured build #10
+Reusing configuration cache.
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :base:preBuild UP-TO-DATE
+> Task :base:preDebugBuild UP-TO-DATE
+> Task :common:preBuild UP-TO-DATE
+> Task :common:preDebugBuild UP-TO-DATE
+> Task :dqag:preBuild UP-TO-DATE
+> Task :dqag:preDebugBuild UP-TO-DATE
+> Task :eeit:preBuild UP-TO-DATE
+> Task :eeit:preDebugBuild UP-TO-DATE
+> Task :app:checkKotlinGradlePluginConfigurationErrors
+> Task :oxcv:preBuild UP-TO-DATE
+> Task :siub:preBuild UP-TO-DATE
+> Task :oxcv:preDebugBuild UP-TO-DATE
+> Task :siub:preDebugBuild UP-TO-DATE
+> Task :yjfw:preBuild UP-TO-DATE
+> Task :yjfw:preDebugBuild UP-TO-DATE
+> Task :base:checkKotlinGradlePluginConfigurationErrors
+> Task :common:checkKotlinGradlePluginConfigurationErrors
+> Task :dqag:checkKotlinGradlePluginConfigurationErrors
+> Task :eeit:checkKotlinGradlePluginConfigurationErrors
+> Task :oxcv:checkKotlinGradlePluginConfigurationErrors
+> Task :siub:checkKotlinGradlePluginConfigurationErrors
+> Task :yjfw:checkKotlinGradlePluginConfigurationErrors
+> Task :common:clean
+> Task :base:clean
+> Task :common:generateDebugResValues
+> Task :common:writeDebugAarMetadata
+> Task :base:generateDebugResValues
+> Task :common:generateDebugResources
+> Task :base:generateDebugResources
+> Task :base:writeDebugAarMetadata
+> Task :base:extractDeepLinksDebug
+> Task :common:processDebugManifest
+> Task :common:extractDeepLinksDebug
+> Task :common:packageDebugResources
+> Task :base:packageDebugResources
+> Task :base:parseDebugLocalResources
+> Task :common:parseDebugLocalResources
+> Task :base:processDebugManifest
+> Task :base:compileDebugLibraryResources
+> Task :base:javaPreCompileDebug
+> Task :base:generateDebugRFile
+> Task :common:compileDebugLibraryResources
+> Task :common:generateDebugRFile
+> Task :base:mergeDebugShaders
+> Task :base:compileDebugShaders NO-SOURCE
+> Task :base:generateDebugAssets UP-TO-DATE
+> Task :base:packageDebugAssets
+> Task :eeit:clean
+> Task :oxcv:clean
+> Task :oxcv:generateDebugResValues
+> Task :eeit:generateDebugResValues
+> Task :common:javaPreCompileDebug
+> Task :common:mergeDebugShaders
+> Task :dqag:clean
+> Task :eeit:writeDebugAarMetadata
+> Task :oxcv:generateDebugResources
+> Task :oxcv:writeDebugAarMetadata
+> Task :eeit:generateDebugResources
+> Task :yjfw:clean
+> Task :dqag:generateDebugResValues
+> Task :siub:clean
+> Task :dqag:writeDebugAarMetadata
+> Task :dqag:generateDebugResources
+> Task :yjfw:generateDebugResValues
+> Task :siub:generateDebugResValues
+> Task :siub:writeDebugAarMetadata
+> Task :yjfw:generateDebugResources
+> Task :siub:generateDebugResources
+> Task :yjfw:writeDebugAarMetadata
+> Task :dqag:processDebugManifest
+> Task :dqag:extractDeepLinksDebug
+> Task :eeit:extractDeepLinksDebug
+> Task :oxcv:extractDeepLinksDebug
+> Task :eeit:packageDebugResources
+> Task :oxcv:processDebugManifest
+> Task :eeit:processDebugManifest
+> Task :oxcv:packageDebugResources
+> Task :siub:extractDeepLinksDebug
+> Task :dqag:packageDebugResources
+> Task :yjfw:extractDeepLinksDebug
+> Task :yjfw:packageDebugResources
+> Task :siub:packageDebugResources
+> Task :eeit:parseDebugLocalResources
+> Task :siub:processDebugManifest
+> Task :oxcv:parseDebugLocalResources
+> Task :yjfw:parseDebugLocalResources
+> Task :yjfw:processDebugManifest
+> Task :dqag:parseDebugLocalResources
+> Task :siub:parseDebugLocalResources
+> Task :eeit:generateDebugRFile
+> Task :oxcv:generateDebugRFile
+> Task :dqag:generateDebugRFile
+> Task :dqag:compileDebugLibraryResources
+> Task :siub:generateDebugRFile
+> Task :yjfw:generateDebugRFile
+> Task :oxcv:compileDebugLibraryResources
+> Task :eeit:compileDebugLibraryResources
+> Task :dqag:javaPreCompileDebug
+> Task :common:compileDebugShaders NO-SOURCE
+> Task :common:generateDebugAssets UP-TO-DATE
+> Task :siub:compileDebugLibraryResources
+> Task :yjfw:compileDebugLibraryResources
+> Task :eeit:javaPreCompileDebug
+> Task :dqag:mergeDebugShaders
+> Task :common:packageDebugAssets
+> Task :dqag:compileDebugShaders NO-SOURCE
+> Task :dqag:generateDebugAssets UP-TO-DATE
+> Task :eeit:mergeDebugShaders
+> Task :oxcv:mergeDebugShaders
+> Task :oxcv:compileDebugShaders NO-SOURCE
+> Task :oxcv:generateDebugAssets UP-TO-DATE
+> Task :eeit:compileDebugShaders NO-SOURCE
+> Task :eeit:generateDebugAssets UP-TO-DATE
+> Task :oxcv:javaPreCompileDebug
+> Task :siub:mergeDebugShaders
+> Task :siub:compileDebugShaders NO-SOURCE
+> Task :siub:generateDebugAssets UP-TO-DATE
+> Task :dqag:packageDebugAssets
+> Task :eeit:packageDebugAssets
+> Task :oxcv:packageDebugAssets
+> Task :siub:javaPreCompileDebug
+> Task :yjfw:javaPreCompileDebug
+> Task :yjfw:mergeDebugShaders
+> Task :yjfw:compileDebugShaders NO-SOURCE
+> Task :yjfw:generateDebugAssets UP-TO-DATE
+> Task :base:mergeDebugJniLibFolders
+> Task :common:mergeDebugJniLibFolders
+> Task :base:mergeDebugNativeLibs NO-SOURCE
+> Task :common:mergeDebugNativeLibs NO-SOURCE
+> Task :oxcv:mergeDebugJniLibFolders
+> Task :siub:packageDebugAssets
+> Task :dqag:mergeDebugJniLibFolders
+> Task :oxcv:mergeDebugNativeLibs NO-SOURCE
+> Task :dqag:mergeDebugNativeLibs NO-SOURCE
+> Task :eeit:mergeDebugJniLibFolders
+> Task :eeit:mergeDebugNativeLibs NO-SOURCE
+> Task :base:copyDebugJniLibsProjectOnly
+> Task :yjfw:packageDebugAssets
+> Task :common:copyDebugJniLibsProjectOnly
+> Task :oxcv:copyDebugJniLibsProjectOnly
+> Task :dqag:copyDebugJniLibsProjectOnly
+> Task :siub:mergeDebugJniLibFolders
+> Task :siub:mergeDebugNativeLibs NO-SOURCE
+> Task :eeit:copyDebugJniLibsProjectOnly
+> Task :siub:copyDebugJniLibsProjectOnly
+> Task :yjfw:mergeDebugJniLibFolders
+> Task :yjfw:mergeDebugNativeLibs NO-SOURCE
+> Task :yjfw:copyDebugJniLibsProjectOnly
+> Task :app:clean
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:generateDebugResValues
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:dataBindingMergeDependencyArtifactsDebug
+> Task :app:mergeDebugShaders
+> Task :app:desugarDebugFileDependencies
+> Task :app:generateDebugResources
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:mergeDebugStartupProfile UP-TO-DATE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:mapDebugSourceSetPaths
+> Task :app:extractDeepLinksDebug
+> Task :app:mergeDebugJniLibFolders
+> Task :app:mergeDebugAssets
+> Task :app:javaPreCompileDebug
+> Task :app:mergeDebugNativeLibs NO-SOURCE
+> Task :app:stripDebugDebugSymbols NO-SOURCE
+> Task :app:compressDebugAssets
+> Task :app:writeDebugAppMetadata
+> Task :app:validateSigningDebug
+> Task :app:writeDebugSigningConfigVersions
+> Task :app:checkDebugAarMetadata
+> Task :common:kaptGenerateStubsDebugKotlin
+> Task :app:checkDebugDuplicateClasses
+> Task :app:processDebugMainManifest
+> Task :app:packageDebugResources
+> Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
+> Task :app:parseDebugLocalResources
+> Task :base:kaptGenerateStubsDebugKotlin
+> Task :base:kaptDebugKotlin
+> Task :common:kaptDebugKotlin
+> Task :base:compileDebugKotlin
+> Task :base:compileDebugJavaWithJavac NO-SOURCE
+> Task :base:bundleLibCompileToJarDebug
+> Task :base:processDebugJavaRes
+> Task :base:bundleLibRuntimeToJarDebug
+> Task :common:compileDebugKotlin
+> Task :common:processDebugJavaRes
+> Task :app:mergeDebugResources
+> Task :common:compileDebugJavaWithJavac
+> Task :common:bundleLibRuntimeToJarDebug
+> Task :common:bundleLibCompileToJarDebug
+> Task :app:dataBindingGenBaseClassesDebug
+> Task :app:mergeExtDexDebug
+> Task :yjfw:kaptGenerateStubsDebugKotlin
+> Task :dqag:kaptGenerateStubsDebugKotlin
+> Task :eeit:kaptGenerateStubsDebugKotlin
+> Task :oxcv:kaptGenerateStubsDebugKotlin
+> Task :siub:kaptGenerateStubsDebugKotlin
+> Task :app:processDebugResources
+> Task :yjfw:kaptDebugKotlin
+> Task :dqag:kaptDebugKotlin
+> Task :eeit:kaptDebugKotlin
+> Task :siub:kaptDebugKotlin
+> Task :oxcv:kaptDebugKotlin
+> Task :dqag:compileDebugKotlin
+> Task :dqag:processDebugJavaRes
+> Task :yjfw:compileDebugKotlin
+> Task :yjfw:processDebugJavaRes
+> Task :dqag:compileDebugJavaWithJavac
+> Task :dqag:bundleLibRuntimeToJarDebug
+> Task :dqag:bundleLibCompileToJarDebug
+> Task :yjfw:compileDebugJavaWithJavac
+> Task :yjfw:bundleLibRuntimeToJarDebug
+> Task :yjfw:bundleLibCompileToJarDebug
+> Task :oxcv:compileDebugKotlin
+> Task :oxcv:processDebugJavaRes
+> Task :eeit:compileDebugKotlin
+> Task :siub:compileDebugKotlin
+> Task :eeit:processDebugJavaRes
+> Task :siub:processDebugJavaRes
+> Task :oxcv:compileDebugJavaWithJavac
+> Task :siub:compileDebugJavaWithJavac
+> Task :eeit:compileDebugJavaWithJavac
+> Task :oxcv:bundleLibRuntimeToJarDebug
+> Task :oxcv:bundleLibCompileToJarDebug
+> Task :eeit:bundleLibRuntimeToJarDebug
+> Task :siub:bundleLibRuntimeToJarDebug
+> Task :eeit:bundleLibCompileToJarDebug
+> Task :siub:bundleLibCompileToJarDebug
+> Task :app:mergeLibDexDebug
+> Task :app:kaptGenerateStubsDebugKotlin
+> Task :app:kaptDebugKotlin
+> Task :app:compileDebugKotlin
+> Task :app:processDebugJavaRes
+> Task :app:compileDebugJavaWithJavac
+> Task :app:mergeDebugJavaResource
+> Task :app:dexBuilderDebug
+> Task :app:mergeProjectDexDebug
+> Task :app:packageDebug
+> Task :app:assembleDebug
+> Task :app:createDebugApkListingFileRedirect
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.7/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 6s
+200 actionable tasks: 199 executed, 1 up-to-date
+Configuration cache entry reused.
+Used daemon with pid 7522
+Execution time 6168 ms
+
+* Stopping daemons
+Running command /Users/fathony.irawan/Projects/dagger-anvil-helper-benchmark/gradle-user-home/wrapper/dists/gradle-8.7-bin/bhs2wmbdwecv87pi65oeuq5iu/gradle-8.7/bin/gradle --stop --gradle-user-home /Users/fathony.irawan/Projects/dagger-anvil-helper-benchmark/gradle-user-home
+Stopping Daemon(s)
+1 Daemon stopped
+
+* Results written to /Users/fathony.irawan/Projects/dagger-anvil-helper-benchmark/benchmark/dagger-5-10
+  /Users/fathony.irawan/Projects/dagger-anvil-helper-benchmark/benchmark/dagger-5-10/benchmark.csv
+  /Users/fathony.irawan/Projects/dagger-anvil-helper-benchmark/benchmark/dagger-5-10/benchmark.html
+
