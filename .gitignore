@@ -163,3 +163,4 @@ cython_debug/
 
 # Generated project dir
 result
+gradle-user-home

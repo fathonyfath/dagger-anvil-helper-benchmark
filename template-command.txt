@@ -1,21 +1,21 @@
-gradle-profiler --project-dir .\result\dagger-1-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark
-gradle-profiler --project-dir .\result\dagger-2-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark
-gradle-profiler --project-dir .\result\dagger-3-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark
-gradle-profiler --project-dir .\result\dagger-4-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark
-gradle-profiler --project-dir .\result\dagger-5-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark
-gradle-profiler --project-dir .\result\dagger-6-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark
-gradle-profiler --project-dir .\result\dagger-7-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark
-gradle-profiler --project-dir .\result\dagger-8-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark
-gradle-profiler --project-dir .\result\dagger-9-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark
-gradle-profiler --project-dir .\result\dagger-10-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark
+gradle-profiler --project-dir .\result\dagger-1-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark --output-dir .\benchmark\dagger-1-10
+gradle-profiler --project-dir .\result\dagger-2-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark --output-dir .\benchmark\dagger-2-10
+gradle-profiler --project-dir .\result\dagger-3-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark --output-dir .\benchmark\dagger-3-10
+gradle-profiler --project-dir .\result\dagger-4-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark --output-dir .\benchmark\dagger-4-10
+gradle-profiler --project-dir .\result\dagger-5-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark --output-dir .\benchmark\dagger-5-10
+gradle-profiler --project-dir .\result\dagger-6-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark --output-dir .\benchmark\dagger-6-10
+gradle-profiler --project-dir .\result\dagger-7-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark --output-dir .\benchmark\dagger-7-10
+gradle-profiler --project-dir .\result\dagger-8-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark --output-dir .\benchmark\dagger-8-10
+gradle-profiler --project-dir .\result\dagger-9-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark --output-dir .\benchmark\dagger-9-10
+gradle-profiler --project-dir .\result\dagger-10-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark --output-dir .\benchmark\dagger-10-10
 
-gradle-profiler --project-dir .\result\anvil-1-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark
-gradle-profiler --project-dir .\result\anvil-2-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark
-gradle-profiler --project-dir .\result\anvil-3-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark
-gradle-profiler --project-dir .\result\anvil-4-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark
-gradle-profiler --project-dir .\result\anvil-5-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark
-gradle-profiler --project-dir .\result\anvil-6-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark
-gradle-profiler --project-dir .\result\anvil-7-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark
-gradle-profiler --project-dir .\result\anvil-8-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark
-gradle-profiler --project-dir .\result\anvil-9-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark
-gradle-profiler --project-dir .\result\anvil-10-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark
+gradle-profiler --project-dir .\result\anvil-1-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark --output-dir .\benchmark\anvil-1-10
+gradle-profiler --project-dir .\result\anvil-2-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark --output-dir .\benchmark\anvil-2-10
+gradle-profiler --project-dir .\result\anvil-3-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark --output-dir .\benchmark\anvil-3-10
+gradle-profiler --project-dir .\result\anvil-4-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark --output-dir .\benchmark\anvil-4-10
+gradle-profiler --project-dir .\result\anvil-5-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark --output-dir .\benchmark\anvil-5-10
+gradle-profiler --project-dir .\result\anvil-6-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark --output-dir .\benchmark\anvil-6-10
+gradle-profiler --project-dir .\result\anvil-7-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark --output-dir .\benchmark\anvil-7-10
+gradle-profiler --project-dir .\result\anvil-8-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark --output-dir .\benchmark\anvil-8-10
+gradle-profiler --project-dir .\result\anvil-9-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark --output-dir .\benchmark\anvil-9-10
+gradle-profiler --project-dir .\result\anvil-10-10 --scenario-file .\benchmark.scenario --warmups 2 --benchmark --output-dir .\benchmark\anvil-10-10
