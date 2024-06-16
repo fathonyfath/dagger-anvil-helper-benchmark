@@ -1,0 +1,4 @@
+clean_build_without_cache {
+  tasks = ["clean", ":app:assembleDebug"]
+  gradle-args = ["--no-build-cache"]
+}
